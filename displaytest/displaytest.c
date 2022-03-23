@@ -123,11 +123,11 @@ void read_from_dht(dht_reading *result) {
     }
     
     
-    char buffer[33];
+    // char buffer[33];
 
-    sprintf(buffer, "low=%d, high=%d", count0, count1);
+    // sprintf(buffer, "low=%d, high=%d", count0, count1);
 
-    LCDwriteMessage(buffer);
+    // LCDwriteMessage(buffer);
 
     //DHT then send 40 bits of data
     //for each bit DHT pulls low for 50us 
@@ -166,7 +166,7 @@ void read_from_dht(dht_reading *result) {
     }
 
 
-    if ((j >= 40) && (data[4] == ((data[0] + data[1] + data[2] + data[3]) & 0xFF))) {
+    if ((data[4] == ((data[0] + data[1] + data[2] + data[3]) & 0xFF))) {
         result->humidity = (float) ((data[0] << 8) + data[1]) / 10;
         if (result->humidity > 100) {
             result->humidity = data[0];
@@ -179,6 +179,6 @@ void read_from_dht(dht_reading *result) {
             result->temp_celsius = -result->temp_celsius;
         }
     } else {
-        //LCDwriteMessage("Bad data");
+        LCDwriteMessage("Bad data");
     }
 }

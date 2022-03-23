@@ -9,9 +9,9 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
-// #ifdef PICO_DEFAULT_LED_PIN
-// #define LED_PIN PICO_DEFAULT_LED_PIN
-// #endif
+#ifdef PICO_DEFAULT_LED_PIN
+#define LED_PIN PICO_DEFAULT_LED_PIN
+#endif
 
 const uint DHT_PIN = 22;
 const uint MAX_TIMINGS = 85;
@@ -21,7 +21,7 @@ typedef struct {
     float temp_celsius;
 } dht_reading;
 
-//void read_from_dht(dht_reading *result);
+void read_from_dht(dht_reading *result);
 
 
 
@@ -140,7 +140,7 @@ void read_from_dht(dht_reading *result) {
     }
 
 
-    if ((j >= 40) && (data[4] == ((data[0] + data[1] + data[2] + data[3]) & 0xFF))) {
+    if ((data[4] == ((data[0] + data[1] + data[2] + data[3]) & 0xFF))) {
         result->humidity = (float) ((data[0] << 8) + data[1]) / 10;
         if (result->humidity > 100) {
             result->humidity = data[0];
