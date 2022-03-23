@@ -13,7 +13,7 @@ License can be found at picoLCD/LICENSE
 
 int LCDpins[14] = {0,1,2,3,4,5,6,7,15,16,17,16,2};
 
-int main(){
+int displaytest(){
     bi_decl(bi_program_description("This is a work-in-progress example of interfacing with LCD Displays using HD44780 chips on the Raspberry Pi Pico!"));
 
     stdio_init_all();

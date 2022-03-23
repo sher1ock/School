@@ -8,10 +8,12 @@
 #include <math.h>
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
+#include "display.c"
 
-#ifdef PICO_DEFAULT_LED_PIN
-#define LED_PIN PICO_DEFAULT_LED_PIN
-#endif
+
+// #ifdef PICO_DEFAULT_LED_PIN
+// #define LED_PIN PICO_DEFAULT_LED_PIN
+// #endif
 
 const uint DHT_PIN = 15;
 const uint MAX_TIMINGS = 85;
