@@ -11,7 +11,7 @@
 
 
 
-const uint DHT_PIN = 22;
+const uint DHT_PIN = 12;
 const uint MAX_TIMINGS = 85;
 
 typedef struct {
@@ -28,7 +28,7 @@ int main(){
     bi_decl(bi_program_description("This is a work-in-progress example of interfacing with LCD Displays using HD44780 chips on the Raspberry Pi Pico!"));
 
     uint8_t *buffer;
-
+    gpio_init(DHT_PIN);
     stdio_init_all();
 
     //Initialize all needed pins as defined in LCDpins, set them as
@@ -48,17 +48,16 @@ int main(){
         LCDgoto("00");
         LCDsendRawInstruction(0,0,"00001100");
 //        LCDwriteMessage("Hello World!");
+        char buffer[33];
         dht_reading reading;
         read_from_dht(&reading);
         float fahrenheit = (reading.temp_celsius * 9 / 5) + 32;
-        sprintf(buffer, "Humidity = %.1f%%, Temperature = %.1fC (%.1fF)\n",
+        sprintf(buffer, "Humidity=%.1f%%, Temperature=%.1fC (%.1fF)\n",
                reading.humidity, reading.temp_celsius, fahrenheit);
 
 
         LCDwriteMessage(buffer);
-
-
-        sleep_ms(1000);    
+        sleep_ms(5000);
         }
     
 }
@@ -122,7 +121,13 @@ void read_from_dht(dht_reading *result) {
         count1++;
         sleep_us(1);
     }
-    //printf("low=%d, high=%d", count0, count1);
+    
+    
+    char buffer[33];
+
+    sprintf(buffer, "low=%d, high=%d", count0, count1);
+
+    LCDwriteMessage(buffer);
 
     //DHT then send 40 bits of data
     //for each bit DHT pulls low for 50us 
@@ -174,6 +179,6 @@ void read_from_dht(dht_reading *result) {
             result->temp_celsius = -result->temp_celsius;
         }
     } else {
-        printf("Bad data\n");
+        //LCDwriteMessage("Bad data");
     }
 }

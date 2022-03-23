@@ -189,6 +189,8 @@ hardware/uart.h
 /home/pi/projects/displaytest/displaytest.c
 stdio.h
 -
+math.h
+-
 pico/stdlib.h
 /home/pi/projects/displaytest/pico/stdlib.h
 hardware/gpio.h
