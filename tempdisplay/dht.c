@@ -15,7 +15,7 @@
 // #define LED_PIN PICO_DEFAULT_LED_PIN
 // #endif
 
-const uint DHT_PIN = 15;
+const uint DHT_PIN = 10;
 const uint MAX_TIMINGS = 85;
 
 typedef struct {
@@ -40,6 +40,7 @@ int main() {
                reading.humidity, reading.temp_celsius, fahrenheit);
 
         sleep_ms(2000);
+        displaytest();
     }
 }
 
