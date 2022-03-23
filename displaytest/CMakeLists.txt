@@ -12,23 +12,23 @@ set(PICO_SDK_PATH "/home/pi/pico/pico-sdk")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(tempdisplay C CXX ASM)
+project(displaytest C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(tempdisplay tempdisplay.c )
+add_executable(displaytest displaytest.c )
 
-pico_set_program_name(tempdisplay "tempdisplay")
-pico_set_program_version(tempdisplay "0.1")
+pico_set_program_name(displaytest "displaytest")
+pico_set_program_version(displaytest "0.1")
 
-pico_enable_stdio_uart(tempdisplay 1)
-pico_enable_stdio_usb(tempdisplay 0)
+pico_enable_stdio_uart(displaytest 1)
+pico_enable_stdio_usb(displaytest 0)
 
 # Add the standard library to the build
-target_link_libraries(tempdisplay pico_stdlib)
+target_link_libraries(displaytest pico_stdlib)
 
-pico_add_extra_outputs(tempdisplay)
+pico_add_extra_outputs(displaytest)
 
