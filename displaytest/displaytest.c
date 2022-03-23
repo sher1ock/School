@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 #include "pico/binary_info.h"
@@ -6,7 +7,6 @@
 #include "generalOps.h"
 #include "presetChars.h"
 #include "presetMessages.h"
-//#include "dht.c"
 
 
 
@@ -19,13 +19,7 @@ typedef struct {
     float temp_celsius;
 } dht_reading;
 
-
-
-/*
-Copyright (c) 2021, zadi15 (https://github.com/zadi15/)
-License can be found at picoLCD/LICENSE
-*/
-
+void read_from_dht(dht_reading *result);
 
 
 int LCDpins[14] = {0,1,2,3,4,5,6,7,15,16,17,16,2};
@@ -64,7 +58,7 @@ int main(){
         LCDwriteMessage(buffer);
 
 
-        sleep_ms(5000);    
+        sleep_ms(1000);    
         }
     
 }
@@ -128,7 +122,7 @@ void read_from_dht(dht_reading *result) {
         count1++;
         sleep_us(1);
     }
-    printf("low=%d, high=%d", count0, count1);
+    //printf("low=%d, high=%d", count0, count1);
 
     //DHT then send 40 bits of data
     //for each bit DHT pulls low for 50us 
