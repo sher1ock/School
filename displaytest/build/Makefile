@@ -175,6 +175,33 @@ bs2_default_padded_checksummed_asm/fast:
 	$(MAKE) -f pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build.make pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/build
 .PHONY : bs2_default_padded_checksummed_asm/fast
 
+LCDops.obj: LCDops.c.obj
+
+.PHONY : LCDops.obj
+
+# target to build an object file
+LCDops.c.obj:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/LCDops.c.obj
+.PHONY : LCDops.c.obj
+
+LCDops.i: LCDops.c.i
+
+.PHONY : LCDops.i
+
+# target to preprocess a source file
+LCDops.c.i:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/LCDops.c.i
+.PHONY : LCDops.c.i
+
+LCDops.s: LCDops.c.s
+
+.PHONY : LCDops.s
+
+# target to generate assembly for a file
+LCDops.c.s:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/LCDops.c.s
+.PHONY : LCDops.c.s
+
 displaytest.obj: displaytest.c.obj
 
 .PHONY : displaytest.obj
@@ -201,6 +228,33 @@ displaytest.s: displaytest.c.s
 displaytest.c.s:
 	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/displaytest.c.s
 .PHONY : displaytest.c.s
+
+generalOps.obj: generalOps.c.obj
+
+.PHONY : generalOps.obj
+
+# target to build an object file
+generalOps.c.obj:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/generalOps.c.obj
+.PHONY : generalOps.c.obj
+
+generalOps.i: generalOps.c.i
+
+.PHONY : generalOps.i
+
+# target to preprocess a source file
+generalOps.c.i:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/generalOps.c.i
+.PHONY : generalOps.c.i
+
+generalOps.s: generalOps.c.s
+
+.PHONY : generalOps.s
+
+# target to generate assembly for a file
+generalOps.c.s:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/generalOps.c.s
+.PHONY : generalOps.c.s
 
 home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
@@ -1219,6 +1273,60 @@ home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
 	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
+presetChars.obj: presetChars.c.obj
+
+.PHONY : presetChars.obj
+
+# target to build an object file
+presetChars.c.obj:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/presetChars.c.obj
+.PHONY : presetChars.c.obj
+
+presetChars.i: presetChars.c.i
+
+.PHONY : presetChars.i
+
+# target to preprocess a source file
+presetChars.c.i:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/presetChars.c.i
+.PHONY : presetChars.c.i
+
+presetChars.s: presetChars.c.s
+
+.PHONY : presetChars.s
+
+# target to generate assembly for a file
+presetChars.c.s:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/presetChars.c.s
+.PHONY : presetChars.c.s
+
+presetMessages.obj: presetMessages.c.obj
+
+.PHONY : presetMessages.obj
+
+# target to build an object file
+presetMessages.c.obj:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/presetMessages.c.obj
+.PHONY : presetMessages.c.obj
+
+presetMessages.i: presetMessages.c.i
+
+.PHONY : presetMessages.i
+
+# target to preprocess a source file
+presetMessages.c.i:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/presetMessages.c.i
+.PHONY : presetMessages.c.i
+
+presetMessages.s: presetMessages.c.s
+
+.PHONY : presetMessages.s
+
+# target to generate assembly for a file
+presetMessages.c.s:
+	$(MAKE) -f CMakeFiles/displaytest.dir/build.make CMakeFiles/displaytest.dir/presetMessages.c.s
+.PHONY : presetMessages.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1232,9 +1340,15 @@ help:
 	@echo "... bs2_default"
 	@echo "... bs2_default_bin"
 	@echo "... bs2_default_padded_checksummed_asm"
+	@echo "... LCDops.obj"
+	@echo "... LCDops.i"
+	@echo "... LCDops.s"
 	@echo "... displaytest.obj"
 	@echo "... displaytest.i"
 	@echo "... displaytest.s"
+	@echo "... generalOps.obj"
+	@echo "... generalOps.i"
+	@echo "... generalOps.s"
 	@echo "... home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.obj"
 	@echo "... home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.i"
 	@echo "... home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.s"
@@ -1348,6 +1462,12 @@ help:
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s"
+	@echo "... presetChars.obj"
+	@echo "... presetChars.i"
+	@echo "... presetChars.s"
+	@echo "... presetMessages.obj"
+	@echo "... presetMessages.i"
+	@echo "... presetMessages.s"
 .PHONY : help
 
 

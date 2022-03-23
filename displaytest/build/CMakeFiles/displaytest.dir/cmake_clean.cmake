@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/displaytest.dir/LCDops.c.obj"
   "CMakeFiles/displaytest.dir/displaytest.c.obj"
+  "CMakeFiles/displaytest.dir/generalOps.c.obj"
   "CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
   "CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
   "CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
@@ -45,6 +47,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
   "CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
   "CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
+  "CMakeFiles/displaytest.dir/presetChars.c.obj"
+  "CMakeFiles/displaytest.dir/presetMessages.c.obj"
   "displaytest.elf"
   "displaytest.pdb"
 )

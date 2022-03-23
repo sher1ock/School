@@ -19,7 +19,13 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(displaytest displaytest.c )
+add_executable(displaytest
+    displaytest.c 
+    LCDops.c
+    generalOps.c
+    presetChars.c
+    presetMessages.c
+)
 
 pico_set_program_name(displaytest "displaytest")
 pico_set_program_version(displaytest "0.1")

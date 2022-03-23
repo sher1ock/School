@@ -105,7 +105,9 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include"
   )
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/pi/projects/displaytest/LCDops.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/LCDops.c.obj"
   "/home/pi/projects/displaytest/displaytest.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/displaytest.c.obj"
+  "/home/pi/projects/displaytest/generalOps.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/generalOps.c.obj"
   "/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
   "/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
   "/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
@@ -139,6 +141,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
+  "/home/pi/projects/displaytest/presetChars.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/presetChars.c.obj"
+  "/home/pi/projects/displaytest/presetMessages.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/presetMessages.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

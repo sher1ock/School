@@ -1,0 +1,3 @@
+[submodule "picoLCD"]
+	path = picoLCD
+	url = https://github.com/zadi15/picoLCD

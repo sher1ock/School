@@ -44,13 +44,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 31,
+				"line" : 37,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 33,
+				"line" : 39,
 				"parent" : 0
 			},
 			{
@@ -93,7 +93,7 @@
 			{
 				"command" : 8,
 				"file" : 0,
-				"line" : 24,
+				"line" : 30,
 				"parent" : 0
 			},
 			{
@@ -105,7 +105,7 @@
 			{
 				"command" : 9,
 				"file" : 0,
-				"line" : 25,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
@@ -466,10 +466,10 @@
 				4,
 				5,
 				6,
+				7,
 				8,
 				9,
 				10,
-				11,
 				12,
 				13,
 				14,
@@ -479,20 +479,24 @@
 				18,
 				19,
 				20,
+				21,
 				22,
 				23,
 				24,
-				25,
 				26,
+				27,
 				28,
-				31,
+				29,
+				30,
 				32,
+				35,
 				36,
-				37,
-				39,
+				40,
+				41,
 				43,
-				44,
-				45
+				47,
+				48,
+				49
 			]
 		},
 		{
@@ -827,17 +831,17 @@
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				7,
-				21,
-				27,
-				29,
-				30,
+				11,
+				25,
+				31,
 				33,
 				34,
-				35,
+				37,
 				38,
-				40,
-				41
+				39,
+				42,
+				44,
+				45
 			]
 		},
 		{
@@ -1191,7 +1195,7 @@
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				42
+				46
 			]
 		}
 	],
@@ -2056,10 +2060,10 @@
 				4,
 				5,
 				6,
+				7,
 				8,
 				9,
 				10,
-				11,
 				12,
 				13,
 				14,
@@ -2069,38 +2073,42 @@
 				18,
 				19,
 				20,
+				21,
 				22,
 				23,
 				24,
-				25,
 				26,
+				27,
 				28,
-				31,
+				29,
+				30,
 				32,
+				35,
 				36,
-				37,
-				39,
-				42,
+				40,
+				41,
 				43,
-				44,
-				45
+				46,
+				47,
+				48,
+				49
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				7,
-				21,
-				27,
-				29,
-				30,
+				11,
+				25,
+				31,
 				33,
 				34,
-				35,
+				37,
 				38,
-				40,
-				41
+				39,
+				42,
+				44,
+				45
 			]
 		}
 	],
@@ -2110,6 +2118,30 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "displaytest.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "LCDops.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "generalOps.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "presetChars.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "presetMessages.c",
 			"sourceGroupIndex" : 0
 		},
 		{
