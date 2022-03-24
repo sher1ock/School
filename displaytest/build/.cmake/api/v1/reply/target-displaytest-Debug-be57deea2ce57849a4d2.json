@@ -19,7 +19,8 @@
 			"pico_define_boot_stage2",
 			"target_compile_definitions",
 			"pico_set_program_name",
-			"pico_set_program_version"
+			"pico_set_program_version",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -38,19 +39,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 22,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 37,
+				"line" : 64,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 39,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
@@ -93,7 +94,7 @@
 			{
 				"command" : 8,
 				"file" : 0,
-				"line" : 30,
+				"line" : 57,
 				"parent" : 0
 			},
 			{
@@ -105,7 +106,7 @@
 			{
 				"command" : 9,
 				"file" : 0,
-				"line" : 31,
+				"line" : 58,
 				"parent" : 0
 			},
 			{
@@ -119,6 +120,12 @@
 				"file" : 3,
 				"line" : 28,
 				"parent" : 3
+			},
+			{
+				"command" : 10,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
 			}
 		]
 	},
@@ -307,6 +314,10 @@
 			],
 			"includes" : 
 			[
+				{
+					"backtrace" : 16,
+					"path" : "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include"
+				},
 				{
 					"backtrace" : 2,
 					"path" : "/home/pi/pico/pico-sdk/src/common/pico_stdlib/include"
@@ -680,6 +691,10 @@
 			"includes" : 
 			[
 				{
+					"backtrace" : 16,
+					"path" : "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include"
+				},
+				{
 					"backtrace" : 2,
 					"path" : "/home/pi/pico/pico-sdk/src/common/pico_stdlib/include"
 				},
@@ -1043,6 +1058,10 @@
 			],
 			"includes" : 
 			[
+				{
+					"backtrace" : 16,
+					"path" : "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include"
+				},
 				{
 					"backtrace" : 2,
 					"path" : "/home/pi/pico/pico-sdk/src/common/pico_stdlib/include"

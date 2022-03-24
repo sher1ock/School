@@ -924,14 +924,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ELF2UF2Build::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ELF2UF2Build-Debug-270855557046a07d0a9e.json",
+					"jsonFile" : "target-ELF2UF2Build-Debug-984d798df75851efffd2.json",
 					"name" : "ELF2UF2Build",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 43,
 					"id" : "bs2_default::@bc554eaed616d198a22d",
-					"jsonFile" : "target-bs2_default-Debug-e430c97ab3badc363672.json",
+					"jsonFile" : "target-bs2_default-Debug-138097e91f5ee60e03aa.json",
 					"name" : "bs2_default",
 					"projectIndex" : 1
 				},
@@ -952,7 +952,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "displaytest::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-displaytest-Debug-94e4b0f94a3cc6c1909d.json",
+					"jsonFile" : "target-displaytest-Debug-be57deea2ce57849a4d2.json",
 					"name" : "displaytest",
 					"projectIndex" : 0
 				}

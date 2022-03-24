@@ -7,9 +7,16 @@
 #include "generalOps.h"
 #include "presetChars.h"
 #include "presetMessages.h"
+#include "../pico-examples/pio/ws2812/generated/ws2812.pio.h"
 
 
 
+#define GREEN 0xff,0,0
+#define YELLOW 0x80,0x80,0
+#define RED 0,0xff,0
+
+const uint LED_PIN = 20;
+const uint SET_PIN = 22;
 
 const uint DHT_PIN = 12;
 const uint MAX_TIMINGS = 85;
@@ -29,6 +36,10 @@ int main(){
 
     uint8_t *buffer;
     gpio_init(DHT_PIN);
+    gpio_init(LED_PIN);
+    gpio_init(SET_PIN);
+    
+
     stdio_init_all();
 
     //Initialize all needed pins as defined in LCDpins, set them as
