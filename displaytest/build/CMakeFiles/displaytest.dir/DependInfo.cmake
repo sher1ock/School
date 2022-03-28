@@ -66,8 +66,11 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+<<<<<<< HEAD
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include"
   "/home/pi/projects/pico-examples/pio/ws2812"
+=======
+>>>>>>> parent of 808c2d8... working on getting neopixel control in
   "/home/pi/pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/pi/pico/pico-sdk/src/common/pico_base/include"
@@ -194,8 +197,11 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+<<<<<<< HEAD
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include"
   "/home/pi/projects/pico-examples/pio/ws2812"
+=======
+>>>>>>> parent of 808c2d8... working on getting neopixel control in
   "/home/pi/pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/pi/pico/pico-sdk/src/common/pico_base/include"
@@ -285,8 +291,11 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+<<<<<<< HEAD
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include"
   "/home/pi/projects/pico-examples/pio/ws2812"
+=======
+>>>>>>> parent of 808c2d8... working on getting neopixel control in
   "/home/pi/pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/pi/pico/pico-sdk/src/common/pico_base/include"
