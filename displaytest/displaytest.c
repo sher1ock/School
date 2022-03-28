@@ -2,6 +2,8 @@
 #include <math.h>
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
+#include "hardware/pio.h"
+#include "hardware/clocks.h"
 #include "pico/binary_info.h"
 #include "LCDops.h"
 #include "generalOps.h"
@@ -9,13 +11,26 @@
 #include "presetMessages.h"
 #include "../pico-examples/pio/ws2812/generated/ws2812.pio.h"
 
+static inline void put_pixel(uint32_t pixel_grb) {
+    pio_sm_put_blocking(pio0, 0, pixel_grb << 8u);
+}
+
+static inline uint32_t urgb_u32(uint8_t r, uint8_t g, uint8_t b) {
+    return
+            ((uint32_t) (r) << 8) |
+            ((uint32_t) (g) << 16) |
+            (uint32_t) (b);
+}
+
+// for (int i = 0; i < ELEMENTS(leds); i++){
+//     gpio_init(leds[i]);
+//     gpio_set_dir(leds[i],GPIO_OUT);
+//     gpio_put(leds[i],0);
+// }
 
 
-#define GREEN 0xff,0,0
-#define YELLOW 0x80,0x80,0
-#define RED 0,0xff,0
 
-const uint LED_PIN = 20;
+const uint PIXEL_PIN = 20;
 const uint SET_PIN = 22;
 
 const uint DHT_PIN = 12;
@@ -32,15 +47,19 @@ void read_from_dht(dht_reading *result);
 int LCDpins[14] = {0,1,2,3,4,5,6,7,15,16,17,16,2};
 
 int main(){
-    bi_decl(bi_program_description("This is a work-in-progress example of interfacing with LCD Displays using HD44780 chips on the Raspberry Pi Pico!"));
+    // bi_decl(bi_program_description("This is a work-in-progress example of interfacing with LCD Displays using HD44780 chips on the Raspberry Pi Pico!"));
 
     uint8_t *buffer;
     gpio_init(DHT_PIN);
-    gpio_init(LED_PIN);
+    gpio_init(PIXEL_PIN);
     gpio_init(SET_PIN);
-    
 
     stdio_init_all();
+
+    gpio_put(PIXEL_PIN,1);
+
+    put_pixel(urgb_u32(0xff, 0, 0xff));
+
 
     //Initialize all needed pins as defined in LCDpins, set them as
     // outputs and then pull them low
@@ -133,12 +152,6 @@ void read_from_dht(dht_reading *result) {
         sleep_us(1);
     }
     
-    
-    // char buffer[33];
-
-    // sprintf(buffer, "low=%d, high=%d", count0, count1);
-
-    // LCDwriteMessage(buffer);
 
     //DHT then send 40 bits of data
     //for each bit DHT pulls low for 50us 

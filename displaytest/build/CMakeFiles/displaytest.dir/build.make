@@ -675,69 +675,69 @@ displaytest_OBJECTS = \
 # External object files for target displaytest
 displaytest_EXTERNAL_OBJECTS =
 
-displaytest.elf: CMakeFiles/displaytest.dir/displaytest.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/LCDops.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/generalOps.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/presetChars.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/presetMessages.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-displaytest.elf: CMakeFiles/displaytest.dir/build.make
-displaytest.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
-displaytest.elf: CMakeFiles/displaytest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/projects/displaytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking CXX executable displaytest.elf"
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/displaytest.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/LCDops.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/generalOps.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/presetChars.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/presetMessages.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/build.make
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/projects/displaytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking CXX executable ======displaytest.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/displaytest.dir/link.txt --verbose=$(VERBOSE)
-	/usr/bin/arm-none-eabi-objcopy -Oihex /home/pi/projects/displaytest/build/displaytest.elf displaytest.hex
-	/usr/bin/arm-none-eabi-objcopy -Obinary /home/pi/projects/displaytest/build/displaytest.elf displaytest.bin
-	/usr/bin/arm-none-eabi-objdump -h /home/pi/projects/displaytest/build/displaytest.elf >displaytest.dis
-	/usr/bin/arm-none-eabi-objdump -d /home/pi/projects/displaytest/build/displaytest.elf >>displaytest.dis
-	elf2uf2/elf2uf2 /home/pi/projects/displaytest/build/displaytest.elf displaytest.uf2
+	/usr/bin/arm-none-eabi-objcopy -Oihex /home/pi/projects/displaytest/build/======displaytest.elf displaytest.hex
+	/usr/bin/arm-none-eabi-objcopy -Obinary /home/pi/projects/displaytest/build/======displaytest.elf displaytest.bin
+	/usr/bin/arm-none-eabi-objdump -h /home/pi/projects/displaytest/build/======displaytest.elf >displaytest.dis
+	/usr/bin/arm-none-eabi-objdump -d /home/pi/projects/displaytest/build/======displaytest.elf >>displaytest.dis
+	elf2uf2/elf2uf2 /home/pi/projects/displaytest/build/======displaytest.elf displaytest.uf2
 
 # Rule to build all files generated by this target.
-CMakeFiles/displaytest.dir/build: displaytest.elf
+CMakeFiles/displaytest.dir/build: $(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf
 
 .PHONY : CMakeFiles/displaytest.dir/build
 

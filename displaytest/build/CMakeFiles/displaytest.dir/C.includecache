@@ -237,6 +237,8 @@ hardware/gpio.h
 /home/pi/projects/displaytest/hardware/gpio.h
 hardware/pio.h
 /home/pi/projects/displaytest/hardware/pio.h
+hardware/clocks.h
+/home/pi/projects/displaytest/hardware/clocks.h
 pico/binary_info.h
 /home/pi/projects/displaytest/pico/binary_info.h
 LCDops.h

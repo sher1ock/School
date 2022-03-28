@@ -27,7 +27,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a
 LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libc.a
 LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libnosys.a
 END GROUP
-OUTPUT(bs2_default.elf elf32-littlearm)
+OUTPUT(======bs2_default.elf elf32-littlearm)
 
 .data           0x20041ff0        0x0
  .data          0x20041ff0        0x0 CMakeFiles/bs2_default.dir/compile_time_choice.S.obj

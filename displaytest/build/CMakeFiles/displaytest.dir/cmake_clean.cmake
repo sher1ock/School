@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "======displaytest.elf"
+  "======displaytest.pdb"
   "CMakeFiles/displaytest.dir/LCDops.c.obj"
   "CMakeFiles/displaytest.dir/displaytest.c.obj"
   "CMakeFiles/displaytest.dir/generalOps.c.obj"
@@ -49,8 +51,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
   "CMakeFiles/displaytest.dir/presetChars.c.obj"
   "CMakeFiles/displaytest.dir/presetMessages.c.obj"
-  "displaytest.elf"
-  "displaytest.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

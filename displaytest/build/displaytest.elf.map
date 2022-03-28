@@ -81,9 +81,9 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/displaytest.dir/displaytest.c.obj
  .rodata.DHT_PIN
                 0x00000000        0x4 CMakeFiles/displaytest.dir/displaytest.c.obj
- .rodata.LED_PIN
-                0x00000000        0x4 CMakeFiles/displaytest.dir/displaytest.c.obj
  .rodata.MAX_TIMINGS
+                0x00000000        0x4 CMakeFiles/displaytest.dir/displaytest.c.obj
+ .rodata.PIXEL_PIN
                 0x00000000        0x4 CMakeFiles/displaytest.dir/displaytest.c.obj
  .rodata.SET_PIN
                 0x00000000        0x4 CMakeFiles/displaytest.dir/displaytest.c.obj
@@ -907,6 +907,8 @@ Discarded input sections
                 0x00000000       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.float2ufix
                 0x00000000       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .text.__wrap___aeabi_f2uiz
+                0x00000000       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.fix2float
                 0x00000000       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  .text.ufix2float
@@ -1152,9 +1154,9 @@ Discarded input sections
                 0x00000000        0x8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_65.4736
                 0x00000000        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .text          0x00000000        0x0 /tmp/ccsQff1g.o
- .data          0x00000000        0x0 /tmp/ccsQff1g.o
- .bss           0x00000000        0x0 /tmp/ccsQff1g.o
+ .text          0x00000000        0x0 /tmp/ccLXFNCi.o
+ .data          0x00000000        0x0 /tmp/ccLXFNCi.o
+ .bss           0x00000000        0x0 /tmp/ccLXFNCi.o
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
  .text          0x00000000       0x10 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-atexit.o)
@@ -1394,11 +1396,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /tmp/ccsQff1g.o
+ .boot2         0x10000000      0x100 /tmp/ccLXFNCi.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x4e80
+.text           0x10000100     0x4d90
                 0x10000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1463,470 +1465,466 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
  .text.read_from_dht
                 0x1000035c      0x1b4 CMakeFiles/displaytest.dir/displaytest.c.obj
                 0x1000035c                read_from_dht
- .text.main     0x10000510      0x1d0 CMakeFiles/displaytest.dir/displaytest.c.obj
+ .text.main     0x10000510       0xf4 CMakeFiles/displaytest.dir/displaytest.c.obj
                 0x10000510                main
  .text.E_INSTRUCTION
-                0x100006e0       0x34 CMakeFiles/displaytest.dir/LCDops.c.obj
-                0x100006e0                E_INSTRUCTION
- .text.E_DATA   0x10000714       0x40 CMakeFiles/displaytest.dir/LCDops.c.obj
-                0x10000714                E_DATA
+                0x10000604       0x34 CMakeFiles/displaytest.dir/LCDops.c.obj
+                0x10000604                E_INSTRUCTION
+ .text.E_DATA   0x10000638       0x40 CMakeFiles/displaytest.dir/LCDops.c.obj
+                0x10000638                E_DATA
  .text.detectLCD
-                0x10000754       0x60 CMakeFiles/displaytest.dir/LCDops.c.obj
-                0x10000754                detectLCD
+                0x10000678       0x60 CMakeFiles/displaytest.dir/LCDops.c.obj
+                0x10000678                detectLCD
  .text.LCDsendRawInstruction
-                0x100007b4       0x50 CMakeFiles/displaytest.dir/LCDops.c.obj
-                0x100007b4                LCDsendRawInstruction
- .text.LCDinit  0x10000804       0x60 CMakeFiles/displaytest.dir/LCDops.c.obj
-                0x10000804                LCDinit
+                0x100006d8       0x50 CMakeFiles/displaytest.dir/LCDops.c.obj
+                0x100006d8                LCDsendRawInstruction
+ .text.LCDinit  0x10000728       0x60 CMakeFiles/displaytest.dir/LCDops.c.obj
+                0x10000728                LCDinit
  .text.LCDclear
-                0x10000864       0x40 CMakeFiles/displaytest.dir/LCDops.c.obj
-                0x10000864                LCDclear
- .text.LCDgoto  0x100008a4       0x2c CMakeFiles/displaytest.dir/LCDops.c.obj
-                0x100008a4                LCDgoto
+                0x10000788       0x40 CMakeFiles/displaytest.dir/LCDops.c.obj
+                0x10000788                LCDclear
+ .text.LCDgoto  0x100007c8       0x2c CMakeFiles/displaytest.dir/LCDops.c.obj
+                0x100007c8                LCDgoto
  .text.LCDwriteMessage
-                0x100008d0      0x164 CMakeFiles/displaytest.dir/LCDops.c.obj
-                0x100008d0                LCDwriteMessage
+                0x100007f4      0x164 CMakeFiles/displaytest.dir/LCDops.c.obj
+                0x100007f4                LCDwriteMessage
  .text.decToBin
-                0x10000a34       0x94 CMakeFiles/displaytest.dir/generalOps.c.obj
-                0x10000a34                decToBin
- .text.binIns   0x10000ac8       0x50 CMakeFiles/displaytest.dir/generalOps.c.obj
-                0x10000ac8                binIns
+                0x10000958       0x94 CMakeFiles/displaytest.dir/generalOps.c.obj
+                0x10000958                decToBin
+ .text.binIns   0x100009ec       0x50 CMakeFiles/displaytest.dir/generalOps.c.obj
+                0x100009ec                binIns
  .text.gpio_set_function
-                0x10000b18       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000b18                gpio_set_function
+                0x10000a3c       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000a3c                gpio_set_function
  .text.gpio_init
-                0x10000b48       0x16 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000b48                gpio_init
- *fill*         0x10000b5e        0x2 
+                0x10000a6c       0x16 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000a6c                gpio_init
+ *fill*         0x10000a82        0x2 
  .text.hw_claim_lock
-                0x10000b60       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000b60                hw_claim_lock
+                0x10000a84       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000a84                hw_claim_lock
  .text.hw_claim_unlock
-                0x10000b78       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000b78                hw_claim_unlock
+                0x10000a9c       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000a9c                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x10000b8c       0x32 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000b8c                hw_claim_or_assert
- *fill*         0x10000bbe        0x2 
+                0x10000ab0       0x32 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000ab0                hw_claim_or_assert
+ *fill*         0x10000ae2        0x2 
  .text.running_on_fpga
-                0x10000bc0       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x10000bc0                running_on_fpga
+                0x10000ae4       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10000ae4                running_on_fpga
  .text.spin_locks_reset
-                0x10000bd4       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000bd4                spin_locks_reset
+                0x10000af8       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000af8                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x10000bf4       0x1c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000bf4                next_striped_spin_lock_num
+                0x10000b18       0x1c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000b18                next_striped_spin_lock_num
  .text.uart_set_baudrate
-                0x10000c10       0x5c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x10000c10                uart_set_baudrate
+                0x10000b34       0x5c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10000b34                uart_set_baudrate
  .text.uart_set_translate_crlf
-                0x10000c6c       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x10000c6c                uart_set_translate_crlf
+                0x10000b90       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10000b90                uart_set_translate_crlf
  .text.uart_init
-                0x10000c94       0x84 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x10000c94                uart_init
+                0x10000bb8       0x84 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10000bb8                uart_init
  .text.alarm_pool_post_alloc_init
-                0x10000d18       0x40 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000c3c       0x40 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.sleep_until_callback
-                0x10000d58       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000c7c       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.timer_pool_entry_comparator
-                0x10000d88       0x7c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000d88                timer_pool_entry_comparator
+                0x10000cac       0x7c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000cac                timer_pool_entry_comparator
  .text.ph_add_child_node
-                0x10000e04       0xa4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000d28       0xa4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.ph_merge_nodes
-                0x10000ea8       0x3a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10000ee2        0x2 
+                0x10000dcc       0x3a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10000e06        0x2 
  .text.add_alarm_under_lock
-                0x10000ee4      0x180 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000e08      0x180 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x10001064      0x344 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000f88      0x344 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x100013a8       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x100013a8                alarm_pool_init_default
+                0x100012cc       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100012cc                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x100013e0       0x2c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x100013e0                alarm_pool_get_default
+                0x10001304       0x2c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001304                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x1000140c      0x168 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x1000140c                alarm_pool_add_alarm_at
+                0x10001330      0x168 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001330                alarm_pool_add_alarm_at
  .text.sleep_until
-                0x10001574       0xfc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001574                sleep_until
+                0x10001498       0xfc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001498                sleep_until
  .text.sleep_us
-                0x10001670       0x54 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001670                sleep_us
+                0x10001594       0x54 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001594                sleep_us
  .text.sleep_ms
-                0x100016c4       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x100016c4                sleep_ms
+                0x100015e8       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100015e8                sleep_ms
  .text.hardware_alarm_irq_handler
-                0x100016d8       0x8c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100015fc       0x8c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10001764       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001764                hardware_alarm_claim
+                0x10001688       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001688                hardware_alarm_claim
  .text.time_us_64
-                0x1000177c       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x1000177c                time_us_64
+                0x100016a0       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100016a0                time_us_64
  .text.busy_wait_until
-                0x10001794       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001794                busy_wait_until
+                0x100016b8       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100016b8                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x100017bc       0x90 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x100017bc                hardware_alarm_set_callback
+                0x100016e0       0x90 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100016e0                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x1000184c       0xe8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x1000184c                hardware_alarm_set_target
+                0x10001770       0xe8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001770                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10001934       0x40 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001934                hardware_alarm_cancel
+                0x10001858       0x40 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001858                hardware_alarm_cancel
  .text.lock_init
-                0x10001974       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x10001974                lock_init
+                0x10001898       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x10001898                lock_init
  .text.mutex_init
-                0x10001984       0x1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10001984                mutex_init
+                0x100018a8       0x1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x100018a8                mutex_init
  .text.recursive_mutex_init
-                0x1000199e       0x1e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x1000199e                recursive_mutex_init
+                0x100018c2       0x1e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x100018c2                recursive_mutex_init
  .text.ph_add_child_node
-                0x100019bc       0xa4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100018e0       0xa4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_merge_nodes
-                0x10001a60       0x3a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10001a9a        0x2 
+                0x10001984       0x3a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x100019be        0x2 
  .text.ph_clear
-                0x10001a9c       0x70 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001a9c                ph_clear
+                0x100019c0       0x70 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100019c0                ph_clear
  .text.ph_post_alloc_init
-                0x10001b0c        0xe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001b0c                ph_post_alloc_init
- *fill*         0x10001b1a        0x2 
+                0x10001a30        0xe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001a30                ph_post_alloc_init
+ *fill*         0x10001a3e        0x2 
  .text.ph_merge_two_pass
-                0x10001b1c       0xac CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001b1c                ph_merge_two_pass
+                0x10001a40       0xac CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001a40                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x10001bc8      0x108 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001aec      0x108 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x10001cd0       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001cd0                ph_remove_head
+                0x10001bf4       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001bf4                ph_remove_head
  .text.ph_remove_and_free_node
-                0x10001ce4       0xf8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001ce4                ph_remove_and_free_node
- .text._exit    0x10001ddc        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001ddc                _exit
- .text.exit     0x10001de0        0x6 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001de0                exit
- *fill*         0x10001de6        0x2 
+                0x10001c08       0xf8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001c08                ph_remove_and_free_node
+ .text._exit    0x10001d00        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001d00                _exit
+ .text.exit     0x10001d04        0x6 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001d04                exit
+ *fill*         0x10001d0a        0x2 
  .text.__assert_func
-                0x10001de8       0x3c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001de8                __assert_func
+                0x10001d0c       0x3c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001d0c                __assert_func
  .text.runtime_init
-                0x10001e24       0xf8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001e24                runtime_init
- .text.panic    0x10001f1c       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001f1c                panic
+                0x10001d48       0xf8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001d48                runtime_init
+ .text.panic    0x10001e40       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001e40                panic
  .text.clock_configure
-                0x10001f4c       0xfc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10001f4c                clock_configure
+                0x10001e70       0xfc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10001e70                clock_configure
  .text.clocks_init
-                0x10002048      0x100 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10002048                clocks_init
+                0x10001f6c      0x100 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10001f6c                clocks_init
  .text.clock_get_hz
-                0x10002148        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10002148                clock_get_hz
+                0x1000206c        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x1000206c                clock_get_hz
  .text.set_raw_irq_handler_and_unlock
-                0x10002154       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002078       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.make_branch
-                0x1000217c       0x34 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100020a0       0x34 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.insert_branch_and_link
-                0x100021b0       0x40 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100020d4       0x40 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_is_enabled
-                0x100021f0       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100021f0                irq_is_enabled
+                0x10002114       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002114                irq_is_enabled
  .text.irq_set_mask_enabled
-                0x10002208       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002208                irq_set_mask_enabled
+                0x1000212c       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000212c                irq_set_mask_enabled
  .text.irq_set_enabled
-                0x10002228        0xe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002228                irq_set_enabled
- *fill*         0x10002236        0x2 
+                0x1000214c        0xe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000214c                irq_set_enabled
+ *fill*         0x1000215a        0x2 
  .text.irq_get_vtable_handler
-                0x10002238       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002238                irq_get_vtable_handler
+                0x1000215c       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000215c                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10002248       0x54 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002248                irq_set_exclusive_handler
+                0x1000216c       0x54 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000216c                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x1000229c      0x1b4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x1000229c                irq_remove_handler
+                0x100021c0      0x1b4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100021c0                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10002450       0xf0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002450                irq_add_tail_to_free_list
+                0x10002374       0xf0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002374                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x10002540       0x1c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002540                irq_init_priorities
+                0x10002464       0x1c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002464                irq_init_priorities
  .text.pll_init
-                0x1000255c      0x118 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x1000255c                pll_init
+                0x10002480      0x118 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x10002480                pll_init
  .text.watchdog_start_tick
-                0x10002674       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10002674                watchdog_start_tick
+                0x10002598       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002598                watchdog_start_tick
  .text.xosc_init
-                0x10002684       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x10002684                xosc_init
+                0x100025a8       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x100025a8                xosc_init
  .text._out_buffer
-                0x100026ac        0x8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100025d0        0x8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_null
-                0x100026b4        0x2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100025d8        0x2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x100026b6        0xe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._atoi    0x100026c4       0x24 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100025da        0xe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._atoi    0x100025e8       0x24 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x100026e8       0x8c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000260c       0x8c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x10002774      0x112 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002698      0x112 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long
-                0x10002886       0x9e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100027aa       0x9e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long_long
-                0x10002924       0xe2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10002a06        0x2 
- .text._etoa    0x10002a08      0x424 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x10002e2c      0x340 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002848       0xe2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x1000292a        0x2 
+ .text._etoa    0x1000292c      0x424 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x10002d50      0x340 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x1000316c      0x640 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003090      0x640 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.__wrap_sprintf
-                0x100037ac       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x100037ac                __wrap_sprintf
+                0x100036d0       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100036d0                __wrap_sprintf
  .text.vfctprintf
-                0x100037d4       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x100037d4                vfctprintf
- .text          0x100037f4       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x100036f8       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100036f8                vfctprintf
+ .text          0x10003718       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x10003804       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003804                rom_func_lookup
+                0x10003728       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10003728                rom_func_lookup
  .text.rom_data_lookup
-                0x10003814       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003814                rom_data_lookup
+                0x10003738       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10003738                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10003824       0x36 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003824                rom_funcs_lookup
- *fill*         0x1000385a        0x2 
+                0x10003748       0x36 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10003748                rom_funcs_lookup
+ *fill*         0x1000377e        0x2 
  .text.__wrap___aeabi_idiv
-                0x1000385c       0x50 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x1000385c                __wrap___aeabi_idivmod
-                0x1000385c                divmod_s32s32
-                0x1000385c                div_s32s32
-                0x1000385c                __wrap___aeabi_idiv
-                0x10003864                divmod_s32s32_unsafe
-                0x10003890                divmod_s32s32_savestate
+                0x10003780       0x50 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003780                __wrap___aeabi_idivmod
+                0x10003780                divmod_s32s32
+                0x10003780                div_s32s32
+                0x10003780                __wrap___aeabi_idiv
+                0x10003788                divmod_s32s32_unsafe
+                0x100037b4                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x100038ac       0x4c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x100038ac                __wrap___aeabi_uidiv
-                0x100038ac                __wrap___aeabi_uidivmod
-                0x100038ac                div_u32u32
-                0x100038ac                divmod_u32u32
-                0x100038b4                divmod_u32u32_unsafe
-                0x100038dc                divmod_u32u32_savestate
+                0x100037d0       0x4c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x100037d0                __wrap___aeabi_uidiv
+                0x100037d0                __wrap___aeabi_uidivmod
+                0x100037d0                div_u32u32
+                0x100037d0                divmod_u32u32
+                0x100037d8                divmod_u32u32_unsafe
+                0x10003800                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x100038f8      0x434 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x100038f8                div_s64s64
-                0x100038f8                divmod_s64s64
-                0x100038f8                __wrap___aeabi_ldivmod
-                0x10003930                div_u64u64
-                0x10003930                divmod_u64u64
-                0x10003930                __wrap___aeabi_uldivmod
-                0x10003940                divmod_u64u64_savestate
-                0x10003968                divmod_s64s64_unsafe
-                0x100039f0                divmod_u64u64_unsafe
+                0x1000381c      0x434 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x1000381c                div_s64s64
+                0x1000381c                divmod_s64s64
+                0x1000381c                __wrap___aeabi_ldivmod
+                0x10003854                div_u64u64
+                0x10003854                divmod_u64u64
+                0x10003854                __wrap___aeabi_uldivmod
+                0x10003864                divmod_u64u64_savestate
+                0x1000388c                divmod_s64s64_unsafe
+                0x10003914                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x10003d2c       0x80 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003d2c                __wrap___aeabi_drsub
-                0x10003d32                __wrap___aeabi_dsub
-                0x10003d44                __wrap___aeabi_dadd
-                0x10003d56                __wrap___aeabi_ddiv
-                0x10003d92                __wrap___aeabi_dmul
+                0x10003c50       0x80 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003c50                __wrap___aeabi_drsub
+                0x10003c56                __wrap___aeabi_dsub
+                0x10003c68                __wrap___aeabi_dadd
+                0x10003c7a                __wrap___aeabi_ddiv
+                0x10003cb6                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x10003dac       0x6c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003dac                __wrap___aeabi_cdrcmple
-                0x10003dbc                __wrap___aeabi_cdcmple
-                0x10003dbc                __wrap___aeabi_cdcmpeq
+                0x10003cd0       0x6c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003cd0                __wrap___aeabi_cdrcmple
+                0x10003ce0                __wrap___aeabi_cdcmple
+                0x10003ce0                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x10003e18        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003e18                __wrap___aeabi_dcmplt
+                0x10003d3c        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d3c                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x10003e24       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003e24                __wrap___aeabi_dcmple
+                0x10003d48       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d48                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x10003e34       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003e34                __wrap___aeabi_dcmpge
+                0x10003d58       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d58                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x10003e44        0xa CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003e44                __wrap___aeabi_dcmpgt
+                0x10003d68        0xa CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d68                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x10003e4e       0x1c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003e4e                __wrap___aeabi_dcmpun
- *fill*         0x10003e6a        0x2 
+                0x10003d72       0x1c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d72                __wrap___aeabi_dcmpun
+ *fill*         0x10003d8e        0x2 
  .text.__wrap___aeabi_i2d
-                0x10003e6c       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003e6c                __wrap___aeabi_ui2d
-                0x10003e74                __wrap___aeabi_i2d
+                0x10003d90       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d90                __wrap___aeabi_ui2d
+                0x10003d98                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x10003ea4       0x48 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003ea4                __wrap___aeabi_d2iz
-                0x10003ea4                double2int_z
+                0x10003dc8       0x48 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003dc8                __wrap___aeabi_d2iz
+                0x10003dc8                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x10003eec       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003eec                double2uint
-                0x10003eec                __wrap___aeabi_d2uiz
+                0x10003e10       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003e10                double2uint
+                0x10003e10                __wrap___aeabi_d2uiz
  .text.__aeabi_double_init
-                0x10003f04       0xc8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x10003f04                __aeabi_double_init
+                0x10003e28       0xc8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10003e28                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10003fcc       0x34 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003fcc                double_table_shim_on_use_helper
+                0x10003ef0       0x34 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003ef0                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x10004000       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004000                drsub_shim
-                0x10004006                dsub_shim
+                0x10003f24       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003f24                drsub_shim
+                0x10003f2a                dsub_shim
  .text.dadd_shim
-                0x10004010      0x15c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004010                dadd_shim
+                0x10003f34      0x15c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003f34                dadd_shim
  .text.dmul_shim
-                0x1000416c      0x15c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x1000416c                dmul_shim
+                0x10004090      0x15c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004090                dmul_shim
  .text.ddiv_shim
-                0x100042c8      0x1b0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100042c8                ddiv_shim
+                0x100041ec      0x1b0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100041ec                ddiv_shim
  .text.double2uint_shim
-                0x10004478        0xe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004478                double2uint_shim
-                0x1000447a                double2ufix_shim
- *fill*         0x10004486        0x2 
+                0x1000439c        0xe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x1000439c                double2uint_shim
+                0x1000439e                double2ufix_shim
+ *fill*         0x100043aa        0x2 
  .text.double2uint64_shim
-                0x10004488       0x70 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10004488                double2uint64_shim
-                0x1000448a                double2ufix64_shim
-                0x100044aa                d2fix_a
+                0x100043ac       0x70 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100043ac                double2uint64_shim
+                0x100043ae                double2ufix64_shim
+                0x100043ce                d2fix_a
  .text.dunpacks
-                0x100044f8       0x3c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100044f8                dunpacks
+                0x1000441c       0x3c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x1000441c                dunpacks
  .text.__aeabi_lmul
-                0x10004534       0x32 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10004534                __wrap___aeabi_lmul
- *fill*         0x10004566        0x2 
+                0x10004458       0x32 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x10004458                __wrap___aeabi_lmul
+ *fill*         0x1000448a        0x2 
  .text.__wrap___aeabi_farithmetic
-                0x10004568       0x58 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10004568                __wrap___aeabi_frsub
-                0x1000456e                __wrap___aeabi_fsub
-                0x10004578                __wrap___aeabi_fadd
-                0x10004582                __wrap___aeabi_fdiv
-                0x100045ae                __wrap___aeabi_fmul
+                0x1000448c       0x58 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x1000448c                __wrap___aeabi_frsub
+                0x10004492                __wrap___aeabi_fsub
+                0x1000449c                __wrap___aeabi_fadd
+                0x100044a6                __wrap___aeabi_fdiv
+                0x100044d2                __wrap___aeabi_fmul
  .text.__wrap___aeabi_cfcmple
-                0x100045c0       0x50 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x100045c0                __wrap___aeabi_cfrcmple
-                0x100045cc                __wrap___aeabi_cfcmpeq
-                0x100045cc                __wrap___aeabi_cfcmple
+                0x100044e4       0x50 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x100044e4                __wrap___aeabi_cfrcmple
+                0x100044f0                __wrap___aeabi_cfcmpeq
+                0x100044f0                __wrap___aeabi_cfcmple
  .text.__wrap___aeabi_fcmpgt
-                0x10004610        0xa CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10004610                __wrap___aeabi_fcmpgt
+                0x10004534        0xa CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10004534                __wrap___aeabi_fcmpgt
  .text.__wrap___aeabi_ui2f
-                0x1000461a        0xa CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x1000461a                __wrap___aeabi_ui2f
+                0x1000453e        0xa CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x1000453e                __wrap___aeabi_ui2f
  .text.__wrap___aeabi_i2f
-                0x10004624       0x44 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10004624                __wrap___aeabi_i2f
- .text.__wrap___aeabi_f2uiz
-                0x10004668       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10004668                __wrap___aeabi_f2uiz
+                0x10004548       0x44 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x10004548                __wrap___aeabi_i2f
  .text.__wrap___aeabi_f2d
-                0x10004678       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
-                0x10004678                __wrap___aeabi_f2d
+                0x1000458c       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x1000458c                __wrap___aeabi_f2d
  .text.__aeabi_float_init
-                0x1000468c       0xfc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x1000468c                __aeabi_float_init
+                0x100045a0       0xfc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x100045a0                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x10004788       0x34 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10004788                float_table_shim_on_use_helper
+                0x1000469c       0x34 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x1000469c                float_table_shim_on_use_helper
  .text.float2double_shim
-                0x100047bc       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x100047bc                float2double_shim
- .text          0x100047ec       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x100047ec                __aeabi_mem_init
- .text.memset   0x100047fc        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x100047fc                __wrap_memset
- .text.memcpy   0x10004808        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10004808                __wrap___aeabi_memcpy
-                0x10004808                __wrap_memcpy
+                0x100046d0       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x100046d0                float2double_shim
+ .text          0x10004700       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10004700                __aeabi_mem_init
+ .text.memset   0x10004710        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10004710                __wrap_memset
+ .text.memcpy   0x1000471c        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x1000471c                __wrap___aeabi_memcpy
+                0x1000471c                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x10004814        0xe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10004822        0x2 
+                0x10004728        0xe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10004736        0x2 
  .text.stdio_out_chars_crlf
-                0x10004824       0x80 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004738       0x80 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_stack_buffer_flush
-                0x100048a4       0x44 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100047b8       0x44 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x100048e8       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100047fc       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_begin
-                0x10004908       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004908                stdout_serialize_begin
+                0x1000481c       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000481c                stdout_serialize_begin
  .text.stdout_serialize_end
-                0x10004938       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004938                stdout_serialize_end
+                0x1000484c       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000484c                stdout_serialize_end
  .text.stdio_put_string
-                0x10004948       0x94 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000485c       0x94 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_set_driver_enabled
-                0x100049dc       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100049dc                stdio_set_driver_enabled
+                0x100048f0       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100048f0                stdio_set_driver_enabled
  .text.stdio_flush
-                0x10004a14       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004a14                stdio_flush
+                0x10004928       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004928                stdio_flush
  .text.__wrap_puts
-                0x10004a34       0x1e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004a34                __wrap_puts
- *fill*         0x10004a52        0x2 
+                0x10004948       0x1e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004948                __wrap_puts
+ *fill*         0x10004966        0x2 
  .text.__wrap_vprintf
-                0x10004a54       0x44 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004a54                __wrap_vprintf
+                0x10004968       0x44 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004968                __wrap_vprintf
  .text.__wrap_printf
-                0x10004a98       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004a98                __wrap_printf
+                0x100049ac       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100049ac                __wrap_printf
  .text.stdio_init_all
-                0x10004ab0        0x8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004ab0                stdio_init_all
+                0x100049c4        0x8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100049c4                stdio_init_all
  .text.stdio_uart_out_chars
-                0x10004ab8       0x70 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100049cc       0x70 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x10004b28       0x50 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10004b28                stdio_uart_in_chars
+                0x10004a3c       0x50 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004a3c                stdio_uart_in_chars
  .text.stdio_uart_init_full
-                0x10004b78       0x3c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10004b78                stdio_uart_init_full
+                0x10004a8c       0x3c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004a8c                stdio_uart_init_full
  .text.stdio_uart_init
-                0x10004bb4       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10004bb4                stdio_uart_init
- .text          0x10004bdc       0x38 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
-                0x10004bdc                __itoa
-                0x10004c0c                itoa
- .text          0x10004c14       0x50 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
-                0x10004c14                strcat
- .text          0x10004c64       0x10 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
-                0x10004c64                strcpy
- .text          0x10004c74       0x64 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
-                0x10004c74                strlen
- .text          0x10004cd8       0x68 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
-                0x10004cd8                strncat
- .text          0x10004d40      0x170 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
-                0x10004e78                _strtol_r
-                0x10004e80                strtol_l
-                0x10004e98                strtol
- .text          0x10004eb0       0x78 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
-                0x10004eb0                __utoa
-                0x10004f20                utoa
+                0x10004ac8       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004ac8                stdio_uart_init
+ .text          0x10004af0       0x38 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
+                0x10004af0                __itoa
+                0x10004b20                itoa
+ .text          0x10004b28       0x50 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
+                0x10004b28                strcat
+ .text          0x10004b78       0x10 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
+                0x10004b78                strcpy
+ .text          0x10004b88       0x64 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+                0x10004b88                strlen
+ .text          0x10004bec       0x68 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
+                0x10004bec                strncat
+ .text          0x10004c54      0x170 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
+                0x10004d8c                _strtol_r
+                0x10004d94                strtol_l
+                0x10004dac                strtol
+ .text          0x10004dc4       0x78 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
+                0x10004dc4                __utoa
+                0x10004e34                utoa
  *(.fini)
- .fini          0x10004f28        0x4 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
-                0x10004f28                _fini
- *fill*         0x10004f2c        0x4 
- .fini.__stub   0x10004f30       0x50 linker stubs
+ .fini          0x10004e3c        0x4 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
+                0x10004e3c                _fini
+ .fini.__stub   0x10004e40       0x50 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -1938,280 +1936,275 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x10004f80        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
-                0x10004f80                . = ALIGN (0x4)
+ .eh_frame      0x10004e90        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+                0x10004e90                . = ALIGN (0x4)
 
-.glue_7         0x10004f80        0x0
- .glue_7        0x10004f80        0x0 linker stubs
+.glue_7         0x10004e90        0x0
+ .glue_7        0x10004e90        0x0 linker stubs
 
-.glue_7t        0x10004f80        0x0
- .glue_7t       0x10004f80        0x0 linker stubs
+.glue_7t        0x10004e90        0x0
+ .glue_7t       0x10004e90        0x0 linker stubs
 
-.vfp11_veneer   0x10004f80        0x0
- .vfp11_veneer  0x10004f80        0x0 linker stubs
+.vfp11_veneer   0x10004e90        0x0
+ .vfp11_veneer  0x10004e90        0x0 linker stubs
 
-.v4_bx          0x10004f80        0x0
- .v4_bx         0x10004f80        0x0 linker stubs
+.v4_bx          0x10004e90        0x0
+ .v4_bx         0x10004e90        0x0 linker stubs
 
-.iplt           0x10004f80        0x0
- .iplt          0x10004f80        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.iplt           0x10004e90        0x0
+ .iplt          0x10004e90        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
-.rodata         0x10004f80     0x1098
+.rodata         0x10004e90     0x1088
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
- .rodata.__bi_61.7196
-                0x10004f80        0xc CMakeFiles/displaytest.dir/displaytest.c.obj
+ .rodata.__bi_50.7195
+                0x10004e90        0xc CMakeFiles/displaytest.dir/displaytest.c.obj
  .rodata.main.str1.4
-                0x10004f8c       0x3c CMakeFiles/displaytest.dir/displaytest.c.obj
+                0x10004e9c       0x3c CMakeFiles/displaytest.dir/displaytest.c.obj
  .rodata.read_from_dht.str1.4
-                0x10004fc8        0x9 CMakeFiles/displaytest.dir/displaytest.c.obj
- *fill*         0x10004fd1        0x3 
+                0x10004ed8        0x9 CMakeFiles/displaytest.dir/displaytest.c.obj
+ *fill*         0x10004ee1        0x3 
  .rodata.str1.4
-                0x10004fd4       0x72 CMakeFiles/displaytest.dir/displaytest.c.obj
- *fill*         0x10005046        0x2 
- .rodata.ws2812_program
-                0x10005048        0x6 CMakeFiles/displaytest.dir/displaytest.c.obj
- *fill*         0x1000504e        0x2 
- .rodata.ws2812_program_instructions
-                0x10005050        0x8 CMakeFiles/displaytest.dir/displaytest.c.obj
+                0x10004ee4       0x72 CMakeFiles/displaytest.dir/displaytest.c.obj
+ *fill*         0x10004f56        0x2 
  .rodata.LCDwriteMessage
-                0x10005058       0x18 CMakeFiles/displaytest.dir/LCDops.c.obj
+                0x10004f58       0x18 CMakeFiles/displaytest.dir/LCDops.c.obj
  .rodata.LCDclear.str1.4
-                0x10005070       0x21 CMakeFiles/displaytest.dir/LCDops.c.obj
- *fill*         0x10005091        0x3 
+                0x10004f70       0x21 CMakeFiles/displaytest.dir/LCDops.c.obj
+ *fill*         0x10004f91        0x3 
  .rodata.LCDinit.str1.4
-                0x10005094       0x2d CMakeFiles/displaytest.dir/LCDops.c.obj
- *fill*         0x100050c1        0x3 
+                0x10004f94       0x2d CMakeFiles/displaytest.dir/LCDops.c.obj
+ *fill*         0x10004fc1        0x3 
  .rodata.LCDwriteMessage.str1.4
-                0x100050c4        0xb CMakeFiles/displaytest.dir/LCDops.c.obj
- *fill*         0x100050cf        0x1 
+                0x10004fc4        0xb CMakeFiles/displaytest.dir/LCDops.c.obj
+ *fill*         0x10004fcf        0x1 
  .rodata.__func__.5648
-                0x100050d0       0x15 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100050e5        0x3 
+                0x10004fd0       0x15 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10004fe5        0x3 
  .rodata.__func__.5954
-                0x100050e8        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10004fe8        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.5961
-                0x100050f4       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005106        0x2 
+                0x10004ff4       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005006        0x2 
  .rodata.__func__.5977
-                0x10005108        0xf CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005117        0x1 
+                0x10005008        0xf CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005017        0x1 
  .rodata.__func__.5999
-                0x10005118        0xd CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005125        0x3 
+                0x10005018        0xd CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005025        0x3 
  .rodata.__func__.6223
-                0x10005128        0xa CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005132        0x2 
+                0x10005028        0xa CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005032        0x2 
  .rodata.__func__.6228
-                0x10005134       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005146        0x2 
+                0x10005034       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005046        0x2 
  .rodata.__func__.6243
-                0x10005148       0x17 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1000515f        0x1 
+                0x10005048       0x17 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x1000505f        0x1 
  .rodata.__func__.6254
-                0x10005160       0x15 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005175        0x3 
+                0x10005060       0x15 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005075        0x3 
  .rodata.__func__.6271
-                0x10005178       0x1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005192        0x2 
+                0x10005078       0x1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005092        0x2 
  .rodata.add_alarm_under_lock.str1.4
-                0x10005194       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10005094       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
                                  0x2b (size before relaxing)
  .rodata.alarm_pool_alarm_callback.str1.4
-                0x100051bc       0xe2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1000529e        0x2 
+                0x100050bc       0xe2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x1000519e        0x2 
  .rodata.alarm_pool_dump_key.str1.4
-                0x100052a0       0x33 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100052d3        0x1 
+                0x100051a0       0x33 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100051d3        0x1 
  .rodata.alarm_pool_get_default.str1.4
-                0x100052d4       0x21 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100052f5        0x3 
+                0x100051d4       0x21 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100051f5        0x3 
  .rodata.ph_add_child_node.str1.4
-                0x100052f8       0x92 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1000538a        0x2 
+                0x100051f8       0x92 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x1000528a        0x2 
  .rodata.repeating_timer_callback.str1.4
-                0x1000538c       0x47 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100053d3        0x1 
+                0x1000528c       0x47 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100052d3        0x1 
  .rodata.sleep_until.str1.4
-                0x100053d4       0x4d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10005421        0x3 
+                0x100052d4       0x4d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10005321        0x3 
  .rodata.__func__.4519
-                0x10005424       0x1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x1000543e        0x2 
+                0x10005324       0x1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x1000533e        0x2 
  .rodata.hardware_alarm_claim.str1.4
-                0x10005440       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x10005462        0x2 
+                0x10005340       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10005362        0x2 
  .rodata.hardware_alarm_set_target.str1.4
-                0x10005464       0x61 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x100054c5        0x3 
+                0x10005364       0x61 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x100053c5        0x3 
  .rodata.__func__.4660
-                0x100054c8        0xb CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- *fill*         0x100054d3        0x1 
+                0x100053c8        0xb CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ *fill*         0x100053d3        0x1 
  .rodata.str1.4
-                0x100054d4       0x85 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x100053d4       0x85 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
                                  0xe5 (size before relaxing)
- *fill*         0x10005559        0x3 
+ *fill*         0x10005459        0x3 
  .rodata.__func__.5655
-                0x1000555c        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x1000545c        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.__func__.5662
-                0x10005568       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x1000557a        0x2 
+                0x10005468       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x1000547a        0x2 
  .rodata.__func__.5748
-                0x1000557c       0x13 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x1000558f        0x1 
+                0x1000547c       0x13 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x1000548f        0x1 
  .rodata.__func__.5766
-                0x10005590       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10005490       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x100055a8       0x92 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100054a8       0x92 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.ph_remove_and_free_node.str1.4
-                0x100055a8       0x26 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x100055ce        0x2 
+                0x100054a8       0x26 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x100054ce        0x2 
  .rodata.ph_remove_any_head.str1.4
-                0x100055d0       0x88 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100054d0       0x88 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.__assert_func.str1.4
-                0x10005658       0x3f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10005558       0x3f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                  0x43 (size before relaxing)
- *fill*         0x10005697        0x1 
+ *fill*         0x10005597        0x1 
  .rodata.__func__.5763
-                0x10005698        0xd CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x100056a5        0x3 
+                0x10005598        0xd CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x100055a5        0x3 
  .rodata.panic.str1.4
-                0x100056a8       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x100056ba        0x2 
+                0x100055a8       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x100055ba        0x2 
  .rodata.runtime_init.str1.4
-                0x100056bc       0x5d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10005719        0x3 
+                0x100055bc       0x5d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10005619        0x3 
  .rodata.__func__.4648
-                0x1000571c       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x1000561c       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.clock_configure.str1.4
-                0x1000572c       0x53 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- *fill*         0x1000577f        0x1 
+                0x1000562c       0x53 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ *fill*         0x1000567f        0x1 
  .rodata.__func__.4693
-                0x10005780       0x1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000579a        0x2 
+                0x10005680       0x1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000569a        0x2 
  .rodata.__func__.4707
-                0x1000579c        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x1000569c        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.__func__.4715
-                0x100057a8       0x17 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100057bf        0x1 
+                0x100056a8       0x17 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100056bf        0x1 
  .rodata.__func__.4719
-                0x100057c0        0xf CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100057cf        0x1 
+                0x100056c0        0xf CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100056cf        0x1 
  .rodata.__func__.4758
-                0x100057d0       0x13 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100057e3        0x1 
+                0x100056d0       0x13 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100056e3        0x1 
  .rodata.__func__.4781
-                0x100057e4       0x1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100057fe        0x2 
+                0x100056e4       0x1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100056fe        0x2 
  .rodata.irq_add_shared_handler.str1.4
-                0x10005800       0xd9 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100058d9        0x3 
+                0x10005700       0xd9 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100057d9        0x3 
  .rodata.irq_add_tail_to_free_list.str1.4
-                0x100058dc       0x32 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100057dc       0x32 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
                                  0x3a (size before relaxing)
- *fill*         0x1000590e        0x2 
+ *fill*         0x1000580e        0x2 
  .rodata.irq_remove_handler.str1.4
-                0x10005910       0x2a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000593a        0x2 
+                0x10005810       0x2a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000583a        0x2 
  .rodata.irq_set_exclusive_handler.str1.4
-                0x1000593c       0x36 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10005972        0x2 
+                0x1000583c       0x36 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10005872        0x2 
  .rodata.make_branch.str1.4
-                0x10005974       0x49 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100059bd        0x3 
+                0x10005874       0x49 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100058bd        0x3 
  .rodata.__func__.4368
-                0x100059c0        0x9 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x100059c9        0x3 
+                0x100058c0        0x9 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x100058c9        0x3 
  .rodata.pll_init.str1.4
-                0x100059cc       0xd7 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x10005aa3        0x1 
+                0x100058cc       0xd7 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x100059a3        0x1 
  .rodata._vsnprintf
-                0x10005aa4      0x1e0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100059a4      0x1e0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata._ftoa.str1.4
-                0x10005c84       0x15 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10005c99        0x7 
+                0x10005b84       0x15 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10005b99        0x7 
  .rodata.pow10.5369
-                0x10005ca0       0x50 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10005ba0       0x50 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__aeabi_double_init.str1.4
-                0x10005cf0       0xa4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10005bf0       0xa4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__func__.4679
-                0x10005d94       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10005c94       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__aeabi_float_init.str1.4
-                0x10005da8       0x76 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10005ca8       0x76 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                  0x7a (size before relaxing)
- *fill*         0x10005e1e        0x2 
+ *fill*         0x10005d1e        0x2 
  .rodata.__func__.4680
-                0x10005e20       0x13 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- *fill*         0x10005e33        0x1 
+                0x10005d20       0x13 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ *fill*         0x10005d33        0x1 
  .rodata.__bi_44
-                0x10005e34        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005d34        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_56
-                0x10005e40        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005d40        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x10005e4c        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005d4c        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x10005e58        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005d58        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.str1.4
-                0x10005e64       0x44 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005d64       0x44 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.5998
-                0x10005ea8        0x2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10005eaa        0x2 
+                0x10005da8        0x2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10005daa        0x2 
  .rodata.__bi_28.4712
-                0x10005eac        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005dac        0xc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_29.4716
-                0x10005eb8        0x8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005db8        0x8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.str1.4
-                0x10005ec0       0x2c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005dc0       0x2c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.str1.4
-                0x10005eec       0x28 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
+                0x10005dec       0x28 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
                                  0x25 (size before relaxing)
- .rodata        0x10005f14      0x101 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
-                0x10005f14                _ctype_
-                0x10006018                . = ALIGN (0x4)
- *fill*         0x10006015        0x3 
+ .rodata        0x10005e14      0x101 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
+                0x10005e14                _ctype_
+                0x10005f18                . = ALIGN (0x4)
+ *fill*         0x10005f15        0x3 
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10006018                . = ALIGN (0x4)
+                0x10005f18                . = ALIGN (0x4)
 
-.rel.dyn        0x10006018        0x0
- .rel.iplt      0x10006018        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.rel.dyn        0x10005f18        0x0
+ .rel.iplt      0x10005f18        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10006018                __exidx_start = .
+                0x10005f18                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10006018                __exidx_end = .
-                0x10006018                . = ALIGN (0x4)
-                0x10006018                __binary_info_start = .
+                0x10005f18                __exidx_end = .
+                0x10005f18                . = ALIGN (0x4)
+                0x10005f18                __binary_info_start = .
 
-.binary_info    0x10006018       0x2c
+.binary_info    0x10005f18       0x2c
  *(.binary_info.keep.*)
- .binary_info.keep.__bi_ptr61
-                0x10006018        0x4 CMakeFiles/displaytest.dir/displaytest.c.obj
- .binary_info.keep.__bi_ptr22
-                0x1000601c        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .binary_info.keep.__bi_ptr30
-                0x10006020        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .binary_info.keep.__bi_ptr38
-                0x10006024        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .binary_info.keep.__bi_ptr44
-                0x10006028        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x1000602c        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005f18        0x4 CMakeFiles/displaytest.dir/displaytest.c.obj
+ .binary_info.keep.__bi_ptr22
+                0x10005f1c        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .binary_info.keep.__bi_ptr30
+                0x10005f20        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .binary_info.keep.__bi_ptr38
+                0x10005f24        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .binary_info.keep.__bi_ptr44
+                0x10005f28        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .binary_info.keep.__bi_ptr50
+                0x10005f2c        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr56
-                0x10006030        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005f30        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x10006034        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005f34        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x10006038        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005f38        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr28
-                0x1000603c        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005f3c        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr29
-                0x10006040        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10006044                __binary_info_end = .
-                0x10006044                . = ALIGN (0x4)
-                0x10006044                __etext = .
+                0x10005f40        0x4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005f44                __binary_info_end = .
+                0x10005f44                . = ALIGN (0x4)
+                0x10005f44                __etext = .
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2220,7 +2213,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
                 0x20000000       0xc0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0x624 load address 0x10006044
+.data           0x200000c0      0x624 load address 0x10005f44
                 0x200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2307,33 +2300,33 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
                 0x200006e4                __data_end__ = .
 
 .tm_clone_table
-                0x200006e4        0x0 load address 0x10006668
+                0x200006e4        0x0 load address 0x10006568
  .tm_clone_table
                 0x200006e4        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
  .tm_clone_table
                 0x200006e4        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtend.o
 
-.igot.plt       0x200006e4        0x0 load address 0x10006668
+.igot.plt       0x200006e4        0x0 load address 0x10006568
  .igot.plt      0x200006e4        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
 .uninitialized_data
-                0x200006e4        0x0 load address 0x10006668
+                0x200006e4        0x0 load address 0x10006568
                 0x200006e4                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10006668
+.scratch_x      0x20040000        0x0 load address 0x10006568
                 0x20040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                . = ALIGN (0x4)
                 0x20040000                __scratch_x_end__ = .
-                0x10006668                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10006568                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10006668
+.scratch_y      0x20041000        0x0 load address 0x10006568
                 0x20041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                . = ALIGN (0x4)
                 0x20041000                __scratch_y_end__ = .
-                0x10006668                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10006568                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x200006e8      0x3d4
                 0x200006e8                . = ALIGN (0x4)
@@ -2395,8 +2388,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10006668        0x0
-                0x10006668                __flash_binary_end = .
+.flash_end      0x10006568        0x0
+                0x10006568                __flash_binary_end = .
                 0x20040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2455,7 +2448,7 @@ LOAD CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standa
 LOAD CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 LOAD CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-LOAD /tmp/ccsQff1g.o
+LOAD /tmp/ccLXFNCi.o
 LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libm.a
 START GROUP
@@ -2470,7 +2463,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libn
 END GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtend.o
 LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
-OUTPUT(displaytest.elf elf32-littlearm)
+OUTPUT(======displaytest.elf elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x28
@@ -2551,7 +2544,7 @@ OUTPUT(displaytest.elf elf32-littlearm)
  .ARM.attributes
                 0x00000680       0x32 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .ARM.attributes
-                0x000006b2       0x22 /tmp/ccsQff1g.o
+                0x000006b2       0x22 /tmp/ccLXFNCi.o
  .ARM.attributes
                 0x000006d4       0x1e /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -2616,135 +2609,135 @@ OUTPUT(displaytest.elf elf32-littlearm)
  .comment       0x000000ae       0x58 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
  .comment       0x000000ae       0x58 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtend.o
 
-.debug_info     0x00000000    0x1ff32
- .debug_info    0x00000000     0x231d CMakeFiles/displaytest.dir/displaytest.c.obj
- .debug_info    0x0000231d     0x23a9 CMakeFiles/displaytest.dir/LCDops.c.obj
- .debug_info    0x000046c6      0xf4a CMakeFiles/displaytest.dir/generalOps.c.obj
- .debug_info    0x00005610     0x1194 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x000067a4      0x5d8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_info    0x00006d7c      0x1c6 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_info    0x00006f42      0x508 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x0000744a      0xa11 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_info    0x00007e5b     0x3aa1 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- .debug_info    0x0000b8fc      0xe63 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x0000c75f      0x1e8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x0000c947     0x1a8a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_info    0x0000e3d1     0x1842 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_info    0x0000fc13     0x11ce CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x00010de1      0xd7a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x00011b5b     0x15fe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x00013159       0x26 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
- .debug_info    0x0001317f      0x464 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x000135e3      0xc5d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_info    0x00014240      0x1b2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x000143f2     0x1d4b CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x0001613d       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_info    0x0001615f      0x23e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x0001639d       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_info    0x000163bf       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_info    0x000163e1      0xab9 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_info    0x00016e9a       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_info    0x00016ebc       0x26 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_info    0x00016ee2       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_info    0x00016f04      0xace CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_info    0x000179d2       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_info    0x000179f4       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_info    0x00017a16       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_info    0x00017a38      0x2fa CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_info    0x00017d32     0x18f5 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x00019627      0xb26 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_info    0x0001a14d       0x26 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
- .debug_info    0x0001a173      0x8a9 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-impure.o)
- .debug_info    0x0001aa1c      0x972 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
- .debug_info    0x0001b38e      0x90e /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
- .debug_info    0x0001bc9c      0x8bc /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
- .debug_info    0x0001c558      0x8e2 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
- .debug_info    0x0001ce3a      0x90c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
- .debug_info    0x0001d746     0x109b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
- .debug_info    0x0001e7e1      0x99b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
- .debug_info    0x0001f17c      0xdb6 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
+.debug_info     0x00000000    0x1f635
+ .debug_info    0x00000000     0x1a20 CMakeFiles/displaytest.dir/displaytest.c.obj
+ .debug_info    0x00001a20     0x23a9 CMakeFiles/displaytest.dir/LCDops.c.obj
+ .debug_info    0x00003dc9      0xf4a CMakeFiles/displaytest.dir/generalOps.c.obj
+ .debug_info    0x00004d13     0x1194 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x00005ea7      0x5d8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_info    0x0000647f      0x1c6 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_info    0x00006645      0x508 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x00006b4d      0xa11 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_info    0x0000755e     0x3aa1 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_info    0x0000afff      0xe63 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x0000be62      0x1e8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x0000c04a     0x1a8a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x0000dad4     0x1842 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_info    0x0000f316     0x11ce CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x000104e4      0xd7a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x0001125e     0x15fe CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x0001285c       0x26 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+ .debug_info    0x00012882      0x464 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x00012ce6      0xc5d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_info    0x00013943      0x1b2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x00013af5     0x1d4b CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x00015840       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_info    0x00015862      0x23e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x00015aa0       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_info    0x00015ac2       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_info    0x00015ae4      0xab9 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_info    0x0001659d       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_info    0x000165bf       0x26 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_info    0x000165e5       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_info    0x00016607      0xace CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_info    0x000170d5       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_info    0x000170f7       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_info    0x00017119       0x22 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_info    0x0001713b      0x2fa CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_info    0x00017435     0x18f5 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x00018d2a      0xb26 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_info    0x00019850       0x26 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00019876      0x8a9 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-impure.o)
+ .debug_info    0x0001a11f      0x972 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
+ .debug_info    0x0001aa91      0x90e /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
+ .debug_info    0x0001b39f      0x8bc /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
+ .debug_info    0x0001bc5b      0x8e2 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+ .debug_info    0x0001c53d      0x90c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
+ .debug_info    0x0001ce49     0x109b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
+ .debug_info    0x0001dee4      0x99b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
+ .debug_info    0x0001e87f      0xdb6 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
 
-.debug_abbrev   0x00000000     0x5ae1
- .debug_abbrev  0x00000000      0x48e CMakeFiles/displaytest.dir/displaytest.c.obj
- .debug_abbrev  0x0000048e      0x339 CMakeFiles/displaytest.dir/LCDops.c.obj
- .debug_abbrev  0x000007c7      0x2ce CMakeFiles/displaytest.dir/generalOps.c.obj
- .debug_abbrev  0x00000a95      0x287 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_abbrev  0x00000d1c      0x265 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_abbrev  0x00000f81       0xde CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_abbrev  0x0000105f      0x1e8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_abbrev  0x00001247      0x29c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_abbrev  0x000014e3      0x58b CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- .debug_abbrev  0x00001a6e      0x320 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_abbrev  0x00001d8e      0x12d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_abbrev  0x00001ebb      0x325 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_abbrev  0x000021e0      0x376 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_abbrev  0x00002556      0x421 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_abbrev  0x00002977      0x35d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_abbrev  0x00002cd4      0x418 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_abbrev  0x000030ec       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
- .debug_abbrev  0x00003100      0x1a0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_abbrev  0x000032a0      0x288 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_abbrev  0x00003528       0xec CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_abbrev  0x00003614      0x402 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_abbrev  0x00003a16       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_abbrev  0x00003a28      0x11e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_abbrev  0x00003b46       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_abbrev  0x00003b58       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_abbrev  0x00003b6a      0x278 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_abbrev  0x00003de2       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_abbrev  0x00003df4       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_abbrev  0x00003e08       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_abbrev  0x00003e1a      0x292 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_abbrev  0x000040ac       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_abbrev  0x000040be       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_abbrev  0x000040d0       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_abbrev  0x000040e2       0x9f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_abbrev  0x00004181      0x4b6 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_abbrev  0x00004637      0x36d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_abbrev  0x000049a4       0x14 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
- .debug_abbrev  0x000049b8      0x192 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-impure.o)
- .debug_abbrev  0x00004b4a      0x21a /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
- .debug_abbrev  0x00004d64      0x1f5 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
- .debug_abbrev  0x00004f59      0x1b6 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
- .debug_abbrev  0x0000510f      0x1b8 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
- .debug_abbrev  0x000052c7      0x1d7 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
- .debug_abbrev  0x0000549e      0x28a /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
- .debug_abbrev  0x00005728      0x229 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
- .debug_abbrev  0x00005951      0x190 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
+.debug_abbrev   0x00000000     0x5a74
+ .debug_abbrev  0x00000000      0x421 CMakeFiles/displaytest.dir/displaytest.c.obj
+ .debug_abbrev  0x00000421      0x339 CMakeFiles/displaytest.dir/LCDops.c.obj
+ .debug_abbrev  0x0000075a      0x2ce CMakeFiles/displaytest.dir/generalOps.c.obj
+ .debug_abbrev  0x00000a28      0x287 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_abbrev  0x00000caf      0x265 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_abbrev  0x00000f14       0xde CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_abbrev  0x00000ff2      0x1e8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_abbrev  0x000011da      0x29c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_abbrev  0x00001476      0x58b CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_abbrev  0x00001a01      0x320 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_abbrev  0x00001d21      0x12d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_abbrev  0x00001e4e      0x325 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_abbrev  0x00002173      0x376 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_abbrev  0x000024e9      0x421 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_abbrev  0x0000290a      0x35d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_abbrev  0x00002c67      0x418 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_abbrev  0x0000307f       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+ .debug_abbrev  0x00003093      0x1a0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_abbrev  0x00003233      0x288 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_abbrev  0x000034bb       0xec CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_abbrev  0x000035a7      0x402 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_abbrev  0x000039a9       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_abbrev  0x000039bb      0x11e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_abbrev  0x00003ad9       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_abbrev  0x00003aeb       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_abbrev  0x00003afd      0x278 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_abbrev  0x00003d75       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_abbrev  0x00003d87       0x14 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_abbrev  0x00003d9b       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_abbrev  0x00003dad      0x292 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_abbrev  0x0000403f       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_abbrev  0x00004051       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_abbrev  0x00004063       0x12 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_abbrev  0x00004075       0x9f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_abbrev  0x00004114      0x4b6 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_abbrev  0x000045ca      0x36d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_abbrev  0x00004937       0x14 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x0000494b      0x192 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-impure.o)
+ .debug_abbrev  0x00004add      0x21a /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
+ .debug_abbrev  0x00004cf7      0x1f5 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
+ .debug_abbrev  0x00004eec      0x1b6 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
+ .debug_abbrev  0x000050a2      0x1b8 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+ .debug_abbrev  0x0000525a      0x1d7 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
+ .debug_abbrev  0x00005431      0x28a /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
+ .debug_abbrev  0x000056bb      0x229 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
+ .debug_abbrev  0x000058e4      0x190 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
 
-.debug_loc      0x00000000     0xc624
- .debug_loc     0x00000000      0x96b CMakeFiles/displaytest.dir/displaytest.c.obj
- .debug_loc     0x0000096b      0x93a CMakeFiles/displaytest.dir/LCDops.c.obj
- .debug_loc     0x000012a5      0x1b3 CMakeFiles/displaytest.dir/generalOps.c.obj
- .debug_loc     0x00001458      0xd1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_loc     0x00002172      0x371 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_loc     0x000024e3       0xcf CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_loc     0x000025b2      0x196 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_loc     0x00002748      0x457 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_loc     0x00002b9f     0x235a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- .debug_loc     0x00004ef9      0x59d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_loc     0x00005496       0x56 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_loc     0x000054ec     0x100d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_loc     0x000064f9      0xfd7 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_loc     0x000074d0      0x2e3 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_loc     0x000077b3      0x66e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_loc     0x00007e21      0xc78 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_loc     0x00008a99      0x28f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_loc     0x00008d28      0x252 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_loc     0x00008f7a       0x35 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_loc     0x00008faf     0x1b4a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_loc     0x0000aaf9      0x171 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_loc     0x0000ac6a       0x4f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_loc     0x0000acb9       0x65 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_loc     0x0000ad1e      0xa2c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_loc     0x0000b74a      0x444 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_loc     0x0000bb8e      0x185 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
- .debug_loc     0x0000bd13       0x86 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
- .debug_loc     0x0000bd99       0x21 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
- .debug_loc     0x0000bdba       0x94 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
- .debug_loc     0x0000be4e       0xb7 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
- .debug_loc     0x0000bf05      0x588 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
- .debug_loc     0x0000c48d      0x197 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
+.debug_loc      0x00000000     0xc1b4
+ .debug_loc     0x00000000      0x4fb CMakeFiles/displaytest.dir/displaytest.c.obj
+ .debug_loc     0x000004fb      0x93a CMakeFiles/displaytest.dir/LCDops.c.obj
+ .debug_loc     0x00000e35      0x1b3 CMakeFiles/displaytest.dir/generalOps.c.obj
+ .debug_loc     0x00000fe8      0xd1a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_loc     0x00001d02      0x371 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_loc     0x00002073       0xcf CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_loc     0x00002142      0x196 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_loc     0x000022d8      0x457 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_loc     0x0000272f     0x235a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_loc     0x00004a89      0x59d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_loc     0x00005026       0x56 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_loc     0x0000507c     0x100d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_loc     0x00006089      0xfd7 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_loc     0x00007060      0x2e3 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_loc     0x00007343      0x66e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_loc     0x000079b1      0xc78 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_loc     0x00008629      0x28f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_loc     0x000088b8      0x252 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_loc     0x00008b0a       0x35 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_loc     0x00008b3f     0x1b4a CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_loc     0x0000a689      0x171 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_loc     0x0000a7fa       0x4f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_loc     0x0000a849       0x65 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_loc     0x0000a8ae      0xa2c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_loc     0x0000b2da      0x444 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_loc     0x0000b71e      0x185 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
+ .debug_loc     0x0000b8a3       0x86 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
+ .debug_loc     0x0000b929       0x21 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
+ .debug_loc     0x0000b94a       0x94 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+ .debug_loc     0x0000b9de       0xb7 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
+ .debug_loc     0x0000ba95      0x588 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
+ .debug_loc     0x0000c01d      0x197 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
 
 .debug_aranges  0x00000000      0xf70
  .debug_aranges
@@ -2840,182 +2833,182 @@ OUTPUT(displaytest.elf elf32-littlearm)
  .debug_aranges
                 0x00000f58       0x18 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
 
-.debug_ranges   0x00000000     0x1ac8
- .debug_ranges  0x00000000       0x90 CMakeFiles/displaytest.dir/displaytest.c.obj
- .debug_ranges  0x00000090      0x110 CMakeFiles/displaytest.dir/LCDops.c.obj
- .debug_ranges  0x000001a0       0x48 CMakeFiles/displaytest.dir/generalOps.c.obj
- .debug_ranges  0x000001e8       0xe0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_ranges  0x000002c8       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_ranges  0x00000300       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_ranges  0x00000318       0x48 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_ranges  0x00000360       0x60 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_ranges  0x000003c0      0x648 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- .debug_ranges  0x00000a08       0x98 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_ranges  0x00000aa0       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_ranges  0x00000ab0      0x2d8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_ranges  0x00000d88      0x248 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_ranges  0x00000fd0       0x68 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_ranges  0x00001038       0x60 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_ranges  0x00001098      0x160 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_ranges  0x000011f8       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_ranges  0x00001210       0x48 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_ranges  0x00001258       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_ranges  0x00001278      0x110 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_ranges  0x00001388       0x60 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_ranges  0x000013e8       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_ranges  0x00001420       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_ranges  0x00001458      0x138 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_ranges  0x00001590       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_ranges  0x000015a0       0xc0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_ranges  0x00001660      0x128 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_ranges  0x00001788       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_ranges  0x000017b0       0x48 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_ranges  0x000017f8       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_ranges  0x00001828       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_ranges  0x00001848      0x198 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_ranges  0x000019e0       0xd8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_ranges  0x00001ab8       0x10 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
+.debug_ranges   0x00000000     0x1a68
+ .debug_ranges  0x00000000       0x30 CMakeFiles/displaytest.dir/displaytest.c.obj
+ .debug_ranges  0x00000030      0x110 CMakeFiles/displaytest.dir/LCDops.c.obj
+ .debug_ranges  0x00000140       0x48 CMakeFiles/displaytest.dir/generalOps.c.obj
+ .debug_ranges  0x00000188       0xe0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_ranges  0x00000268       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_ranges  0x000002a0       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_ranges  0x000002b8       0x48 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_ranges  0x00000300       0x60 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_ranges  0x00000360      0x648 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_ranges  0x000009a8       0x98 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_ranges  0x00000a40       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_ranges  0x00000a50      0x2d8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_ranges  0x00000d28      0x248 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_ranges  0x00000f70       0x68 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_ranges  0x00000fd8       0x60 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_ranges  0x00001038      0x160 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_ranges  0x00001198       0x18 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_ranges  0x000011b0       0x48 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_ranges  0x000011f8       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_ranges  0x00001218      0x110 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_ranges  0x00001328       0x60 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_ranges  0x00001388       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_ranges  0x000013c0       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_ranges  0x000013f8      0x138 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_ranges  0x00001530       0x10 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_ranges  0x00001540       0xc0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_ranges  0x00001600      0x128 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_ranges  0x00001728       0x28 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_ranges  0x00001750       0x48 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_ranges  0x00001798       0x30 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_ranges  0x000017c8       0x20 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_ranges  0x000017e8      0x198 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_ranges  0x00001980       0xd8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_ranges  0x00001a58       0x10 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
 
-.debug_line     0x00000000     0x945f
- .debug_line    0x00000000      0x724 CMakeFiles/displaytest.dir/displaytest.c.obj
- .debug_line    0x00000724      0x6b7 CMakeFiles/displaytest.dir/LCDops.c.obj
- .debug_line    0x00000ddb      0x3fd CMakeFiles/displaytest.dir/generalOps.c.obj
- .debug_line    0x000011d8      0x594 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_line    0x0000176c      0x268 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_line    0x000019d4      0x1a2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_line    0x00001b76      0x298 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_line    0x00001e0e      0x44e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_line    0x0000225c      0xa60 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- .debug_line    0x00002cbc      0x531 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_line    0x000031ed      0x1e5 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_line    0x000033d2      0x5e1 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_line    0x000039b3      0x3e8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_line    0x00003d9b      0x5d2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_line    0x0000436d      0x5c2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_line    0x0000492f      0x64b CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_line    0x00004f7a       0x80 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
- .debug_line    0x00004ffa      0x35c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_line    0x00005356      0x2b1 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_line    0x00005607      0x1b0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_line    0x000057b7      0x60f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_line    0x00005dc6      0x143 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line    0x00005f09      0x150 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_line    0x00006059      0x2cc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_line    0x00006325      0x421 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line    0x00006746      0x270 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_line    0x000069b6      0x697 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line    0x0000704d       0x93 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_line    0x000070e0      0x3d7 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line    0x000074b7      0x275 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_line    0x0000772c      0x1c3 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_line    0x000078ef       0xbd CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line    0x000079ac       0xce CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line    0x00007a7a      0x15b CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_line    0x00007bd5      0x7a6 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_line    0x0000837b      0x534 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_line    0x000088af       0x5d /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
- .debug_line    0x0000890c       0xd4 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-impure.o)
- .debug_line    0x000089e0      0x137 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
- .debug_line    0x00008b17      0x129 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
- .debug_line    0x00008c40      0x123 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
- .debug_line    0x00008d63      0x146 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
- .debug_line    0x00008ea9      0x132 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
- .debug_line    0x00008fdb      0x1f5 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
- .debug_line    0x000091d0      0x156 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
- .debug_line    0x00009326      0x139 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
+.debug_line     0x00000000     0x938e
+ .debug_line    0x00000000      0x653 CMakeFiles/displaytest.dir/displaytest.c.obj
+ .debug_line    0x00000653      0x6b7 CMakeFiles/displaytest.dir/LCDops.c.obj
+ .debug_line    0x00000d0a      0x3fd CMakeFiles/displaytest.dir/generalOps.c.obj
+ .debug_line    0x00001107      0x594 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_line    0x0000169b      0x268 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_line    0x00001903      0x1a2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_line    0x00001aa5      0x298 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_line    0x00001d3d      0x44e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_line    0x0000218b      0xa60 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_line    0x00002beb      0x531 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_line    0x0000311c      0x1e5 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_line    0x00003301      0x5e1 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_line    0x000038e2      0x3e8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_line    0x00003cca      0x5d2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_line    0x0000429c      0x5c2 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_line    0x0000485e      0x64b CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_line    0x00004ea9       0x80 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+ .debug_line    0x00004f29      0x35c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_line    0x00005285      0x2b1 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_line    0x00005536      0x1b0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_line    0x000056e6      0x60f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_line    0x00005cf5      0x143 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line    0x00005e38      0x150 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_line    0x00005f88      0x2cc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line    0x00006254      0x421 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line    0x00006675      0x270 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_line    0x000068e5      0x697 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line    0x00006f7c       0x93 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_line    0x0000700f      0x3d7 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line    0x000073e6      0x275 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_line    0x0000765b      0x1c3 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_line    0x0000781e       0xbd CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line    0x000078db       0xce CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line    0x000079a9      0x15b CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_line    0x00007b04      0x7a6 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_line    0x000082aa      0x534 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_line    0x000087de       0x5d /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x0000883b       0xd4 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-impure.o)
+ .debug_line    0x0000890f      0x137 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
+ .debug_line    0x00008a46      0x129 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
+ .debug_line    0x00008b6f      0x123 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
+ .debug_line    0x00008c92      0x146 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+ .debug_line    0x00008dd8      0x132 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
+ .debug_line    0x00008f0a      0x1f5 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
+ .debug_line    0x000090ff      0x156 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
+ .debug_line    0x00009255      0x139 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
 
-.debug_str      0x00000000     0x4360
- .debug_str     0x00000000      0xee5 CMakeFiles/displaytest.dir/displaytest.c.obj
-                               0x1035 (size before relaxing)
- .debug_str     0x00000ee5      0x176 CMakeFiles/displaytest.dir/LCDops.c.obj
+.debug_str      0x00000000     0x4114
+ .debug_str     0x00000000      0xb55 CMakeFiles/displaytest.dir/displaytest.c.obj
+                                0xc6a (size before relaxing)
+ .debug_str     0x00000b55      0x176 CMakeFiles/displaytest.dir/LCDops.c.obj
                                 0x999 (size before relaxing)
- .debug_str     0x0000105b       0x57 CMakeFiles/displaytest.dir/generalOps.c.obj
+ .debug_str     0x00000ccb       0x57 CMakeFiles/displaytest.dir/generalOps.c.obj
                                 0x86a (size before relaxing)
- .debug_str     0x000010b2      0x435 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_str     0x00000d22      0x4f4 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
                                 0x88d (size before relaxing)
- .debug_str     0x000014e7      0x1be CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_str     0x00001216      0x1be CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
                                 0x36e (size before relaxing)
- .debug_str     0x000016a5       0x7d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_str     0x000013d4       0x7d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
                                 0x22a (size before relaxing)
- .debug_str     0x00001722       0xe8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_str     0x00001451       0xe8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
                                 0x355 (size before relaxing)
- .debug_str     0x0000180a      0x243 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_str     0x00001539      0x2c3 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
                                 0x534 (size before relaxing)
- .debug_str     0x00001a4d      0x6c6 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_str     0x000017fc      0x6c6 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
                                 0xf7c (size before relaxing)
- .debug_str     0x00002113      0x17e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_str     0x00001ec2      0x17e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
                                 0x696 (size before relaxing)
- .debug_str     0x00002291       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_str     0x00002040       0x38 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
                                 0x262 (size before relaxing)
- .debug_str     0x000022c9      0x161 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_str     0x00002078      0x161 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
                                 0x5de (size before relaxing)
- .debug_str     0x0000242a       0xe8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_str     0x000021d9       0xe8 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
                                 0x7dd (size before relaxing)
- .debug_str     0x00002512      0x1fd CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_str     0x000022c1      0x1fd CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                 0xa43 (size before relaxing)
- .debug_str     0x0000270f      0x246 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_str     0x000024be      0x246 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
                                 0x662 (size before relaxing)
- .debug_str     0x00002955      0x2dc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_str     0x00002704      0x2dc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
                                 0x730 (size before relaxing)
- .debug_str     0x00002c31       0x55 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+ .debug_str     0x000029e0       0x55 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
                                  0x79 (size before relaxing)
- .debug_str     0x00002c86       0x8b CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_str     0x00002a35       0x8b CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
                                 0x2d7 (size before relaxing)
- .debug_str     0x00002d11      0x122 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_str     0x00002ac0      0x122 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
                                 0x70b (size before relaxing)
- .debug_str     0x00002e33       0x67 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_str     0x00002be2       0x67 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
                                 0x229 (size before relaxing)
- .debug_str     0x00002e9a      0x189 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_str     0x00002c49      0x18e CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
                                 0x769 (size before relaxing)
- .debug_str     0x00003023       0x43 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_str     0x00002dd7       0x43 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
                                  0x75 (size before relaxing)
- .debug_str     0x00003066       0xc0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_str     0x00002e1a       0xc0 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
                                 0x264 (size before relaxing)
- .debug_str     0x00003126       0x3d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_str     0x00002eda       0x3d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
                                  0x6f (size before relaxing)
- .debug_str     0x00003163       0x41 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_str     0x00002f17       0x41 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
                                  0x73 (size before relaxing)
- .debug_str     0x000031a4       0x99 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_str     0x00002f58       0x99 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
                                 0x682 (size before relaxing)
- .debug_str     0x0000323d       0x47 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_str     0x00002ff1       0x47 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
                                  0x79 (size before relaxing)
- .debug_str     0x00003284       0x4c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_str     0x00003038       0x4c CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
                                  0x7e (size before relaxing)
- .debug_str     0x000032d0       0x3f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_str     0x00003084       0x3f CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
                                  0x71 (size before relaxing)
- .debug_str     0x0000330f       0x7d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_str     0x000030c3       0x7d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                 0x69e (size before relaxing)
- .debug_str     0x0000338c       0x45 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_str     0x00003140       0x45 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
                                  0x77 (size before relaxing)
- .debug_str     0x000033d1       0x43 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_str     0x00003185       0x43 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
                                  0x75 (size before relaxing)
- .debug_str     0x00003414       0x40 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_str     0x000031c8       0x40 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
                                  0x72 (size before relaxing)
- .debug_str     0x00003454      0x24d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_str     0x00003208      0x213 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
                                 0x426 (size before relaxing)
- .debug_str     0x000036a1      0x2cc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_str     0x0000341b      0x2cc CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
                                 0xb59 (size before relaxing)
- .debug_str     0x0000396d      0x26d CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_str     0x000036e7      0x2a7 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
                                 0x6ff (size before relaxing)
- .debug_str     0x00003bda       0x8f /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+ .debug_str     0x0000398e       0x8f /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
                                  0x9d (size before relaxing)
- .debug_str     0x00003c69      0x110 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-impure.o)
+ .debug_str     0x00003a1d      0x110 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-impure.o)
                                 0x584 (size before relaxing)
- .debug_str     0x00003d79       0x8c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
+ .debug_str     0x00003b2d       0x8c /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-itoa.o)
                                 0x5a7 (size before relaxing)
- .debug_str     0x00003e05       0x8b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
+ .debug_str     0x00003bb9       0x8b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcat.o)
                                 0x593 (size before relaxing)
- .debug_str     0x00003e90       0x86 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
+ .debug_str     0x00003c44       0x86 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strcpy.o)
                                 0x58e (size before relaxing)
- .debug_str     0x00003f16       0x4b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+ .debug_str     0x00003cca       0x4b /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
                                 0x5ad (size before relaxing)
- .debug_str     0x00003f61       0x32 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
+ .debug_str     0x00003d15       0x32 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strncat.o)
                                 0x595 (size before relaxing)
- .debug_str     0x00003f93      0x327 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
+ .debug_str     0x00003d47      0x327 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strtol.o)
                                 0x93f (size before relaxing)
- .debug_str     0x000042ba       0x2f /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
+ .debug_str     0x0000406e       0x2f /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-utoa.o)
                                 0x5aa (size before relaxing)
- .debug_str     0x000042e9       0x77 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
+ .debug_str     0x0000409d       0x77 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-ctype_.o)
                                 0x89c (size before relaxing)
 
 .debug_frame    0x00000000     0x1920
