@@ -229,19 +229,26 @@ CMakeFiles/displaytest.dir/displaytest.c.obj
  /home/pi/pico/pico-sdk/src/common/pico_time/include/pico/time.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
  /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h
  /home/pi/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
  /home/pi/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
+ /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h
  /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
+ /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h
+ /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
  /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h
  /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h
  /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -252,6 +259,7 @@ CMakeFiles/displaytest.dir/displaytest.c.obj
  /home/pi/projects/displaytest/generalOps.h
  /home/pi/projects/displaytest/presetChars.h
  /home/pi/projects/displaytest/presetMessages.h
+ /home/pi/projects/pico-examples/pio/ws2812/generated/ws2812.pio.h
  generated/pico_base/pico/config_autogen.h
  generated/pico_base/pico/version.h
 CMakeFiles/displaytest.dir/generalOps.c.obj

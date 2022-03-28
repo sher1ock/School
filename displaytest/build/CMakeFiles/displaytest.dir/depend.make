@@ -228,19 +228,26 @@ CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/common/
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/common/pico_time/include/pico/time.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
+CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/clocks.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h
+CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h
+CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/clocks.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
+CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
+CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
+CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h
+CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
@@ -251,6 +258,7 @@ CMakeFiles/displaytest.dir/displaytest.c.obj: ../displaytest.c
 CMakeFiles/displaytest.dir/displaytest.c.obj: ../generalOps.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: ../presetChars.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: ../presetMessages.h
+CMakeFiles/displaytest.dir/displaytest.c.obj: /home/pi/projects/pico-examples/pio/ws2812/generated/ws2812.pio.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: generated/pico_base/pico/config_autogen.h
 CMakeFiles/displaytest.dir/displaytest.c.obj: generated/pico_base/pico/version.h
 

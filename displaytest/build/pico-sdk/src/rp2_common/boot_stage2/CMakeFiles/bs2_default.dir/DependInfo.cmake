@@ -19,6 +19,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include"
+  "/home/pi/projects/pico-examples/pio/ws2812"
   "/home/pi/pico/pico-sdk/src/rp2_common/boot_stage2/asminclude"
   "/home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_base/include"
