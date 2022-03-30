@@ -14,7 +14,15 @@
 
 #define RED 0, 0xff, 0
 #define GREEN 0xff, 0, 0
-#define YELLOWISH 0x80, 0x80, 0
+#define BLUE 0, 0, 0xff
+#define Yellow 0xff, 0xff, 0
+#define WHITE 0xff, 0xff, 0xff
+
+
+#define DEBOUNCETIME 50
+
+int newset = false;
+
 
 
 static inline void put_pixel(uint32_t PIXEL_PIN) {
@@ -46,17 +54,29 @@ typedef struct {
 void read_from_dht(dht_reading *result);
 
 void gpio_init(uint PIXEL_PIN);	
-//static void gpio_set_dir(uint PIXEL_PIN, bool out);
 
 
 int LCDpins[14] = {0,1,2,3,4,5,6,7,15,16,17,16,2};
 
+static char event_str[128];
+
+void gpio_event_string(char *buf, uint32_t events);
+
+void gpio_callback(uint gpio, uint32_t events) {
+
+    put_pixel(urgb_u32(WHITE));
+    put_pixel(2*urgb_u32(WHITE));
+    //LCDwriteMessage("Button pressed");
+    newset = true;
+
+}
+
+
+
 int main(){
-    // bi_decl(bi_program_description("This is a work-in-progress example of interfacing with LCD Displays using HD44780 chips on the Raspberry Pi Pico!"));
 
     uint8_t *buffer;
     gpio_init(DHT_PIN);
-//    gpio_init(PIXEL_PIN);
 
     gpio_init(SET_PIN);
 
@@ -67,9 +87,7 @@ int main(){
 
     ws2812_program_init(pio, sm, offset, PIXEL_PIN, 800000, 0);
 
-    // gpio_put(PIXEL_PIN,1);
 
-    put_pixel(urgb_u32(0xff, 0, 0));
 
 
     //Initialize all needed pins as defined in LCDpins, set them as
@@ -83,24 +101,68 @@ int main(){
     //Initialize and clear the LCD, prepping it for characters / instructions
     LCDinit();
 
-    while (1) {
-        LCDclear();
-        sleep_ms(8);
-        LCDgoto("00");
-        LCDsendRawInstruction(0,0,"00001100");
-//        LCDwriteMessage("Hello World!");
-        char buffer[33];
-        dht_reading reading;
-        read_from_dht(&reading);
-        float fahrenheit = (reading.temp_celsius * 9 / 5) + 32;
-        sprintf(buffer, "Humidity=%.1f%%, Temperature=%.1fC (%.1fF)\n",
-               reading.humidity, reading.temp_celsius, fahrenheit);
+    gpio_set_irq_enabled_with_callback(SET_PIN, GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL, true, &gpio_callback);
 
-
-        LCDwriteMessage(buffer);
-        sleep_ms(5000);
-        }
+    int settemp = 0;
+    int sethum =0;
     
+    //put_pixel(urgb_u32(BLUE));
+    while (1){
+        if (newset == false) {
+            LCDclear();
+            sleep_ms(8);
+            LCDgoto("00");
+            LCDsendRawInstruction(0,0,"00001100");
+            char buffer[33];
+            dht_reading reading;
+            read_from_dht(&reading);
+            float fahrenheit = (reading.temp_celsius * 9 / 5) + 32;
+            sprintf(buffer, "Humidity=%.1f%%, Temperature=%.1fC (%.1fF)\n",
+                reading.humidity, reading.temp_celsius, fahrenheit);
+            LCDwriteMessage(buffer);
+
+            if (reading.humidity == sethum){
+                put_pixel(urgb_u32(GREEN));
+            }
+            else if (reading.humidity > sethum){
+                put_pixel(urgb_u32(RED));
+            }
+            else if (reading.humidity < sethum){
+                put_pixel(urgb_u32(BLUE));
+            }
+
+
+            if (reading.temp_celsius == settemp){
+                put_pixel(2*urgb_u32(GREEN));
+            }
+            else if (reading.temp_celsius > settemp){
+                put_pixel(2*urgb_u32(RED));
+            }
+            else if (reading.temp_celsius < settemp){
+                put_pixel(2*urgb_u32(BLUE));
+            }
+
+
+            sleep_ms(5000);
+        }
+        else if (newset == true) {
+            dht_reading reading;
+            read_from_dht(&reading);
+            settemp = reading.temp_celsius;
+            sethum = reading.humidity;
+            //put_pixel(urgb_u32(WHITE));
+            LCDclear();
+            LCDwriteMessage("New setpoint");
+            newset = false;
+            sleep_ms(500);
+        
+        }
+        else {
+            LCDwriteMessage("Shit's broke");
+            sleep_ms(1000);
+
+        }
+    }
 }
 
 
@@ -162,6 +224,12 @@ void read_from_dht(dht_reading *result) {
         count1++;
         sleep_us(1);
     }
+
+    // char buffer[33];
+
+    // sprintf(buffer, "low=%d, high=%d", count0, count1);
+
+    // LCDwriteMessage(buffer);
     
 
     //DHT then send 40 bits of data
