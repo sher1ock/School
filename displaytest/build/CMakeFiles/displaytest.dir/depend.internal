@@ -596,6 +596,34 @@ CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq
  /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
  generated/pico_base/pico/config_autogen.h
  generated/pico_base/pico/version.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+ /home/pi/pico/pico-sdk/src/boards/include/boards/pico.h
+ /home/pi/pico/pico-sdk/src/common/pico_base/include/pico.h
+ /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/assert.h
+ /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/config.h
+ /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/error.h
+ /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/types.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h
+ /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
+ /home/pi/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
+ /home/pi/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
+ /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/include/hardware/claim.h
+ /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
+ /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h
+ /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
+ /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
+ /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h
+ /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
+ generated/pico_base/pico/config_autogen.h
+ generated/pico_base/pico/version.h
 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
  /home/pi/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/pi/pico/pico-sdk/src/common/pico_base/include/pico.h

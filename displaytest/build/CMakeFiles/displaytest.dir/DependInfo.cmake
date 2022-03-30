@@ -122,6 +122,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
+  "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c" "/home/pi/projects/displaytest/build/CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"

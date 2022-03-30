@@ -66,6 +66,8 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include"
+  "/home/pi/projects/pico-examples/pio/ws2812/generated"
   "/home/pi/pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/pi/pico/pico-sdk/src/common/pico_base/include"
@@ -118,6 +120,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "/home/pi/projects/testproject/build/CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "/home/pi/projects/testproject/build/CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c" "/home/pi/projects/testproject/build/CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
+  "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c" "/home/pi/projects/testproject/build/CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c" "/home/pi/projects/testproject/build/CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c" "/home/pi/projects/testproject/build/CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c" "/home/pi/projects/testproject/build/CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
@@ -188,6 +191,8 @@ set(CMAKE_TARGET_DEFINITIONS_C
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include"
+  "/home/pi/projects/pico-examples/pio/ws2812/generated"
   "/home/pi/pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/pi/pico/pico-sdk/src/common/pico_base/include"
@@ -277,6 +282,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include"
+  "/home/pi/projects/pico-examples/pio/ws2812/generated"
   "/home/pi/pico/pico-sdk/src/common/pico_stdlib/include"
   "/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/include"
   "/home/pi/pico/pico-sdk/src/common/pico_base/include"

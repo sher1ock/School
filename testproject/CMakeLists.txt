@@ -10,7 +10,14 @@ set(CMAKE_CXX_STANDARD 17)
 set(PICO_SDK_PATH "/home/pi/pico/pico-sdk")
 
 # Pull in Raspberry Pi Pico SDK (must be before project)
-include(pico_sdk_import.cmake)
+include(pico_sdk_import.cmake 
+#${workspaceFolder}
+#"/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h"
+)
+include_directories(
+"/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include/"
+"/home/pi/projects/pico-examples/pio/ws2812/generated/"
+)
 
 project(testproject C CXX ASM)
 
@@ -28,7 +35,7 @@ pico_enable_stdio_uart(testproject 1)
 pico_enable_stdio_usb(testproject 0)
 
 # Add the standard library to the build
-target_link_libraries(testproject pico_stdlib)
+target_link_libraries(testproject pico_stdlib hardware_pio hardware_clocks)
 
 pico_add_extra_outputs(testproject)
 

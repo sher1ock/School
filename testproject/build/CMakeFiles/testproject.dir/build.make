@@ -60,93 +60,93 @@ include CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/testproject.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/testproject.c.obj: ../testproject.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/testproject.dir/testproject.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/testproject.c.obj   -c /home/pi/projects/testproject/testproject.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/testproject.c.obj   -c /home/pi/projects/testproject/testproject.c
 
 CMakeFiles/testproject.dir/testproject.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/testproject.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/projects/testproject/testproject.c > CMakeFiles/testproject.dir/testproject.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/projects/testproject/testproject.c > CMakeFiles/testproject.dir/testproject.c.i
 
 CMakeFiles/testproject.dir/testproject.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/testproject.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/projects/testproject/testproject.c -o CMakeFiles/testproject.dir/testproject.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/projects/testproject/testproject.c -o CMakeFiles/testproject.dir/testproject.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S
@@ -156,171 +156,171 @@ CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_divider
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj: /home/pi/pico/pico-sdk/src/common/pico_time/time.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_time/time.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_time/time.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_time/time.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_time/time.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_time/time.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_time/time.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj: /home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj: /home/pi/pico/pico-sdk/src/common/pico_sync/sem.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/sem.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/sem.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_sync/sem.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_sync/sem.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_sync/sem.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_sync/sem.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj: /home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj: /home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: /home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj: /home/pi/pico/pico-sdk/src/common/pico_util/datetime.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_util/datetime.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_util/datetime.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_util/datetime.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_util/datetime.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_util/datetime.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_util/datetime.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj: /home/pi/pico/pico-sdk/src/common/pico_util/pheap.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_util/pheap.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_util/pheap.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_util/pheap.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_util/pheap.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_util/pheap.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_util/pheap.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj: /home/pi/pico/pico-sdk/src/common/pico_util/queue.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_util/queue.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_util/queue.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_util/queue.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/common/pico_util/queue.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_util/queue.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/common/pico_util/queue.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
@@ -330,67 +330,67 @@ CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
@@ -400,15 +400,15 @@ CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S
@@ -423,28 +423,28 @@ CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/doub
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S
@@ -464,28 +464,28 @@ CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S
@@ -495,15 +495,15 @@ CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
@@ -531,41 +531,54 @@ CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_li
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: CMakeFiles/testproject.dir/flags.make
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
 
 CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
-	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+
+CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: CMakeFiles/testproject.dir/flags.make
+CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
+
+CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i"
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c > CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s"
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c -o CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
 
 # Object files for target testproject
 testproject_OBJECTS = \
@@ -614,7 +627,8 @@ testproject_OBJECTS = \
 "CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" \
 "CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj" \
 "CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
-"CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
+"CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" \
+"CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
 
 # External object files for target testproject
 testproject_EXTERNAL_OBJECTS =
@@ -665,10 +679,11 @@ testproject.elf: CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common
 testproject.elf: CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 testproject.elf: CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 testproject.elf: CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+testproject.elf: CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 testproject.elf: CMakeFiles/testproject.dir/build.make
 testproject.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 testproject.elf: CMakeFiles/testproject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking CXX executable testproject.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/projects/testproject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Linking CXX executable testproject.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/testproject.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objcopy -Oihex /home/pi/projects/testproject/build/testproject.elf testproject.hex
 	/usr/bin/arm-none-eabi-objcopy -Obinary /home/pi/projects/testproject/build/testproject.elf testproject.bin

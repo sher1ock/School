@@ -619,6 +619,19 @@ CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c -o CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: CMakeFiles/displaytest.dir/flags.make
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/projects/displaytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
+
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i"
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c > CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s"
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c -o CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+
 # Object files for target displaytest
 displaytest_OBJECTS = \
 "CMakeFiles/displaytest.dir/displaytest.c.obj" \
@@ -670,7 +683,8 @@ displaytest_OBJECTS = \
 "CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" \
 "CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj" \
 "CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj" \
-"CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
+"CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj" \
+"CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
 
 # External object files for target displaytest
 displaytest_EXTERNAL_OBJECTS =
@@ -725,10 +739,11 @@ $(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFile
 $(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 $(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 $(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 $(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/build.make
 $(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 $(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)$(EQUALS)displaytest.elf: CMakeFiles/displaytest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/projects/displaytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking CXX executable ======displaytest.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/projects/displaytest/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Linking CXX executable ======displaytest.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/displaytest.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objcopy -Oihex /home/pi/projects/displaytest/build/======displaytest.elf displaytest.hex
 	/usr/bin/arm-none-eabi-objcopy -Obinary /home/pi/projects/displaytest/build/======displaytest.elf displaytest.bin

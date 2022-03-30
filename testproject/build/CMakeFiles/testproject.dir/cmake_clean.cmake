@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
   "CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
   "CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
+  "CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
   "CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
   "CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
   "CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"

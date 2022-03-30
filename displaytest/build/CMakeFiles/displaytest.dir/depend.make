@@ -596,6 +596,34 @@ CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq
 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: generated/pico_base/pico/config_autogen.h
 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: generated/pico_base/pico/version.h
 
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/boards/include/boards/pico.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/assert.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/config.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/error.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/types.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/include/hardware/claim.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: generated/pico_base/pico/config_autogen.h
+CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: generated/pico_base/pico/version.h
+
 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: /home/pi/pico/pico-sdk/src/boards/include/boards/pico.h
 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico.h
 CMakeFiles/displaytest.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/assert.h

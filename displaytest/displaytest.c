@@ -11,8 +11,14 @@
 #include "presetMessages.h"
 #include "../pico-examples/pio/ws2812/generated/ws2812.pio.h"
 
-static inline void put_pixel(uint32_t pixel_grb) {
-    pio_sm_put_blocking(pio0, 0, pixel_grb << 8u);
+
+#define RED 0, 0xff, 0
+#define GREEN 0xff, 0, 0
+#define YELLOWISH 0x80, 0x80, 0
+
+
+static inline void put_pixel(uint32_t PIXEL_PIN) {
+    pio_sm_put_blocking(pio0, 0, PIXEL_PIN << 8u);
 }
 
 static inline uint32_t urgb_u32(uint8_t r, uint8_t g, uint8_t b) {
@@ -22,11 +28,7 @@ static inline uint32_t urgb_u32(uint8_t r, uint8_t g, uint8_t b) {
             (uint32_t) (b);
 }
 
-// for (int i = 0; i < ELEMENTS(leds); i++){
-//     gpio_init(leds[i]);
-//     gpio_set_dir(leds[i],GPIO_OUT);
-//     gpio_put(leds[i],0);
-// }
+
 
 
 
@@ -43,6 +45,9 @@ typedef struct {
 
 void read_from_dht(dht_reading *result);
 
+void gpio_init(uint PIXEL_PIN);	
+//static void gpio_set_dir(uint PIXEL_PIN, bool out);
+
 
 int LCDpins[14] = {0,1,2,3,4,5,6,7,15,16,17,16,2};
 
@@ -51,14 +56,20 @@ int main(){
 
     uint8_t *buffer;
     gpio_init(DHT_PIN);
-    gpio_init(PIXEL_PIN);
+//    gpio_init(PIXEL_PIN);
+
     gpio_init(SET_PIN);
 
-    stdio_init_all();
+    //stdio_init_all();
+    PIO pio = pio0;
+    int sm = 0;
+    uint offset = pio_add_program(pio, &ws2812_program);
 
-    gpio_put(PIXEL_PIN,1);
+    ws2812_program_init(pio, sm, offset, PIXEL_PIN, 800000, 0);
 
-    put_pixel(urgb_u32(0xff, 0, 0xff));
+    // gpio_put(PIXEL_PIN,1);
+
+    put_pixel(urgb_u32(0xff, 0, 0));
 
 
     //Initialize all needed pins as defined in LCDpins, set them as
@@ -203,6 +214,6 @@ void read_from_dht(dht_reading *result) {
             result->temp_celsius = -result->temp_celsius;
         }
     } else {
-        LCDwriteMessage("Bad data");
+        //LCDwriteMessage("Bad data");
     }
 }

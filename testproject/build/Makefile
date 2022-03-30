@@ -544,6 +544,33 @@ home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
 	$(MAKE) -f CMakeFiles/testproject.dir/build.make CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
+home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj: home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+
+.PHONY : home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj
+
+# target to build an object file
+home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj:
+	$(MAKE) -f CMakeFiles/testproject.dir/build.make CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+
+home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i: home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+.PHONY : home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i
+
+# target to preprocess a source file
+home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i:
+	$(MAKE) -f CMakeFiles/testproject.dir/build.make CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+
+home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s: home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+
+.PHONY : home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s
+
+# target to generate assembly for a file
+home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s:
+	$(MAKE) -f CMakeFiles/testproject.dir/build.make CMakeFiles/testproject.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+
 home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 .PHONY : home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj
@@ -1273,6 +1300,9 @@ help:
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj"
+	@echo "... home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj"
+	@echo "... home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i"
+	@echo "... home/pi/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s"
