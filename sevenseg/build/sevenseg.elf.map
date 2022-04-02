@@ -1065,9 +1065,9 @@ Discarded input sections
                 0x00000000        0x8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_65.4736
                 0x00000000        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .text          0x00000000        0x0 /tmp/ccY8N9qd.o
- .data          0x00000000        0x0 /tmp/ccY8N9qd.o
- .bss           0x00000000        0x0 /tmp/ccY8N9qd.o
+ .text          0x00000000        0x0 /tmp/cc0Gh29K.o
+ .data          0x00000000        0x0 /tmp/cc0Gh29K.o
+ .bss           0x00000000        0x0 /tmp/cc0Gh29K.o
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
  .text          0x00000000       0x10 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-atexit.o)
@@ -1288,11 +1288,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /tmp/ccY8N9qd.o
+ .boot2         0x10000000      0x100 /tmp/cc0Gh29K.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x4400
+.text           0x10000100     0x4418
                 0x10000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1356,392 +1356,393 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
  .text          0x100002c4       0x98 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
  .text.setup    0x1000035c       0x6c CMakeFiles/sevenseg.dir/sevenseg.c.obj
                 0x1000035c                setup
- .text.main     0x100003c8      0x140 CMakeFiles/sevenseg.dir/sevenseg.c.obj
+ .text.main     0x100003c8      0x154 CMakeFiles/sevenseg.dir/sevenseg.c.obj
                 0x100003c8                main
  .text.gpio_set_function
-                0x10000508       0x30 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000508                gpio_set_function
+                0x1000051c       0x30 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x1000051c                gpio_set_function
  .text.gpio_init
-                0x10000538       0x16 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000538                gpio_init
- *fill*         0x1000054e        0x2 
+                0x1000054c       0x16 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x1000054c                gpio_init
+ *fill*         0x10000562        0x2 
  .text.hw_claim_lock
-                0x10000550       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000550                hw_claim_lock
+                0x10000564       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000564                hw_claim_lock
  .text.hw_claim_unlock
-                0x10000568       0x14 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000568                hw_claim_unlock
+                0x1000057c       0x14 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x1000057c                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x1000057c       0x32 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x1000057c                hw_claim_or_assert
- *fill*         0x100005ae        0x2 
+                0x10000590       0x32 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000590                hw_claim_or_assert
+ *fill*         0x100005c2        0x2 
  .text.running_on_fpga
-                0x100005b0       0x14 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x100005b0                running_on_fpga
+                0x100005c4       0x14 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x100005c4                running_on_fpga
  .text.spin_locks_reset
-                0x100005c4       0x20 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x100005c4                spin_locks_reset
+                0x100005d8       0x20 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x100005d8                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x100005e4       0x1c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x100005e4                next_striped_spin_lock_num
+                0x100005f8       0x1c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x100005f8                next_striped_spin_lock_num
  .text.uart_set_baudrate
-                0x10000600       0x5c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x10000600                uart_set_baudrate
+                0x10000614       0x5c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10000614                uart_set_baudrate
  .text.uart_set_translate_crlf
-                0x1000065c       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x1000065c                uart_set_translate_crlf
+                0x10000670       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10000670                uart_set_translate_crlf
  .text.uart_init
-                0x10000684       0x84 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
-                0x10000684                uart_init
+                0x10000698       0x84 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+                0x10000698                uart_init
  .text.alarm_pool_post_alloc_init
-                0x10000708       0x40 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000071c       0x40 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.sleep_until_callback
-                0x10000748       0x30 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000075c       0x30 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.timer_pool_entry_comparator
-                0x10000778       0x7c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000778                timer_pool_entry_comparator
+                0x1000078c       0x7c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000078c                timer_pool_entry_comparator
  .text.ph_add_child_node
-                0x100007f4       0xa4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000808       0xa4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.ph_merge_nodes
-                0x10000898       0x3a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100008d2        0x2 
+                0x100008ac       0x3a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100008e6        0x2 
  .text.add_alarm_under_lock
-                0x100008d4      0x180 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100008e8      0x180 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x10000a54      0x344 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000a68      0x344 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x10000d98       0x38 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000d98                alarm_pool_init_default
+                0x10000dac       0x38 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000dac                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x10000dd0       0x2c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000dd0                alarm_pool_get_default
+                0x10000de4       0x2c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000de4                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x10000dfc      0x168 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000dfc                alarm_pool_add_alarm_at
+                0x10000e10      0x168 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000e10                alarm_pool_add_alarm_at
  .text.sleep_until
-                0x10000f64       0xfc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10000f64                sleep_until
+                0x10000f78       0xfc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10000f78                sleep_until
  .text.sleep_us
-                0x10001060       0x54 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001060                sleep_us
+                0x10001074       0x54 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001074                sleep_us
  .text.sleep_ms
-                0x100010b4       0x14 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x100010b4                sleep_ms
+                0x100010c8       0x14 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100010c8                sleep_ms
  .text.hardware_alarm_irq_handler
-                0x100010c8       0x8c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100010dc       0x8c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10001154       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001154                hardware_alarm_claim
+                0x10001168       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001168                hardware_alarm_claim
  .text.time_us_64
-                0x1000116c       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x1000116c                time_us_64
+                0x10001180       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001180                time_us_64
  .text.busy_wait_until
-                0x10001184       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001184                busy_wait_until
+                0x10001198       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001198                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x100011ac       0x90 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x100011ac                hardware_alarm_set_callback
+                0x100011c0       0x90 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x100011c0                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x1000123c       0xe8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x1000123c                hardware_alarm_set_target
+                0x10001250       0xe8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001250                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10001324       0x40 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001324                hardware_alarm_cancel
+                0x10001338       0x40 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001338                hardware_alarm_cancel
  .text.lock_init
-                0x10001364       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x10001364                lock_init
+                0x10001378       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x10001378                lock_init
  .text.mutex_init
-                0x10001374       0x1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10001374                mutex_init
+                0x10001388       0x1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10001388                mutex_init
  .text.recursive_mutex_init
-                0x1000138e       0x1e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x1000138e                recursive_mutex_init
+                0x100013a2       0x1e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x100013a2                recursive_mutex_init
  .text.ph_add_child_node
-                0x100013ac       0xa4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100013c0       0xa4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_merge_nodes
-                0x10001450       0x3a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x1000148a        0x2 
+                0x10001464       0x3a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x1000149e        0x2 
  .text.ph_clear
-                0x1000148c       0x70 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000148c                ph_clear
+                0x100014a0       0x70 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100014a0                ph_clear
  .text.ph_post_alloc_init
-                0x100014fc        0xe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100014fc                ph_post_alloc_init
- *fill*         0x1000150a        0x2 
+                0x10001510        0xe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001510                ph_post_alloc_init
+ *fill*         0x1000151e        0x2 
  .text.ph_merge_two_pass
-                0x1000150c       0xac CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000150c                ph_merge_two_pass
+                0x10001520       0xac CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001520                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x100015b8      0x108 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100015cc      0x108 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x100016c0       0x14 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100016c0                ph_remove_head
+                0x100016d4       0x14 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100016d4                ph_remove_head
  .text.ph_remove_and_free_node
-                0x100016d4       0xf8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x100016d4                ph_remove_and_free_node
- .text._exit    0x100017cc        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100017cc                _exit
- .text.exit     0x100017d0        0x6 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100017d0                exit
- *fill*         0x100017d6        0x2 
+                0x100016e8       0xf8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100016e8                ph_remove_and_free_node
+ .text._exit    0x100017e0        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100017e0                _exit
+ .text.exit     0x100017e4        0x6 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100017e4                exit
+ *fill*         0x100017ea        0x2 
  .text.__assert_func
-                0x100017d8       0x3c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x100017d8                __assert_func
+                0x100017ec       0x3c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100017ec                __assert_func
  .text.runtime_init
-                0x10001814       0xf8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10001814                runtime_init
- .text.panic    0x1000190c       0x30 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x1000190c                panic
+                0x10001828       0xf8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001828                runtime_init
+ .text.panic    0x10001920       0x30 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10001920                panic
  .text.clock_configure
-                0x1000193c       0xfc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x1000193c                clock_configure
+                0x10001950       0xfc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10001950                clock_configure
  .text.clocks_init
-                0x10001a38      0x100 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10001a38                clocks_init
+                0x10001a4c      0x100 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10001a4c                clocks_init
  .text.clock_get_hz
-                0x10001b38        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10001b38                clock_get_hz
+                0x10001b4c        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10001b4c                clock_get_hz
  .text.set_raw_irq_handler_and_unlock
-                0x10001b44       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001b58       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.make_branch
-                0x10001b6c       0x34 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001b80       0x34 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.insert_branch_and_link
-                0x10001ba0       0x40 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001bb4       0x40 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_is_enabled
-                0x10001be0       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001be0                irq_is_enabled
+                0x10001bf4       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001bf4                irq_is_enabled
  .text.irq_set_mask_enabled
-                0x10001bf8       0x20 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001bf8                irq_set_mask_enabled
+                0x10001c0c       0x20 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001c0c                irq_set_mask_enabled
  .text.irq_set_enabled
-                0x10001c18        0xe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001c18                irq_set_enabled
- *fill*         0x10001c26        0x2 
+                0x10001c2c        0xe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001c2c                irq_set_enabled
+ *fill*         0x10001c3a        0x2 
  .text.irq_get_vtable_handler
-                0x10001c28       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001c28                irq_get_vtable_handler
+                0x10001c3c       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001c3c                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10001c38       0x54 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001c38                irq_set_exclusive_handler
+                0x10001c4c       0x54 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001c4c                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x10001c8c      0x1b4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001c8c                irq_remove_handler
+                0x10001ca0      0x1b4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001ca0                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10001e40       0xf0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001e40                irq_add_tail_to_free_list
+                0x10001e54       0xf0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001e54                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x10001f30       0x1c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10001f30                irq_init_priorities
+                0x10001f44       0x1c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10001f44                irq_init_priorities
  .text.pll_init
-                0x10001f4c      0x118 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x10001f4c                pll_init
+                0x10001f60      0x118 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x10001f60                pll_init
  .text.watchdog_start_tick
-                0x10002064       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10002064                watchdog_start_tick
+                0x10002078       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002078                watchdog_start_tick
  .text.xosc_init
-                0x10002074       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x10002074                xosc_init
+                0x10002088       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x10002088                xosc_init
  .text._out_null
-                0x1000209c        0x2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100020b0        0x2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x1000209e        0xe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._atoi    0x100020ac       0x24 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100020b2        0xe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._atoi    0x100020c0       0x24 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x100020d0       0x8c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100020e4       0x8c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x1000215c      0x112 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002170      0x112 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long
-                0x1000226e       0x9e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002282       0x9e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long_long
-                0x1000230c       0xe2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x100023ee        0x2 
- .text._etoa    0x100023f0      0x424 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x10002814      0x340 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002320       0xe2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10002402        0x2 
+ .text._etoa    0x10002404      0x424 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x10002828      0x340 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x10002b54      0x640 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002b68      0x640 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x10003194       0x20 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10003194                vfctprintf
- .text          0x100031b4       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x100031a8       0x20 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100031a8                vfctprintf
+ .text          0x100031c8       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x100031c4       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x100031c4                rom_func_lookup
+                0x100031d8       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100031d8                rom_func_lookup
  .text.rom_data_lookup
-                0x100031d4       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x100031d4                rom_data_lookup
+                0x100031e8       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100031e8                rom_data_lookup
  .text.rom_funcs_lookup
-                0x100031e4       0x36 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x100031e4                rom_funcs_lookup
- *fill*         0x1000321a        0x2 
+                0x100031f8       0x36 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100031f8                rom_funcs_lookup
+ *fill*         0x1000322e        0x2 
  .text.__wrap___aeabi_idiv
-                0x1000321c       0x50 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x1000321c                __wrap___aeabi_idivmod
-                0x1000321c                divmod_s32s32
-                0x1000321c                div_s32s32
-                0x1000321c                __wrap___aeabi_idiv
-                0x10003224                divmod_s32s32_unsafe
-                0x10003250                divmod_s32s32_savestate
+                0x10003230       0x50 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003230                __wrap___aeabi_idivmod
+                0x10003230                divmod_s32s32
+                0x10003230                div_s32s32
+                0x10003230                __wrap___aeabi_idiv
+                0x10003238                divmod_s32s32_unsafe
+                0x10003264                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x1000326c       0x4c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x1000326c                __wrap___aeabi_uidiv
-                0x1000326c                __wrap___aeabi_uidivmod
-                0x1000326c                div_u32u32
-                0x1000326c                divmod_u32u32
-                0x10003274                divmod_u32u32_unsafe
-                0x1000329c                divmod_u32u32_savestate
+                0x10003280       0x4c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x10003280                __wrap___aeabi_uidiv
+                0x10003280                __wrap___aeabi_uidivmod
+                0x10003280                div_u32u32
+                0x10003280                divmod_u32u32
+                0x10003288                divmod_u32u32_unsafe
+                0x100032b0                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x100032b8      0x434 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x100032b8                div_s64s64
-                0x100032b8                divmod_s64s64
-                0x100032b8                __wrap___aeabi_ldivmod
-                0x100032f0                div_u64u64
-                0x100032f0                divmod_u64u64
-                0x100032f0                __wrap___aeabi_uldivmod
-                0x10003300                divmod_u64u64_savestate
-                0x10003328                divmod_s64s64_unsafe
-                0x100033b0                divmod_u64u64_unsafe
+                0x100032cc      0x434 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x100032cc                div_s64s64
+                0x100032cc                divmod_s64s64
+                0x100032cc                __wrap___aeabi_ldivmod
+                0x10003304                div_u64u64
+                0x10003304                divmod_u64u64
+                0x10003304                __wrap___aeabi_uldivmod
+                0x10003314                divmod_u64u64_savestate
+                0x1000333c                divmod_s64s64_unsafe
+                0x100033c4                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x100036ec       0x80 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100036ec                __wrap___aeabi_drsub
-                0x100036f2                __wrap___aeabi_dsub
-                0x10003704                __wrap___aeabi_dadd
-                0x10003716                __wrap___aeabi_ddiv
-                0x10003752                __wrap___aeabi_dmul
+                0x10003700       0x80 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003700                __wrap___aeabi_drsub
+                0x10003706                __wrap___aeabi_dsub
+                0x10003718                __wrap___aeabi_dadd
+                0x1000372a                __wrap___aeabi_ddiv
+                0x10003766                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x1000376c       0x6c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000376c                __wrap___aeabi_cdrcmple
-                0x1000377c                __wrap___aeabi_cdcmple
-                0x1000377c                __wrap___aeabi_cdcmpeq
+                0x10003780       0x6c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003780                __wrap___aeabi_cdrcmple
+                0x10003790                __wrap___aeabi_cdcmple
+                0x10003790                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x100037d8        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100037d8                __wrap___aeabi_dcmplt
+                0x100037ec        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100037ec                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x100037e4       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100037e4                __wrap___aeabi_dcmple
+                0x100037f8       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100037f8                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x100037f4       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100037f4                __wrap___aeabi_dcmpge
+                0x10003808       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003808                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x10003804        0xa CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003804                __wrap___aeabi_dcmpgt
+                0x10003818        0xa CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003818                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x1000380e       0x1c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000380e                __wrap___aeabi_dcmpun
- *fill*         0x1000382a        0x2 
+                0x10003822       0x1c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003822                __wrap___aeabi_dcmpun
+ *fill*         0x1000383e        0x2 
  .text.__wrap___aeabi_i2d
-                0x1000382c       0x38 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000382c                __wrap___aeabi_ui2d
-                0x10003834                __wrap___aeabi_i2d
+                0x10003840       0x38 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003840                __wrap___aeabi_ui2d
+                0x10003848                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x10003864       0x48 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003864                __wrap___aeabi_d2iz
-                0x10003864                double2int_z
+                0x10003878       0x48 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003878                __wrap___aeabi_d2iz
+                0x10003878                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x100038ac       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100038ac                double2uint
-                0x100038ac                __wrap___aeabi_d2uiz
+                0x100038c0       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100038c0                double2uint
+                0x100038c0                __wrap___aeabi_d2uiz
  .text.__aeabi_double_init
-                0x100038c4       0xc8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x100038c4                __aeabi_double_init
+                0x100038d8       0xc8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x100038d8                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x1000398c       0x34 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x1000398c                double_table_shim_on_use_helper
+                0x100039a0       0x34 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100039a0                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x100039c0       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100039c0                drsub_shim
-                0x100039c6                dsub_shim
+                0x100039d4       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100039d4                drsub_shim
+                0x100039da                dsub_shim
  .text.dadd_shim
-                0x100039d0      0x15c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100039d0                dadd_shim
+                0x100039e4      0x15c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x100039e4                dadd_shim
  .text.dmul_shim
-                0x10003b2c      0x15c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003b2c                dmul_shim
+                0x10003b40      0x15c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003b40                dmul_shim
  .text.ddiv_shim
-                0x10003c88      0x1b0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003c88                ddiv_shim
+                0x10003c9c      0x1b0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003c9c                ddiv_shim
  .text.double2uint_shim
-                0x10003e38        0xe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003e38                double2uint_shim
-                0x10003e3a                double2ufix_shim
- *fill*         0x10003e46        0x2 
+                0x10003e4c        0xe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003e4c                double2uint_shim
+                0x10003e4e                double2ufix_shim
+ *fill*         0x10003e5a        0x2 
  .text.double2uint64_shim
-                0x10003e48       0x70 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003e48                double2uint64_shim
-                0x10003e4a                double2ufix64_shim
-                0x10003e6a                d2fix_a
+                0x10003e5c       0x70 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003e5c                double2uint64_shim
+                0x10003e5e                double2ufix64_shim
+                0x10003e7e                d2fix_a
  .text.dunpacks
-                0x10003eb8       0x3c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003eb8                dunpacks
+                0x10003ecc       0x3c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003ecc                dunpacks
  .text.__aeabi_lmul
-                0x10003ef4       0x32 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10003ef4                __wrap___aeabi_lmul
- *fill*         0x10003f26        0x2 
+                0x10003f08       0x32 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x10003f08                __wrap___aeabi_lmul
+ *fill*         0x10003f3a        0x2 
  .text.__aeabi_float_init
-                0x10003f28       0xfc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x10003f28                __aeabi_float_init
+                0x10003f3c       0xfc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10003f3c                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x10004024       0x34 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x10004024                float_table_shim_on_use_helper
- .text          0x10004058       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10004058                __aeabi_mem_init
- .text.memset   0x10004068        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10004068                __wrap_memset
- .text.memcpy   0x10004074        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x10004074                __wrap___aeabi_memcpy
-                0x10004074                __wrap_memcpy
+                0x10004038       0x34 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x10004038                float_table_shim_on_use_helper
+ .text          0x1000406c       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x1000406c                __aeabi_mem_init
+ .text.memset   0x1000407c        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x1000407c                __wrap_memset
+ .text.memcpy   0x10004088        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x10004088                __wrap___aeabi_memcpy
+                0x10004088                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x10004080        0xe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x1000408e        0x2 
+                0x10004094        0xe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x100040a2        0x2 
  .text.stdio_out_chars_crlf
-                0x10004090       0x80 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100040a4       0x80 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_stack_buffer_flush
-                0x10004110       0x44 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004124       0x44 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x10004154       0x20 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004168       0x20 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_begin
-                0x10004174       0x30 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004174                stdout_serialize_begin
+                0x10004188       0x30 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004188                stdout_serialize_begin
  .text.stdout_serialize_end
-                0x100041a4       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100041a4                stdout_serialize_end
+                0x100041b8       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100041b8                stdout_serialize_end
  .text.stdio_put_string
-                0x100041b4       0x94 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100041c8       0x94 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_set_driver_enabled
-                0x10004248       0x38 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004248                stdio_set_driver_enabled
+                0x1000425c       0x38 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000425c                stdio_set_driver_enabled
  .text.stdio_flush
-                0x10004280       0x20 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004280                stdio_flush
+                0x10004294       0x20 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004294                stdio_flush
  .text.__wrap_puts
-                0x100042a0       0x1e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100042a0                __wrap_puts
- *fill*         0x100042be        0x2 
+                0x100042b4       0x1e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100042b4                __wrap_puts
+ *fill*         0x100042d2        0x2 
  .text.__wrap_vprintf
-                0x100042c0       0x44 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100042c0                __wrap_vprintf
+                0x100042d4       0x44 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100042d4                __wrap_vprintf
  .text.__wrap_printf
-                0x10004304       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004304                __wrap_printf
+                0x10004318       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004318                __wrap_printf
  .text.stdio_init_all
-                0x1000431c        0x8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x1000431c                stdio_init_all
+                0x10004330        0x8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004330                stdio_init_all
  .text.stdio_uart_out_chars
-                0x10004324       0x70 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004338       0x70 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x10004394       0x50 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10004394                stdio_uart_in_chars
+                0x100043a8       0x50 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100043a8                stdio_uart_in_chars
  .text.stdio_uart_init_full
-                0x100043e4       0x3c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x100043e4                stdio_uart_init_full
+                0x100043f8       0x3c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100043f8                stdio_uart_init_full
  .text.stdio_uart_init
-                0x10004420       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10004420                stdio_uart_init
- .text          0x10004448       0x64 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
-                0x10004448                strlen
+                0x10004434       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004434                stdio_uart_init
+ .text          0x1000445c       0x64 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+                0x1000445c                strlen
  *(.fini)
- .fini          0x100044ac        0x4 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
-                0x100044ac                _fini
- .fini.__stub   0x100044b0       0x50 linker stubs
+ .fini          0x100044c0        0x4 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
+                0x100044c0                _fini
+ *fill*         0x100044c4        0x4 
+ .fini.__stub   0x100044c8       0x50 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -1753,248 +1754,248 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x10004500        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
-                0x10004500                . = ALIGN (0x4)
+ .eh_frame      0x10004518        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+                0x10004518                . = ALIGN (0x4)
 
-.glue_7         0x10004500        0x0
- .glue_7        0x10004500        0x0 linker stubs
+.glue_7         0x10004518        0x0
+ .glue_7        0x10004518        0x0 linker stubs
 
-.glue_7t        0x10004500        0x0
- .glue_7t       0x10004500        0x0 linker stubs
+.glue_7t        0x10004518        0x0
+ .glue_7t       0x10004518        0x0 linker stubs
 
-.vfp11_veneer   0x10004500        0x0
- .vfp11_veneer  0x10004500        0x0 linker stubs
+.vfp11_veneer   0x10004518        0x0
+ .vfp11_veneer  0x10004518        0x0 linker stubs
 
-.v4_bx          0x10004500        0x0
- .v4_bx         0x10004500        0x0 linker stubs
+.v4_bx          0x10004518        0x0
+ .v4_bx         0x10004518        0x0 linker stubs
 
-.iplt           0x10004500        0x0
- .iplt          0x10004500        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.iplt           0x10004518        0x0
+ .iplt          0x10004518        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
-.rodata         0x10004500      0xe74
+.rodata         0x10004518      0xe74
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
- .rodata        0x10004500       0x55 CMakeFiles/sevenseg.dir/sevenseg.c.obj
- *fill*         0x10004555        0x3 
- .rodata.__func__.5648
-                0x10004558       0x15 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .rodata        0x10004518       0x55 CMakeFiles/sevenseg.dir/sevenseg.c.obj
  *fill*         0x1000456d        0x3 
+ .rodata.__func__.5648
+                0x10004570       0x15 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10004585        0x3 
  .rodata.__func__.5954
-                0x10004570        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10004588        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .rodata.__func__.5961
-                0x1000457c       0x12 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1000458e        0x2 
+                0x10004594       0x12 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100045a6        0x2 
  .rodata.__func__.5977
-                0x10004590        0xf CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1000459f        0x1 
+                0x100045a8        0xf CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100045b7        0x1 
  .rodata.__func__.5999
-                0x100045a0        0xd CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100045ad        0x3 
+                0x100045b8        0xd CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100045c5        0x3 
  .rodata.__func__.6223
-                0x100045b0        0xa CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100045ba        0x2 
+                0x100045c8        0xa CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100045d2        0x2 
  .rodata.__func__.6228
-                0x100045bc       0x12 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100045ce        0x2 
+                0x100045d4       0x12 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100045e6        0x2 
  .rodata.__func__.6243
-                0x100045d0       0x17 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100045e7        0x1 
+                0x100045e8       0x17 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100045ff        0x1 
  .rodata.__func__.6254
-                0x100045e8       0x15 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100045fd        0x3 
+                0x10004600       0x15 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10004615        0x3 
  .rodata.__func__.6271
-                0x10004600       0x1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1000461a        0x2 
+                0x10004618       0x1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10004632        0x2 
  .rodata.add_alarm_under_lock.str1.4
-                0x1000461c       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10004634       0x28 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
                                  0x2b (size before relaxing)
  .rodata.alarm_pool_alarm_callback.str1.4
-                0x10004644       0xe2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10004726        0x2 
+                0x1000465c       0xe2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x1000473e        0x2 
  .rodata.alarm_pool_dump_key.str1.4
-                0x10004728       0x33 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1000475b        0x1 
+                0x10004740       0x33 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10004773        0x1 
  .rodata.alarm_pool_get_default.str1.4
-                0x1000475c       0x21 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1000477d        0x3 
+                0x10004774       0x21 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10004795        0x3 
  .rodata.ph_add_child_node.str1.4
-                0x10004780       0x92 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x10004812        0x2 
+                0x10004798       0x92 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x1000482a        0x2 
  .rodata.repeating_timer_callback.str1.4
-                0x10004814       0x47 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x1000485b        0x1 
+                0x1000482c       0x47 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x10004873        0x1 
  .rodata.sleep_until.str1.4
-                0x1000485c       0x4d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- *fill*         0x100048a9        0x3 
+                0x10004874       0x4d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ *fill*         0x100048c1        0x3 
  .rodata.__func__.4519
-                0x100048ac       0x1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x100048c6        0x2 
+                0x100048c4       0x1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x100048de        0x2 
  .rodata.hardware_alarm_claim.str1.4
-                0x100048c8       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x100048ea        0x2 
+                0x100048e0       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10004902        0x2 
  .rodata.hardware_alarm_set_target.str1.4
-                0x100048ec       0x61 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x1000494d        0x3 
+                0x10004904       0x61 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10004965        0x3 
  .rodata.__func__.4660
-                0x10004950        0xb CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- *fill*         0x1000495b        0x1 
+                0x10004968        0xb CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ *fill*         0x10004973        0x1 
  .rodata.str1.4
-                0x1000495c       0x85 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10004974       0x85 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
                                  0xe5 (size before relaxing)
- *fill*         0x100049e1        0x3 
+ *fill*         0x100049f9        0x3 
  .rodata.__func__.5655
-                0x100049e4        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x100049fc        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.__func__.5662
-                0x100049f0       0x12 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10004a02        0x2 
+                0x10004a08       0x12 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10004a1a        0x2 
  .rodata.__func__.5748
-                0x10004a04       0x13 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10004a17        0x1 
+                0x10004a1c       0x13 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10004a2f        0x1 
  .rodata.__func__.5766
-                0x10004a18       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10004a30       0x18 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x10004a30       0x92 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10004a48       0x92 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.ph_remove_and_free_node.str1.4
-                0x10004a30       0x26 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- *fill*         0x10004a56        0x2 
+                0x10004a48       0x26 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ *fill*         0x10004a6e        0x2 
  .rodata.ph_remove_any_head.str1.4
-                0x10004a58       0x88 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10004a70       0x88 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .rodata.__assert_func.str1.4
-                0x10004ae0       0x3f CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10004af8       0x3f CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                  0x43 (size before relaxing)
- *fill*         0x10004b1f        0x1 
+ *fill*         0x10004b37        0x1 
  .rodata.__func__.5763
-                0x10004b20        0xd CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10004b2d        0x3 
+                0x10004b38        0xd CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10004b45        0x3 
  .rodata.panic.str1.4
-                0x10004b30       0x12 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10004b42        0x2 
+                0x10004b48       0x12 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10004b5a        0x2 
  .rodata.runtime_init.str1.4
-                0x10004b44       0x5d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x10004ba1        0x3 
+                0x10004b5c       0x5d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x10004bb9        0x3 
  .rodata.__func__.4648
-                0x10004ba4       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10004bbc       0x10 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.clock_configure.str1.4
-                0x10004bb4       0x53 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- *fill*         0x10004c07        0x1 
+                0x10004bcc       0x53 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ *fill*         0x10004c1f        0x1 
  .rodata.__func__.4693
-                0x10004c08       0x1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004c22        0x2 
+                0x10004c20       0x1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004c3a        0x2 
  .rodata.__func__.4707
-                0x10004c24        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10004c3c        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.__func__.4715
-                0x10004c30       0x17 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004c47        0x1 
+                0x10004c48       0x17 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004c5f        0x1 
  .rodata.__func__.4719
-                0x10004c48        0xf CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004c57        0x1 
+                0x10004c60        0xf CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004c6f        0x1 
  .rodata.__func__.4758
-                0x10004c58       0x13 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004c6b        0x1 
+                0x10004c70       0x13 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004c83        0x1 
  .rodata.__func__.4781
-                0x10004c6c       0x1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004c86        0x2 
+                0x10004c84       0x1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004c9e        0x2 
  .rodata.irq_add_shared_handler.str1.4
-                0x10004c88       0xd9 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004d61        0x3 
+                0x10004ca0       0xd9 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004d79        0x3 
  .rodata.irq_add_tail_to_free_list.str1.4
-                0x10004d64       0x32 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10004d7c       0x32 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
                                  0x3a (size before relaxing)
- *fill*         0x10004d96        0x2 
+ *fill*         0x10004dae        0x2 
  .rodata.irq_remove_handler.str1.4
-                0x10004d98       0x2a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004dc2        0x2 
+                0x10004db0       0x2a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004dda        0x2 
  .rodata.irq_set_exclusive_handler.str1.4
-                0x10004dc4       0x36 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004dfa        0x2 
+                0x10004ddc       0x36 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004e12        0x2 
  .rodata.make_branch.str1.4
-                0x10004dfc       0x49 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10004e45        0x3 
+                0x10004e14       0x49 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10004e5d        0x3 
  .rodata.__func__.4368
-                0x10004e48        0x9 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x10004e51        0x3 
+                0x10004e60        0x9 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x10004e69        0x3 
  .rodata.pll_init.str1.4
-                0x10004e54       0xd7 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- *fill*         0x10004f2b        0x1 
+                0x10004e6c       0xd7 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ *fill*         0x10004f43        0x1 
  .rodata._vsnprintf
-                0x10004f2c      0x1e0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10004f44      0x1e0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata._ftoa.str1.4
-                0x1000510c       0x15 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x10005121        0x7 
+                0x10005124       0x15 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x10005139        0x7 
  .rodata.pow10.5369
-                0x10005128       0x50 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10005140       0x50 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__aeabi_double_init.str1.4
-                0x10005178       0xa4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10005190       0xa4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__func__.4679
-                0x1000521c       0x14 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10005234       0x14 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__aeabi_float_init.str1.4
-                0x10005230       0x76 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10005248       0x76 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                  0x7a (size before relaxing)
- *fill*         0x100052a6        0x2 
+ *fill*         0x100052be        0x2 
  .rodata.__func__.4680
-                0x100052a8       0x13 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- *fill*         0x100052bb        0x1 
+                0x100052c0       0x13 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ *fill*         0x100052d3        0x1 
  .rodata.__bi_44
-                0x100052bc        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .rodata.__bi_56
-                0x100052c8        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .rodata.__bi_75
                 0x100052d4        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .rodata.__bi_81
+ .rodata.__bi_56
                 0x100052e0        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .rodata.__bi_75
+                0x100052ec        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .rodata.__bi_81
+                0x100052f8        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.str1.4
-                0x100052ec       0x44 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005304       0x44 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.5998
-                0x10005330        0x2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10005332        0x2 
+                0x10005348        0x2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x1000534a        0x2 
  .rodata.__bi_28.4712
-                0x10005334        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x1000534c        0xc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_29.4716
-                0x10005340        0x8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005358        0x8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.str1.4
-                0x10005348       0x2c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10005374                . = ALIGN (0x4)
+                0x10005360       0x2c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x1000538c                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10005374                . = ALIGN (0x4)
+                0x1000538c                . = ALIGN (0x4)
 
-.rel.dyn        0x10005374        0x0
- .rel.iplt      0x10005374        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.rel.dyn        0x1000538c        0x0
+ .rel.iplt      0x1000538c        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10005374                __exidx_start = .
+                0x1000538c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10005374                __exidx_end = .
-                0x10005374                . = ALIGN (0x4)
-                0x10005374                __binary_info_start = .
+                0x1000538c                __exidx_end = .
+                0x1000538c                . = ALIGN (0x4)
+                0x1000538c                __binary_info_start = .
 
-.binary_info    0x10005374       0x28
+.binary_info    0x1000538c       0x28
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr22
-                0x10005374        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .binary_info.keep.__bi_ptr30
-                0x10005378        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .binary_info.keep.__bi_ptr38
-                0x1000537c        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .binary_info.keep.__bi_ptr44
-                0x10005380        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .binary_info.keep.__bi_ptr50
-                0x10005384        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .binary_info.keep.__bi_ptr56
-                0x10005388        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .binary_info.keep.__bi_ptr75
                 0x1000538c        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .binary_info.keep.__bi_ptr81
+ .binary_info.keep.__bi_ptr30
                 0x10005390        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .binary_info.keep.__bi_ptr38
+                0x10005394        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .binary_info.keep.__bi_ptr44
+                0x10005398        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .binary_info.keep.__bi_ptr50
+                0x1000539c        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .binary_info.keep.__bi_ptr56
+                0x100053a0        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .binary_info.keep.__bi_ptr75
+                0x100053a4        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .binary_info.keep.__bi_ptr81
+                0x100053a8        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr28
-                0x10005394        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100053ac        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr29
-                0x10005398        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x1000539c                __binary_info_end = .
-                0x1000539c                . = ALIGN (0x4)
-                0x1000539c                __etext = .
+                0x100053b0        0x4 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100053b4                __binary_info_end = .
+                0x100053b4                . = ALIGN (0x4)
+                0x100053b4                __etext = .
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2003,7 +2004,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
                 0x20000000       0xc0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0x1c0 load address 0x1000539c
+.data           0x200000c0      0x1c0 load address 0x100053b4
                 0x200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2085,33 +2086,33 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
                 0x20000280                __data_end__ = .
 
 .tm_clone_table
-                0x20000280        0x0 load address 0x1000555c
+                0x20000280        0x0 load address 0x10005574
  .tm_clone_table
                 0x20000280        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
  .tm_clone_table
                 0x20000280        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtend.o
 
-.igot.plt       0x20000280        0x0 load address 0x1000555c
+.igot.plt       0x20000280        0x0 load address 0x10005574
  .igot.plt      0x20000280        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
 .uninitialized_data
-                0x20000280        0x0 load address 0x1000555c
+                0x20000280        0x0 load address 0x10005574
                 0x20000280                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x1000555c
+.scratch_x      0x20040000        0x0 load address 0x10005574
                 0x20040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                . = ALIGN (0x4)
                 0x20040000                __scratch_x_end__ = .
-                0x1000555c                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10005574                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x1000555c
+.scratch_y      0x20041000        0x0 load address 0x10005574
                 0x20041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                . = ALIGN (0x4)
                 0x20041000                __scratch_y_end__ = .
-                0x1000555c                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10005574                __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x20000280      0x3d0
                 0x20000280                . = ALIGN (0x4)
@@ -2170,8 +2171,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x1000555c        0x0
-                0x1000555c                __flash_binary_end = .
+.flash_end      0x10005574        0x0
+                0x10005574                __flash_binary_end = .
                 0x20040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2226,7 +2227,7 @@ LOAD CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_
 LOAD CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 LOAD CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-LOAD /tmp/ccY8N9qd.o
+LOAD /tmp/cc0Gh29K.o
 LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libm.a
 START GROUP
@@ -2318,7 +2319,7 @@ OUTPUT(sevenseg.elf elf32-littlearm)
  .ARM.attributes
                 0x0000061c       0x32 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .ARM.attributes
-                0x0000064e       0x22 /tmp/ccY8N9qd.o
+                0x0000064e       0x22 /tmp/cc0Gh29K.o
  .ARM.attributes
                 0x00000670       0x1e /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -2357,43 +2358,43 @@ OUTPUT(sevenseg.elf elf32-littlearm)
                                  0x58 (size before relaxing)
  .comment       0x000000ae       0x58 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtend.o
 
-.debug_info     0x00000000    0x1678a
- .debug_info    0x00000000     0x1345 CMakeFiles/sevenseg.dir/sevenseg.c.obj
- .debug_info    0x00001345     0x1194 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x000024d9      0x5d8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_info    0x00002ab1      0x1c6 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_info    0x00002c77      0x508 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x0000317f      0xa11 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_info    0x00003b90     0x3aa1 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- .debug_info    0x00007631      0xe63 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x00008494      0x1e8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x0000867c     0x1a8a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_info    0x0000a106     0x1842 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_info    0x0000b948     0x11ce CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x0000cb16      0xd7a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x0000d890     0x15fe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x0000ee8e       0x26 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
- .debug_info    0x0000eeb4      0x464 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x0000f318      0xc5d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_info    0x0000ff75      0x1b2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x00010127     0x1d4b CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x00011e72       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_info    0x00011e94      0x23e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x000120d2       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_info    0x000120f4       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_info    0x00012116      0xab9 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_info    0x00012bcf       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_info    0x00012bf1       0x26 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_info    0x00012c17       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_info    0x00012c39      0xace CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_info    0x00013707       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_info    0x00013729       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_info    0x0001374b       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_info    0x0001376d      0x2fa CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_info    0x00013a67     0x18f5 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x0001535c      0xb26 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_info    0x00015e82       0x26 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
- .debug_info    0x00015ea8      0x8e2 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+.debug_info     0x00000000    0x1679e
+ .debug_info    0x00000000     0x1359 CMakeFiles/sevenseg.dir/sevenseg.c.obj
+ .debug_info    0x00001359     0x1194 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x000024ed      0x5d8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_info    0x00002ac5      0x1c6 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_info    0x00002c8b      0x508 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x00003193      0xa11 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_info    0x00003ba4     0x3aa1 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_info    0x00007645      0xe63 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x000084a8      0x1e8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x00008690     0x1a8a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x0000a11a     0x1842 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_info    0x0000b95c     0x11ce CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x0000cb2a      0xd7a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x0000d8a4     0x15fe CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x0000eea2       0x26 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+ .debug_info    0x0000eec8      0x464 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x0000f32c      0xc5d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_info    0x0000ff89      0x1b2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x0001013b     0x1d4b CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x00011e86       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_info    0x00011ea8      0x23e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x000120e6       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_info    0x00012108       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_info    0x0001212a      0xab9 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_info    0x00012be3       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_info    0x00012c05       0x26 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_info    0x00012c2b       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_info    0x00012c4d      0xace CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_info    0x0001371b       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_info    0x0001373d       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_info    0x0001375f       0x22 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_info    0x00013781      0x2fa CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_info    0x00013a7b     0x18f5 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x00015370      0xb26 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_info    0x00015e96       0x26 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00015ebc      0x8e2 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
 
 .debug_abbrev   0x00000000     0x4457
  .debug_abbrev  0x00000000      0x37c CMakeFiles/sevenseg.dir/sevenseg.c.obj
@@ -2433,31 +2434,31 @@ OUTPUT(sevenseg.elf elf32-littlearm)
  .debug_abbrev  0x0000428b       0x14 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
  .debug_abbrev  0x0000429f      0x1b8 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
 
-.debug_loc      0x00000000     0xac5e
- .debug_loc     0x00000000      0x494 CMakeFiles/sevenseg.dir/sevenseg.c.obj
- .debug_loc     0x00000494      0xd1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_loc     0x000011ae      0x371 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_loc     0x0000151f       0xcf CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_loc     0x000015ee      0x196 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_loc     0x00001784      0x457 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_loc     0x00001bdb     0x235a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- .debug_loc     0x00003f35      0x59d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_loc     0x000044d2       0x56 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_loc     0x00004528     0x100d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_loc     0x00005535      0xfd7 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_loc     0x0000650c      0x2e3 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_loc     0x000067ef      0x66e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_loc     0x00006e5d      0xc78 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_loc     0x00007ad5      0x28f CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_loc     0x00007d64      0x252 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_loc     0x00007fb6       0x35 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_loc     0x00007feb     0x1b4a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_loc     0x00009b35      0x171 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_loc     0x00009ca6       0x4f CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_loc     0x00009cf5       0x65 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_loc     0x00009d5a      0xa2c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_loc     0x0000a786      0x444 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_loc     0x0000abca       0x94 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+.debug_loc      0x00000000     0xacf1
+ .debug_loc     0x00000000      0x527 CMakeFiles/sevenseg.dir/sevenseg.c.obj
+ .debug_loc     0x00000527      0xd1a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_loc     0x00001241      0x371 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_loc     0x000015b2       0xcf CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_loc     0x00001681      0x196 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_loc     0x00001817      0x457 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_loc     0x00001c6e     0x235a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_loc     0x00003fc8      0x59d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_loc     0x00004565       0x56 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_loc     0x000045bb     0x100d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_loc     0x000055c8      0xfd7 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_loc     0x0000659f      0x2e3 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_loc     0x00006882      0x66e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_loc     0x00006ef0      0xc78 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_loc     0x00007b68      0x28f CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_loc     0x00007df7      0x252 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_loc     0x00008049       0x35 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_loc     0x0000807e     0x1b4a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_loc     0x00009bc8      0x171 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_loc     0x00009d39       0x4f CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_loc     0x00009d88       0x65 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_loc     0x00009ded      0xa2c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_loc     0x0000a819      0x444 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_loc     0x0000ac5d       0x94 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
 
 .debug_aranges  0x00000000      0xdc8
  .debug_aranges
@@ -2566,116 +2567,116 @@ OUTPUT(sevenseg.elf elf32-littlearm)
  .debug_ranges  0x000016c0      0x198 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .debug_ranges  0x00001858       0xd8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
-.debug_line     0x00000000     0x7d00
- .debug_line    0x00000000      0x486 CMakeFiles/sevenseg.dir/sevenseg.c.obj
- .debug_line    0x00000486      0x594 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_line    0x00000a1a      0x268 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
- .debug_line    0x00000c82      0x1a2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
- .debug_line    0x00000e24      0x298 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- .debug_line    0x000010bc      0x44e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
- .debug_line    0x0000150a      0xa60 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
- .debug_line    0x00001f6a      0x531 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- .debug_line    0x0000249b      0x1e5 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
- .debug_line    0x00002680      0x5e1 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
- .debug_line    0x00002c61      0x3e8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
- .debug_line    0x00003049      0x5d2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_line    0x0000361b      0x5c2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_line    0x00003bdd      0x64b CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .debug_line    0x00004228       0x80 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
- .debug_line    0x000042a8      0x35c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
- .debug_line    0x00004604      0x2b1 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_line    0x000048b5      0x1b0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_line    0x00004a65      0x60f CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .debug_line    0x00005074      0x143 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line    0x000051b7      0x150 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_line    0x00005307      0x2cc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
- .debug_line    0x000055d3      0x421 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line    0x000059f4      0x270 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_line    0x00005c64      0x697 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line    0x000062fb       0x93 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_line    0x0000638e      0x3d7 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line    0x00006765      0x275 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_line    0x000069da      0x1c3 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_line    0x00006b9d       0xbd CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line    0x00006c5a       0xce CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line    0x00006d28      0x15b CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_line    0x00006e83      0x7a6 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_line    0x00007629      0x534 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_line    0x00007b5d       0x5d /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
- .debug_line    0x00007bba      0x146 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+.debug_line     0x00000000     0x7d02
+ .debug_line    0x00000000      0x488 CMakeFiles/sevenseg.dir/sevenseg.c.obj
+ .debug_line    0x00000488      0x594 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_line    0x00000a1c      0x268 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_line    0x00000c84      0x1a2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_line    0x00000e26      0x298 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_line    0x000010be      0x44e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_line    0x0000150c      0xa60 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_line    0x00001f6c      0x531 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_line    0x0000249d      0x1e5 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_line    0x00002682      0x5e1 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_line    0x00002c63      0x3e8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_line    0x0000304b      0x5d2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_line    0x0000361d      0x5c2 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_line    0x00003bdf      0x64b CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_line    0x0000422a       0x80 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+ .debug_line    0x000042aa      0x35c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_line    0x00004606      0x2b1 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_line    0x000048b7      0x1b0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_line    0x00004a67      0x60f CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_line    0x00005076      0x143 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line    0x000051b9      0x150 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_line    0x00005309      0x2cc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line    0x000055d5      0x421 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line    0x000059f6      0x270 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_line    0x00005c66      0x697 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line    0x000062fd       0x93 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_line    0x00006390      0x3d7 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line    0x00006767      0x275 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_line    0x000069dc      0x1c3 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_line    0x00006b9f       0xbd CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line    0x00006c5c       0xce CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line    0x00006d2a      0x15b CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_line    0x00006e85      0x7a6 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_line    0x0000762b      0x534 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_line    0x00007b5f       0x5d /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x00007bbc      0x146 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
 
-.debug_str      0x00000000     0x36ec
- .debug_str     0x00000000      0x85d CMakeFiles/sevenseg.dir/sevenseg.c.obj
-                                0x92e (size before relaxing)
- .debug_str     0x0000085d      0x4f3 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+.debug_str      0x00000000     0x36f3
+ .debug_str     0x00000000      0x864 CMakeFiles/sevenseg.dir/sevenseg.c.obj
+                                0x935 (size before relaxing)
+ .debug_str     0x00000864      0x4f3 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
                                 0x88a (size before relaxing)
- .debug_str     0x00000d50      0x1c6 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_str     0x00000d57      0x1c6 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
                                 0x36b (size before relaxing)
- .debug_str     0x00000f16       0x7d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+ .debug_str     0x00000f1d       0x7d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
                                 0x227 (size before relaxing)
- .debug_str     0x00000f93       0xe8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_str     0x00000f9a       0xe8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
                                 0x352 (size before relaxing)
- .debug_str     0x0000107b      0x284 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_str     0x00001082      0x284 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
                                 0x531 (size before relaxing)
- .debug_str     0x000012ff      0x6d9 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+ .debug_str     0x00001306      0x6d9 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
                                 0xf79 (size before relaxing)
- .debug_str     0x000019d8      0x17e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_str     0x000019df      0x17e CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
                                 0x693 (size before relaxing)
- .debug_str     0x00001b56       0x38 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+ .debug_str     0x00001b5d       0x38 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
                                 0x25f (size before relaxing)
- .debug_str     0x00001b8e      0x16a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+ .debug_str     0x00001b95      0x16a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
                                 0x5db (size before relaxing)
- .debug_str     0x00001cf8       0xe8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+ .debug_str     0x00001cff       0xe8 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
                                 0x7da (size before relaxing)
- .debug_str     0x00001de0      0x1fd CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_str     0x00001de7      0x1fd CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                                 0xa40 (size before relaxing)
- .debug_str     0x00001fdd      0x246 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_str     0x00001fe4      0x246 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
                                 0x65f (size before relaxing)
- .debug_str     0x00002223      0x2dc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_str     0x0000222a      0x2dc CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
                                 0x72d (size before relaxing)
- .debug_str     0x000024ff       0x55 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+ .debug_str     0x00002506       0x55 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
                                  0x76 (size before relaxing)
- .debug_str     0x00002554       0x8b CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_str     0x0000255b       0x8b CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
                                 0x2d4 (size before relaxing)
- .debug_str     0x000025df      0x122 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_str     0x000025e6      0x122 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
                                 0x708 (size before relaxing)
- .debug_str     0x00002701       0x67 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_str     0x00002708       0x67 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
                                 0x226 (size before relaxing)
- .debug_str     0x00002768      0x193 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .debug_str     0x0000276f      0x193 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
                                 0x766 (size before relaxing)
- .debug_str     0x000028fb       0x43 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_str     0x00002902       0x43 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
                                  0x72 (size before relaxing)
- .debug_str     0x0000293e       0xc0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_str     0x00002945       0xc0 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
                                 0x261 (size before relaxing)
- .debug_str     0x000029fe       0x3d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+ .debug_str     0x00002a05       0x3d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
                                  0x6c (size before relaxing)
- .debug_str     0x00002a3b       0x41 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_str     0x00002a42       0x41 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
                                  0x70 (size before relaxing)
- .debug_str     0x00002a7c       0x99 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_str     0x00002a83       0x99 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
                                 0x67f (size before relaxing)
- .debug_str     0x00002b15       0x47 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_str     0x00002b1c       0x47 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
                                  0x76 (size before relaxing)
- .debug_str     0x00002b5c       0x4c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_str     0x00002b63       0x4c CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
                                  0x7b (size before relaxing)
- .debug_str     0x00002ba8       0x3f CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_str     0x00002baf       0x3f CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
                                  0x6e (size before relaxing)
- .debug_str     0x00002be7       0x7d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_str     0x00002bee       0x7d CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
                                 0x69b (size before relaxing)
- .debug_str     0x00002c64       0x45 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_str     0x00002c6b       0x45 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
                                  0x74 (size before relaxing)
- .debug_str     0x00002ca9       0x43 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_str     0x00002cb0       0x43 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
                                  0x72 (size before relaxing)
- .debug_str     0x00002cec       0x40 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_str     0x00002cf3       0x40 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
                                  0x6f (size before relaxing)
- .debug_str     0x00002d2c      0x27a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_str     0x00002d33      0x27a CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
                                 0x423 (size before relaxing)
- .debug_str     0x00002fa6      0x2eb CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_str     0x00002fad      0x2eb CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
                                 0xb56 (size before relaxing)
- .debug_str     0x00003291      0x2a7 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_str     0x00003298      0x2a7 CMakeFiles/sevenseg.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
                                 0x6fc (size before relaxing)
- .debug_str     0x00003538       0x8f /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+ .debug_str     0x0000353f       0x8f /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
                                  0x9d (size before relaxing)
- .debug_str     0x000035c7      0x125 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
+ .debug_str     0x000035ce      0x125 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libg.a(lib_a-strlen-stub.o)
                                 0x5ad (size before relaxing)
 
 .debug_frame    0x00000000     0x15c4
