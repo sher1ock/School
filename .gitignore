@@ -1,1 +1,3 @@
 /home/pi/projects/displaytest/build
+/home/pi/projects/*/build
+/home/chrx/school/pico-sdk
