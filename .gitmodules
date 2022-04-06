@@ -1,0 +1,6 @@
+[submodule "picoLCD"]
+	path = picoLCD
+	url = https://github.com/zadi15/picoLCD
+[submodule "pico-examples"]
+	path = pico-examples
+	url = https://github.com/raspberrypi/pico-examples
