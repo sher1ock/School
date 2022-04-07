@@ -80,20 +80,20 @@ void static inline Display(unsigned int num){
 	sleep_ms(OFF_TIME);
 }
 int main(void){
-    uint count = 0;
+    uint count = 6000;
     uint32_t t1,t2;
     setup();
     t1 = time_us_32();
     while (1) {
-		if (count < 9999){
+		if (count > 0){
             t2 = time_us_32();
             if ((t2-t1) > 9999){
-                count++;
+                count--;
                 t1 = t2;
             }
         }
         else{
-            count = 0;
+            count = 6000;
         }
 
         Display(count);

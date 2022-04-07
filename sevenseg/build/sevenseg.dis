@@ -35,17 +35,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  15 .debug_abbrev 00004457  00000000  00000000  0001ebb4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_loc    0000acf1  00000000  00000000  0002300b  2**0
+ 16 .debug_loc    0000acfe  00000000  00000000  0002300b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_aranges 00000dc8  00000000  00000000  0002dd00  2**3
+ 17 .debug_aranges 00000dc8  00000000  00000000  0002dd10  2**3
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_ranges 00001930  00000000  00000000  0002eac8  2**3
+ 18 .debug_ranges 00001930  00000000  00000000  0002ead8  2**3
                   CONTENTS, READONLY, DEBUGGING
- 19 .debug_line   00007d02  00000000  00000000  000303f8  2**0
+ 19 .debug_line   00007d02  00000000  00000000  00030408  2**0
                   CONTENTS, READONLY, DEBUGGING
- 20 .debug_str    000036f3  00000000  00000000  000380fa  2**0
+ 20 .debug_str    000036f3  00000000  00000000  0003810a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 21 .debug_frame  000015c4  00000000  00000000  0003b7f0  2**2
+ 21 .debug_frame  000015c4  00000000  00000000  0003b800  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 /home/pi/projects/sevenseg/build/sevenseg.elf:     file format elf32-littlearm
@@ -432,12 +432,12 @@ Disassembly of section .text:
 100003d6:	4b4d      	ldr	r3, [pc, #308]	; (1000050c <main+0x144>)
 100003d8:	6a9b      	ldr	r3, [r3, #40]	; 0x28
 100003da:	4698      	mov	r8, r3
-100003dc:	2300      	movs	r3, #0
+100003dc:	4b4c      	ldr	r3, [pc, #304]	; (10000510 <main+0x148>)
 100003de:	4699      	mov	r9, r3
 100003e0:	e082      	b.n	100004e8 <main+0x120>
-100003e2:	2300      	movs	r3, #0
+100003e2:	4b4b      	ldr	r3, [pc, #300]	; (10000510 <main+0x148>)
 100003e4:	4699      	mov	r9, r3
-100003e6:	4b4a      	ldr	r3, [pc, #296]	; (10000510 <main+0x148>)
+100003e6:	4b4b      	ldr	r3, [pc, #300]	; (10000514 <main+0x14c>)
 100003e8:	6b9a      	ldr	r2, [r3, #56]	; 0x38
 100003ea:	9200      	str	r2, [sp, #0]
 100003ec:	a901      	add	r1, sp, #4
@@ -562,9 +562,9 @@ Disassembly of section .text:
 100004e0:	e7be      	b.n	10000460 <main+0x98>
 100004e2:	2000      	movs	r0, #0
 100004e4:	f000 fdf0 	bl	100010c8 <sleep_ms>
-100004e8:	4b0a      	ldr	r3, [pc, #40]	; (10000514 <main+0x14c>)
-100004ea:	4599      	cmp	r9, r3
-100004ec:	d900      	bls.n	100004f0 <main+0x128>
+100004e8:	464b      	mov	r3, r9
+100004ea:	2b00      	cmp	r3, #0
+100004ec:	d100      	bne.n	100004f0 <main+0x128>
 100004ee:	e778      	b.n	100003e2 <main+0x1a>
 100004f0:	4b06      	ldr	r3, [pc, #24]	; (1000050c <main+0x144>)
 100004f2:	6a9b      	ldr	r3, [r3, #40]	; 0x28
@@ -575,14 +575,14 @@ Disassembly of section .text:
 100004fc:	d800      	bhi.n	10000500 <main+0x138>
 100004fe:	e772      	b.n	100003e6 <main+0x1e>
 10000500:	2201      	movs	r2, #1
-10000502:	4694      	mov	ip, r2
-10000504:	44e1      	add	r9, ip
-10000506:	4698      	mov	r8, r3
-10000508:	e76d      	b.n	100003e6 <main+0x1e>
-1000050a:	46c0      	nop			; (mov r8, r8)
+10000502:	4252      	negs	r2, r2
+10000504:	4694      	mov	ip, r2
+10000506:	44e1      	add	r9, ip
+10000508:	4698      	mov	r8, r3
+1000050a:	e76c      	b.n	100003e6 <main+0x1e>
 1000050c:	40054000 	.word	0x40054000
-10000510:	10004518 	.word	0x10004518
-10000514:	0000270e 	.word	0x0000270e
+10000510:	00001770 	.word	0x00001770
+10000514:	10004518 	.word	0x10004518
 10000518:	0000270f 	.word	0x0000270f
 
 1000051c <gpio_set_function>:
