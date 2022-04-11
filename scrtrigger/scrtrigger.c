@@ -1,36 +1,52 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/clocks.h"
+#include "hardware/gpio.h"
+#include "hardware/adc.h"
 
 const uint OUTPIN = 0;
 const uint INPIN = 2;
+const uint DELAYPIN = 26;
 
-int DELAY = 5;
+int DELAY = 3;
 
-static void gpio_pull_up(uint gpio);
 
+
+//typedef void(* irq_handler_t) (void);
 
 void gpio_callback(uint gpio, uint32_t events) {
 
     //gpio_put(OUTPIN, 0);
-    sleep_ms(DELAY);
+    busy_wait_ms(DELAY);
     gpio_put(OUTPIN, 1);
-    sleep_ms(2);
+    busy_wait_ms(1);
     gpio_put(OUTPIN, 0);
-
 }
 
 int main(){
 
 
-    clocks_init();
-    stdio_init_all();
-    gpio_pull_down(OUTPIN);
-    //gpio_put(OUTPIN, 0);
+    gpio_init(OUTPIN);
+    gpio_init(INPIN);
+    gpio_set_dir(INPIN, false);
+    gpio_set_dir(OUTPIN, true);
+    adc_init();
+        // Make sure GPIO is high-impedance, no pullups etc
+    adc_gpio_init(26);
+    // Select ADC input 0 (GPIO26)
+    adc_select_input(0);
+    gpio_pull_up(OUTPIN);
     gpio_set_irq_enabled_with_callback(INPIN, GPIO_IRQ_EDGE_RISE, true, &gpio_callback);
-    // while (1){
-    //     sleep_ms(10);
-    //     //gpio_put(OUTPIN, 0);
-    // }
+    while (1){
+        //busy_wait_ms(8);
+        //gpio_put(OUTPIN, 0);
+        // 12-bit conversion, assume max value == ADC_VREF == 3.3 V
+        const float conversion_factor = 3.3f / (1 << 12);
+        uint16_t result = adc_read();
+        //printf("Raw value: 0x%03x, voltage: %f V\n", result, result * conversion_factor);
+        DELAY = (result*conversion_factor/3.3)*8;
+        gpio_put(OUTPIN, 0);
+
+    }
 }
 

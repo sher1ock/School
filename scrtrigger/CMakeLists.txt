@@ -28,7 +28,7 @@ pico_enable_stdio_uart(scrtrigger 1)
 pico_enable_stdio_usb(scrtrigger 0)
 
 # Add the standard library to the build
-target_link_libraries(scrtrigger pico_stdlib)
+target_link_libraries(scrtrigger pico_stdlib hardware_adc)
 
 pico_add_extra_outputs(scrtrigger)
 

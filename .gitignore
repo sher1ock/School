@@ -2,3 +2,4 @@
 /home/pi/projects/*/build
 /home/chrx/school/pico-sdk
 **/build
+**/core
