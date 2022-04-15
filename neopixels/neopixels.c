@@ -87,52 +87,48 @@ void pattern_test(uint len, uint t) {
 // };
 int main() {
     stdio_init_all();
-    printf("WS2812 Smoke Test, using pin %d", WS2812_PIN);
 
     PIO pio = pio0;
     int sm = 0;
     uint offset = pio_add_program(pio, &ws2812_program);
 
     ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
+    //reset all pixels
+    for (uint i=0; i<12; i++){
+        put_pixel(0);
+    }
 
-    int t = 0;
-    int dir = 1;
-    int r = 0;
-    int g = 0;
-    int b = 0;
+
+    int r = 30;
+    int g = 20;
+    int b = 10;
+    int x = 0;
+
     while (1){
-        for(int i=0;i<NUM_PIXELS;i++){
-   
-            while (r < 30) {
-                r++;
-                if (b>0) {
-                    b--;
-                }
+
+        if (r >= 30)
+            r = 0;
+        
+        else if (g >= 30)
+            g = 0;
+
+        else if (b >= 30)
+            b = 0;
+
+        r++;
+        g++;
+        b++;
+
+
+        while (x<=12){
+            x++;
             put_pixel(urgb_u32(r, g, b));
-            sleep_ms(10);
-            }
 
-            while (g < 30) {
-                g++;
-                if (r>0) {
-                    r--;
-                }
-                put_pixel(urgb_u32(r, g, b));
-                sleep_ms(10);
-            }
-
-            while (b < 30){
-                b++;
-                if (g>0) {
-                    g--;
-                }
-                put_pixel(urgb_u32(r, g, b));
-                sleep_ms(10);
-            }
 
         }
-
+           
+        sleep_ms(50);
+        x = 0;
 
     }
-    
 }

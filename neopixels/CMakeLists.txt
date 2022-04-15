@@ -33,4 +33,3 @@ pico_enable_stdio_usb(neopixels 0)
 target_link_libraries(neopixels pico_stdlib hardware_pio hardware_clocks)
 
 pico_add_extra_outputs(neopixels)
-
