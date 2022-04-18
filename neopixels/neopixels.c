@@ -42,25 +42,38 @@ int main() {
     }
 
 
-
+    int countred=0;
+    int countblue=0;
     int x = 0;
     int z = 0;
     while (1){
+
+        // put_pixel(urgb_u32(0,10,0));
+        // sleep_ms(10);
+
 
         const float conversion_factor = 3.3f / (1 << 12);
         uint16_t result = adc_read();
         //printf("Raw value: 0x%03x, voltage: %f V\n", result, result * conversion_factor);
         z = (result*conversion_factor/3.3)*12;
+        countred = 0;
+        countblue = 0;
+        
+        if (z>0){    
+            while (x<z+1){
+                x++;
+                put_pixel(urgb_u32(0, 0, 5));
+                countblue ++;
 
-        while (x<z){
-            x++;
-            put_pixel(urgb_u32(0, 0, 5));
-
+            }
         }
+        
         while (z<12){
             z++;
             put_pixel(urgb_u32(20,0,0));
+            countred++;
         }
+        
            
         sleep_ms(50);
         x = 0;
