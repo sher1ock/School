@@ -1,0 +1,10 @@
+**/build
+**/build/
+**/core/
+pico-**
+openocd/
+picotool/
+picoprobe/
+**/test.test
+ledtest/
+test/
