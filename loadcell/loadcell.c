@@ -1,27 +1,36 @@
-/**
- * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 #include <stdio.h>
 #include <string.h>
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 #include "pico/binary_info.h"
+#include "ws2812.pio.h"
+#include "hardware/pio.h"
+#include "hardware/clocks.h"
+#include "hardware/adc.h"
+#include "hardware/gpio.h"
 
-/* Example code to drive a 16x2 LCD panel via a I2C bridge chip (e.g. PCF8574)
-   NOTE: The panel must be capable of being driven at 3.3v NOT 5v. The Pico
-   GPIO (and therefor I2C) cannot be used at 5v.
-   You will need to use a level shifter on the I2C lines if you want to run the
-   board at 5v.
-   Connections on Raspberry Pi Pico board, other boards may vary.
-   GPIO 4 (pin 6)-> SDA on LCD bridge board
-   GPIO 5 (pin 7)-> SCL on LCD bridge board
-   3.3v (pin 36) -> VCC on LCD bridge board
-   GND (pin 38)  -> GND on LCD bridge board
-*/
-// commands
+
+#define IS_RGBW true
+#define NUM_PIXELS 150
+
+#ifdef PICO_DEFAULT_WS2812_PIN
+#define WS2812_PIN PICO_DEFAULT_WS2812_PIN
+#else
+// default to pin 2 if the board doesn't have a default WS2812 pin defined
+#define WS2812_PIN 2
+#endif
+
+static inline void put_pixel(uint32_t pixel_grb) {
+    pio_sm_put_blocking(pio0, 0, pixel_grb << 8u);
+}
+
+static inline uint32_t urgb_u32(uint8_t r, uint8_t g, uint8_t b) {
+    return
+            ((uint32_t) (r) << 8) |
+            ((uint32_t) (g) << 16) |
+            (uint32_t) (b);
+}
+
 const int LCD_CLEARDISPLAY = 0x01;
 const int LCD_RETURNHOME = 0x02;
 const int LCD_ENTRYMODESET = 0x04;
@@ -126,9 +135,15 @@ void lcd_init() {
 }
 
 int main() {
-#if !defined(i2c_default) || !defined(PICO_DEFAULT_I2C_SDA_PIN) || !defined(PICO_DEFAULT_I2C_SCL_PIN)
-    #warning i2c/lcd_1602_i2c example requires a board with I2C pins
-#else
+
+    // LED setup
+    stdio_init_all();
+    PIO pio = pio0;
+    int sm = 0;
+    uint offset = pio_add_program(pio, &ws2812_program);
+    ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
+
+    //LCD setup
     // This example will use I2C0 on the default SDA and SCL pins (4, 5 on a Pico)
     i2c_init(i2c_default, 100 * 1000);
     gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
@@ -139,19 +154,28 @@ int main() {
     bi_decl(bi_2pins_with_func(PICO_DEFAULT_I2C_SDA_PIN, PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C));
 
     lcd_init();
+    // adc setup:
+    adc_init();
 
-    static char *message[] =
-            {
-                    "RP2040 by", "Raspberry Pi",
-                    "A brand new", "microcontroller",
-                    "Twin core M0", "Full C SDK",
-                    "More power in", "your product",
-                    "More beans", "than Heinz!"
-            };
+    // Make sure GPIO is high-impedance, no pullups etc
+    adc_gpio_init(26);
+    // Select ADC input 0 (GPIO26)
+    adc_select_input(0);
+
+    // static char *message[] =
+    //         {
+    //                 "RP2040 by", "Raspberry Pi",
+    //                 "A brand new", "microcontroller",
+    //                 "Twin core M0", "Full C SDK",
+    //                 "More power in", "your product",
+    //                 "More beans", "than Heinz!"
+    //         };
 
     while (1) {
-        for (int m = 0; m < sizeof(message) / sizeof(message[0]); m += MAX_LINES) {
-            for (int line = 0; line < MAX_LINES; line++) {
+      uint16_t result = adc_read();
+
+        // for (int m = 0; m < sizeof(message) / sizeof(message[0]); m += MAX_LINES) {
+        //     for (int line = 0; line < MAX_LINES; line++) {
                 lcd_set_cursor(line, (MAX_CHARS / 2) - strlen(message[m + line]) / 2);
                 lcd_string(message[m + line]);
             }
