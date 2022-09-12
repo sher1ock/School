@@ -17,7 +17,7 @@
 #define WS2812_PIN PICO_DEFAULT_WS2812_PIN
 #else
 // default to pin 2 if the board doesn't have a default WS2812 pin defined
-#define WS2812_PIN 2
+#define WS2812_PIN 0
 #endif
 
 static inline void put_pixel(uint32_t pixel_grb) {
@@ -162,28 +162,35 @@ int main() {
     // Select ADC input 0 (GPIO26)
     adc_select_input(0);
 
-    // static char *message[] =
-    //         {
-    //                 "RP2040 by", "Raspberry Pi",
-    //                 "A brand new", "microcontroller",
-    //                 "Twin core M0", "Full C SDK",
-    //                 "More power in", "your product",
-    //                 "More beans", "than Heinz!"
-    //         };
+    //char *message[] =
+    //        {
+                    //"RP2040 by", "Raspberry Pi",
+                    // "A brand new", "microcontroller",
+                    // "Twin core M0", "Full C SDK",
+                    // "More power in", "your product",
+                    // "More beans", "than Heinz!"
+    //        };
 
     while (1) {
-      uint16_t result = adc_read();
+        float result = adc_read();
+        double output = 2000 * 1/4095;
 
-        // for (int m = 0; m < sizeof(message) / sizeof(message[0]); m += MAX_LINES) {
-        //     for (int line = 0; line < MAX_LINES; line++) {
-                lcd_set_cursor(line, (MAX_CHARS / 2) - strlen(message[m + line]) / 2);
-                lcd_string(message[m + line]);
-            }
-            sleep_ms(2000);
-            lcd_clear();
-        }
+        char display = "output is %s", output;
+
+        lcd_string(display);
+        sleep_ms(2000);
+        lcd_clear();
+
+
+        //  for (int m = 0; m < sizeof(message) / sizeof(message[0]); m += MAX_LINES) {
+        //      for (int line = 0; line < MAX_LINES; line++) {
+        //         lcd_set_cursor(line, (MAX_CHARS / 2) - strlen(message[m + line]) / 2);
+        //         lcd_string(message[m + line]);
+        //     }
+        //     sleep_ms(2000);
+        //     lcd_clear();
+        //}
     }
 
     return 0;
-#endif
 }
