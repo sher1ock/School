@@ -1,0 +1,7 @@
+
+[submodule "loadcell/hx711pico"]
+	path = loadcell/hx711pico
+	url = https://github.com/endail/hx711-pico-c
+[submodule "loadcell/picoscale"]
+	path = loadcell/picoscale
+	url = https://github.com/endail/pico-scale
