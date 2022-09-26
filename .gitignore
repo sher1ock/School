@@ -8,6 +8,7 @@ ledtest/
 test/
 test.test
 *.vscode/
+loadcell
 
 
 ### C ###

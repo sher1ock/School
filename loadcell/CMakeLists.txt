@@ -33,8 +33,12 @@ target_link_libraries(loadcell pico_stdlib)
 # Add any user requested libraries
 target_link_libraries(loadcell
         hardware_i2c
+        hardware_clocks
         hardware_pio
         hardware_adc
+        hx711-pico
+        pico_stdlib
+        pico_stdio
         )
 
 pico_add_extra_outputs(loadcell)
