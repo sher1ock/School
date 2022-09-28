@@ -7,6 +7,9 @@
 #include "ws2812.pio.h"
 #include "hardware/i2c.h"
 #include "pico/binary_info.h"
+#define WS2812_PIN 3
+#define repeat(x) for(int i = x; i--;)
+
 
 
 #define IS_RGBW false
@@ -121,8 +124,6 @@ void lcd_init() {
 uint16_t adcresult = 1;
 
 int light = 1.2;
-#define WS2812_PIN 0
-#define repeat(x) for(int i = x; i--;)
 
 
 
@@ -225,7 +226,7 @@ int main(void) {
         &hx,
         clkPin,
         datPin,
-        pio0,
+        pio1,
         &hx711_noblock_program,
         &hx711_noblock_program_init);
 
@@ -250,27 +251,33 @@ int main(void) {
     while(1) {
 
         
-
+        
         
         output = hx711_get_value(&hx);
 
 
-        output = output -2750;
+        output = output -2250;
         if (output < 50){
             output = 0;
         }
-        int grams = output /1481;
+        float grams = output * (float)1/1481;
 
         char buf[256];
-        sprintf(buf, "%d units,%d grams", output, grams);
-
-
+        sprintf(buf, "%.2f grams, %d",grams, output);
+        printf( "%.2f grams \n", grams);
 
         lcd_string(buf);
-        sleep_ms(400);
+        sleep_ms(200);
         lcd_clear();
+        
+        if (grams <24){
+            int lightnum = grams / 2;
+            repeat(lightnum){
+                put_pixel(urgb_u32(0,10,0));
+            }
+            repeat(24-lightnum){
+                put_pixel(urgb_u32(10,0,0));
+            }
+        }
     }
-
-    return EXIT_SUCCESS;
-
 }
