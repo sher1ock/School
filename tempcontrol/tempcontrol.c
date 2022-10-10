@@ -256,7 +256,6 @@ void encoder_callback(uint gpio, uint32_t events)
     if (gpio == ENC_SW){
         if (enc_value == 0b00)
         buttonpos++;
-        busy_wait_ms(200);
     }
            
 
