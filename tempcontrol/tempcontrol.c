@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "pico/binary_info.h"
 #include "pico/stdlib.h"
 #include "hardware/spi.h"
 #include "hardware/i2c.h"
@@ -18,6 +20,8 @@
 #define ENC_B   11
 #define ENC_SW  12
 
+#define DEBOUNCETIME 50
+
 
 #define WS2812_PIN 3
 #define repeat(x) for(int i = x; i--;)
@@ -29,6 +33,9 @@
 #define brightness 50
 
 #define repeat(x) for(int i = x; i--;)
+
+volatile int encPos = 10;
+int buttonpos = 0;
 
 // commands
 const int LCD_CLEARDISPLAY = 0x01;
@@ -225,6 +232,7 @@ void encoder_callback(uint gpio, uint32_t events)
             ccw_fall = 0;
             //do something here,  for now it is just printing out CW or CCW
             printf("CCW \r\n");
+            encPos--;
         }
 
     }   
@@ -241,9 +249,16 @@ void encoder_callback(uint gpio, uint32_t events)
             ccw_fall = 0;
             //do something here,  for now it is just printing out CW or CCW
             printf("CW \r\n");
+            encPos++;
         }
 
     }
+    if (gpio == ENC_SW){
+        if (enc_value == 0b00)
+        buttonpos++;
+        busy_wait_ms(200);
+    }
+           
 
 }
 
@@ -267,11 +282,7 @@ int main()
     gpio_set_irq_enabled(ENC_A, GPIO_IRQ_EDGE_FALL, true);
     gpio_set_irq_enabled(ENC_B, GPIO_IRQ_EDGE_FALL, true);
 
-    while (1) 
-    {
-    // do something here forever
-    sleep_ms(1000);
-    }
+    
 
     // This example will use I2C0 on the default SDA and SCL pins (4, 5 on a Pico)
     i2c_init(i2c_default, 100 * 1000);
@@ -297,5 +308,15 @@ int main()
     
     
     bootanimation();
+    while (1) {
+
+        char buf[256];
+        sprintf(buf, "pos:%i button:%i", encPos, buttonpos);
+        printf( "pos %i", encPos);
+
+        lcd_string(buf);
+        sleep_ms(200);
+        lcd_clear();
+    }
 
 }
