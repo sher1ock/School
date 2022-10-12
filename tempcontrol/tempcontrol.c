@@ -9,6 +9,10 @@
 #include "hardware/clocks.h"
 #include "ws2812.pio.h"
 #include "hardware/gpio.h"
+//#include "menu.c"
+#include "menu.h"
+#include "encoder.h"
+#include "NewLCDLibrary.h"
 
 /*Encoder GPIO*/
 // GPIO 10 is Encoder phase A,  
@@ -20,7 +24,11 @@
 #define ENC_B   11
 #define ENC_SW  12
 
-#define DEBOUNCETIME 50
+#define NAN 0.0/0.0
+
+pidVars_t PID;
+
+//#define DEBOUNCETIME 50
 
 
 #define WS2812_PIN 3
@@ -157,6 +165,143 @@ static inline uint32_t urgb_u32(uint8_t r, uint8_t g, uint8_t b) {
             ((uint32_t) (g) << 16) |
             (uint32_t) (b);
 }
+void menuInit(void)
+{
+    PID.menu = PID.update = PID.pwm = PID.SP = 0;
+    PID.kp = PID.ki = PID.kd = 0;
+    PID.currentVariable = &PID.SP;
+    PID.seeDelay = 250;
+    PID.menu = 0;
+    PID.update = 0;
+    sprintf(PID.title,"Temperature PID v0.5 ");
+    sprintf(PID.author, "Dan");
+
+}
+void showSplashScreen(void)
+{
+	// Clear the screen
+	lcd_clear();
+	// Simple string printing
+	LCDWriteStringXY(0, 0, PID.title);
+	// A string on line 2
+	LCDWriteStringXY(0, 1, PID.author);
+	sleep_ms(2000);
+	// Clear the screen
+	lcd_clear();
+}
+
+void mainMenu(void)
+{
+	int debounce_delay = PID.seeDelay;
+	if (PID.menu > 0)
+	{
+		// Clear the screen
+		if (PID.update == 0)
+		{
+			lcd_clear();
+
+			// PID.menu
+			LCDWriteStringXY(0, 0, "SP:"); // Set Point
+			LCDWriteStringXY(8, 0, "ki:"); // Integer Gain
+			LCDWriteStringXY(0, 1, "kd:"); // Differential Gain
+			LCDWriteStringXY(8, 1, "kp:"); // Proportional Gain
+			PID.update = 1;
+		}
+		else
+		{
+			if (PID.menu == 1)
+			{
+				sleep_ms(debounce_delay);
+				LCDWriteStringXY(3, 0, "    ");
+				sleep_ms(debounce_delay);
+				LCDWriteIntXY(3, 0, PID.SP);
+				PID.currentVariable = &PID.SP; // connect to interrupt
+			}
+			if (PID.menu == 2)
+			{
+				sleep_ms(debounce_delay);
+				LCDWriteStringXY(11, 0, "    ");
+				sleep_ms(debounce_delay);
+				LCDWriteIntXY(11, 0, PID.ki);
+				PID.currentVariable = &PID.ki; // connect to interrupt
+			}
+			if (PID.menu == 3)
+			{
+				sleep_ms(debounce_delay);
+				LCDWriteStringXY(3, 1, "    ");
+				sleep_ms(debounce_delay);
+				LCDWriteIntXY(3, 1, PID.kd);
+				PID.currentVariable = &PID.kd; // connect to interrupt
+			}
+			if (PID.menu == 4)
+			{
+				sleep_ms(debounce_delay);
+				LCDWriteStringXY(11, 1, "    ");
+				sleep_ms(debounce_delay);
+				LCDWriteIntXY(11, 1, PID.kp);
+				PID.currentVariable = &PID.kp; // connect to interrupt
+			}
+
+			LCDWriteIntXY(3, 0, PID.SP);  // Set Point
+			LCDWriteIntXY(11, 0, PID.ki);  // Integer Gain
+			LCDWriteIntXY(3, 1, PID.kd);  // Differential Gain
+			LCDWriteIntXY(11, 1, PID.kp); // Proportional Gain
+		}
+	}
+	else
+	{
+		if (PID.update == 0)
+		{
+			lcd_clear();
+			LCDWriteStringXY(0, 0, "Temperature:");
+			LCDWriteStringXY(0, 1, "PWM:");
+			PID.update = 1;
+		}
+		else
+		{
+			if (PID.temperature != NAN)
+			{
+				if (PID.temperature < 100) // needed to kill revanent digit
+				{
+					LCDWriteStringXY(14, 0, " ");
+				}
+				LCDWriteFloatXY(12, 0, PID.temperature); // Current Temp
+				if (PID.pwm < 100)							// needed to kill revanent digit
+				{
+					LCDWriteStringXY(12, 1, " ");
+				}
+				LCDWriteIntXY(4, 1, PID.pwm);
+			}
+			else
+			{
+				LCDWriteStringXY(12, 0, "NAN");
+			}
+		}
+	}
+}
+
+void LCDgotoPos(int pos_i, int line){
+    lcd_set_cursor(pos_i, line);
+} 
+void LCDWriteStringXY(int x,int y, const char *msg) 
+{
+ lcd_set_cursor(x,y);
+ lcd_string(msg);
+}
+
+void LCDWriteIntXY(int x, int y, int var)
+{
+    char buffer[6]={0,0,0,0,0,0};
+    sprintf(buffer,"%4.4d", var);
+    LCDWriteStringXY(x,y,buffer);
+}
+
+void LCDWriteFloatXY(int x, int y, float var)
+{
+    char buffer[6]={0,0,0,0,0,0};
+    sprintf(buffer,"%4.1f", var);
+    LCDWriteStringXY(x,y,buffer);
+}
 
 void bootanimation(){
     sleep_ms(250);
@@ -192,19 +337,6 @@ void bootanimation(){
     }
 }
 
-
-
-
-
-
-
-/* Encoder Callback*/
-/*
-        "LEVEL_LOW",  // 0x1
-        "LEVEL_HIGH", // 0x2
-        "EDGE_FALL",  // 0x4
-        "EDGE_RISE"   // 0x8
-*/
 void encoder_callback(uint gpio, uint32_t events) 
 {
 
@@ -261,6 +393,12 @@ void encoder_callback(uint gpio, uint32_t events)
 
 }
 
+
+
+
+
+
+
 int main()
 {
     stdio_init_all();
@@ -307,15 +445,29 @@ int main()
     
     
     bootanimation();
+    menuInit();
+    int variable = 0;
+    char buffer[33];
+    //stdio_init_all();
+    //LCDinit(6,7,8,9,13,11,16,2);
     while (1) {
-
-        char buf[256];
-        sprintf(buf, "pos:%i button:%i", encPos, buttonpos);
-        printf( "pos %i", encPos);
-
-        lcd_string(buf);
-        sleep_ms(200);
+        lcd_string("MECH Menu");
+        LCDgotoPos(1,0);
+        lcd_string("var1:");
+        //LCDcursorOn(true);
+        LCDWriteIntXY(5,1,variable++);
+        LCDWriteFloatXY(10,1,(float)variable);
+        sleep_ms(5000);
         lcd_clear();
+        sleep_ms(1000);
+
+        // char buf[256];
+        // sprintf(buf, "pos:%i button:%i", encPos, buttonpos);
+        // printf( "pos %i", encPos);
+
+        // lcd_string(buf);
+        // sleep_ms(200);
+        // lcd_clear();
     }
 
 }
