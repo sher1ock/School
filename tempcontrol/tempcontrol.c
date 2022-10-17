@@ -35,6 +35,15 @@ pidVars_t PID;
 #define repeat(x) for(int i = x; i--;)
 
 
+int menupos = 0;
+// int P = 0;
+// int I = 0;
+// int D = 0;
+// int SP = 0;
+int realtemp = 0;
+
+int pids[4] = {0,0,0,10}; //P= 0, I=1 D=2 S=3
+
 
 #define IS_RGBW false
 #define NUM_PIXELS 12
@@ -42,8 +51,8 @@ pidVars_t PID;
 
 #define repeat(x) for(int i = x; i--;)
 
-volatile int encPos = 10;
-int buttonpos = 0;
+// volatile int encPos = 0;
+// int buttonpos = 0;
 
 // commands
 const int LCD_CLEARDISPLAY = 0x01;
@@ -281,7 +290,7 @@ void mainMenu(void)
 }
 
 void LCDgotoPos(int pos_i, int line){
-    lcd_set_cursor(pos_i, line);
+    lcd_set_cursor(line, pos_i); //pos_i, line);
 } 
 void LCDWriteStringXY(int x,int y, const char *msg) 
 {
@@ -363,8 +372,10 @@ void encoder_callback(uint gpio, uint32_t events)
             cw_fall = 0;
             ccw_fall = 0;
             //do something here,  for now it is just printing out CW or CCW
-            printf("CCW \r\n");
-            encPos--;
+            pids[menupos]--;
+            if (pids[menupos]<0){
+                pids[menupos] = 0;
+            }
         }
 
     }   
@@ -381,23 +392,51 @@ void encoder_callback(uint gpio, uint32_t events)
             ccw_fall = 0;
             //do something here,  for now it is just printing out CW or CCW
             printf("CW \r\n");
-            encPos++;
+            pids[menupos]++;
+            if (pids[menupos]<0){
+                pids[menupos] = 0;
+            }
         }
 
     }
     if (gpio == ENC_SW){
-        if (enc_value == 0b00)
-        buttonpos++;
+        menupos++;
+        if (menupos > 3){
+            menupos = 0;
+        }
+    
     }
            
 
 }
 
-
-
-
-
-
+void menuicon(void){
+        if (menupos = 0){
+            LCDWriteStringXY(0, 0, ">");
+            LCDWriteStringXY(0, 8, " ");
+            LCDWriteStringXY(2, 0, " ");
+            LCDWriteStringXY(2, 8, " ");
+        }
+        else if (menupos = 1){
+            LCDWriteStringXY(0, 0, " ");
+            LCDWriteStringXY(0, 8, ">");
+            LCDWriteStringXY(2, 0, " ");
+            LCDWriteStringXY(2, 8, " ");
+        }
+        else if (menupos = 2){
+            LCDWriteStringXY(0, 0, " ");
+            LCDWriteStringXY(0, 8, " ");
+            LCDWriteStringXY(2, 0, ">");
+            LCDWriteStringXY(2, 8, " ");
+        }
+        else if (menupos = 3){
+            LCDWriteStringXY(0, 0, " ");
+            LCDWriteStringXY(0, 8, " ");
+            LCDWriteStringXY(2, 0, " ");
+            LCDWriteStringXY(2, 8, ">");
+        }
+        
+}
 
 int main()
 {
@@ -450,24 +489,29 @@ int main()
     char buffer[33];
     //stdio_init_all();
     //LCDinit(6,7,8,9,13,11,16,2);
+    // LCDWriteIntXY(5,1,variable++);
+    // LCDWriteFloatXY(10,1,(float)variable);
+    // sleep_ms(5000);
+    lcd_clear();
     while (1) {
-        lcd_string("MECH Menu");
-        LCDgotoPos(1,0);
-        lcd_string("var1:");
-        //LCDcursorOn(true);
-        LCDWriteIntXY(5,1,variable++);
-        LCDWriteFloatXY(10,1,(float)variable);
-        sleep_ms(5000);
-        lcd_clear();
-        sleep_ms(1000);
+        //menuicon();
 
-        // char buf[256];
-        // sprintf(buf, "pos:%i button:%i", encPos, buttonpos);
-        // printf( "pos %i", encPos);
+        LCDWriteStringXY(0, 1, "P:");
+		LCDWriteStringXY(0, 9, "I:");
+		LCDWriteStringXY(2, 1, "D:");
+		LCDWriteStringXY(2, 9, "S:"); 
 
-        // lcd_string(buf);
-        // sleep_ms(200);
-        // lcd_clear();
+        LCDWriteIntXY(0, 3, pids[0]);
+		LCDWriteIntXY(0, 11, pids[1]);
+		LCDWriteIntXY(2, 3, pids[2]);
+		LCDWriteIntXY(2, 11, pids[3]);
+
+
+
+
+
+
+        sleep_ms(100);
     }
 
 }
