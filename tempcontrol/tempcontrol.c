@@ -409,37 +409,7 @@ void encoder_callback(uint gpio, uint32_t events)
            
 
 }
-
-void menuicon(void){
-        if (menupos = 0){
-            LCDWriteStringXY(0, 0, ">");
-            LCDWriteStringXY(0, 8, " ");
-            LCDWriteStringXY(2, 0, " ");
-            LCDWriteStringXY(2, 8, " ");
-        }
-        else if (menupos = 1){
-            LCDWriteStringXY(0, 0, " ");
-            LCDWriteStringXY(0, 8, ">");
-            LCDWriteStringXY(2, 0, " ");
-            LCDWriteStringXY(2, 8, " ");
-        }
-        else if (menupos = 2){
-            LCDWriteStringXY(0, 0, " ");
-            LCDWriteStringXY(0, 8, " ");
-            LCDWriteStringXY(2, 0, ">");
-            LCDWriteStringXY(2, 8, " ");
-        }
-        else if (menupos = 3){
-            LCDWriteStringXY(0, 0, " ");
-            LCDWriteStringXY(0, 8, " ");
-            LCDWriteStringXY(2, 0, " ");
-            LCDWriteStringXY(2, 8, ">");
-        }
-        
-}
-
-int main()
-{
+void setup(void){
     stdio_init_all();
      // GPIO Setup for Encoder
     gpio_init(ENC_SW);                  //Initialise a GPIO for (enabled I/O and set func to GPIO_FUNC_SIO)
@@ -493,8 +463,40 @@ int main()
     // LCDWriteFloatXY(10,1,(float)variable);
     // sleep_ms(5000);
     lcd_clear();
+}
+void menuicon(void){
+        if (menupos == 0){
+            LCDWriteStringXY(0, 0, ">");
+            LCDWriteStringXY(0, 8, " ");
+            LCDWriteStringXY(2, 0, " ");
+            LCDWriteStringXY(2, 8, " ");
+        }
+        else if (menupos == 1){
+            LCDWriteStringXY(0, 0, " ");
+            LCDWriteStringXY(0, 8, ">");
+            LCDWriteStringXY(2, 0, " ");
+            LCDWriteStringXY(2, 8, " ");
+        }
+        else if (menupos == 2){
+            LCDWriteStringXY(0, 0, " ");
+            LCDWriteStringXY(0, 8, " ");
+            LCDWriteStringXY(2, 0, ">");
+            LCDWriteStringXY(2, 8, " ");
+        }
+        else if (menupos == 3){
+            LCDWriteStringXY(0, 0, " ");
+            LCDWriteStringXY(0, 8, " ");
+            LCDWriteStringXY(2, 0, " ");
+            LCDWriteStringXY(2, 8, ">");
+        }
+        
+}
+
+int main(){
+    setup();
+    
     while (1) {
-        //menuicon();
+        menuicon();
 
         LCDWriteStringXY(0, 1, "P:");
 		LCDWriteStringXY(0, 9, "I:");
