@@ -9,7 +9,6 @@
 #include "hardware/clocks.h"
 #include "ws2812.pio.h"
 #include "hardware/gpio.h"
-//#include "menu.c"
 #include "menu.h"
 #include "encoder.h"
 #include "NewLCDLibrary.h"
@@ -36,10 +35,6 @@ pidVars_t PID;
 
 
 int menupos = 0;
-// int P = 0;
-// int I = 0;
-// int D = 0;
-// int SP = 0;
 int realtemp = 0;
 
 int pids[4] = {0,0,0,10}; //P= 0, I=1 D=2 S=3
@@ -174,120 +169,8 @@ static inline uint32_t urgb_u32(uint8_t r, uint8_t g, uint8_t b) {
             ((uint32_t) (g) << 16) |
             (uint32_t) (b);
 }
-void menuInit(void)
-{
-    PID.menu = PID.update = PID.pwm = PID.SP = 0;
-    PID.kp = PID.ki = PID.kd = 0;
-    PID.currentVariable = &PID.SP;
-    PID.seeDelay = 250;
-    PID.menu = 0;
-    PID.update = 0;
-    sprintf(PID.title,"Temperature PID v0.5 ");
-    sprintf(PID.author, "Dan");
 
-}
-void showSplashScreen(void)
-{
-	// Clear the screen
-	lcd_clear();
-	// Simple string printing
-	LCDWriteStringXY(0, 0, PID.title);
-	// A string on line 2
-	LCDWriteStringXY(0, 1, PID.author);
-	sleep_ms(2000);
-	// Clear the screen
-	lcd_clear();
-}
 
-void mainMenu(void)
-{
-	int debounce_delay = PID.seeDelay;
-	if (PID.menu > 0)
-	{
-		// Clear the screen
-		if (PID.update == 0)
-		{
-			lcd_clear();
-
-			// PID.menu
-			LCDWriteStringXY(0, 0, "SP:"); // Set Point
-			LCDWriteStringXY(8, 0, "ki:"); // Integer Gain
-			LCDWriteStringXY(0, 1, "kd:"); // Differential Gain
-			LCDWriteStringXY(8, 1, "kp:"); // Proportional Gain
-			PID.update = 1;
-		}
-		else
-		{
-			if (PID.menu == 1)
-			{
-				sleep_ms(debounce_delay);
-				LCDWriteStringXY(3, 0, "    ");
-				sleep_ms(debounce_delay);
-				LCDWriteIntXY(3, 0, PID.SP);
-				PID.currentVariable = &PID.SP; // connect to interrupt
-			}
-			if (PID.menu == 2)
-			{
-				sleep_ms(debounce_delay);
-				LCDWriteStringXY(11, 0, "    ");
-				sleep_ms(debounce_delay);
-				LCDWriteIntXY(11, 0, PID.ki);
-				PID.currentVariable = &PID.ki; // connect to interrupt
-			}
-			if (PID.menu == 3)
-			{
-				sleep_ms(debounce_delay);
-				LCDWriteStringXY(3, 1, "    ");
-				sleep_ms(debounce_delay);
-				LCDWriteIntXY(3, 1, PID.kd);
-				PID.currentVariable = &PID.kd; // connect to interrupt
-			}
-			if (PID.menu == 4)
-			{
-				sleep_ms(debounce_delay);
-				LCDWriteStringXY(11, 1, "    ");
-				sleep_ms(debounce_delay);
-				LCDWriteIntXY(11, 1, PID.kp);
-				PID.currentVariable = &PID.kp; // connect to interrupt
-			}
-
-			LCDWriteIntXY(3, 0, PID.SP);  // Set Point
-			LCDWriteIntXY(11, 0, PID.ki);  // Integer Gain
-			LCDWriteIntXY(3, 1, PID.kd);  // Differential Gain
-			LCDWriteIntXY(11, 1, PID.kp); // Proportional Gain
-		}
-	}
-	else
-	{
-		if (PID.update == 0)
-		{
-			lcd_clear();
-			LCDWriteStringXY(0, 0, "Temperature:");
-			LCDWriteStringXY(0, 1, "PWM:");
-			PID.update = 1;
-		}
-		else
-		{
-			if (PID.temperature != NAN)
-			{
-				if (PID.temperature < 100) // needed to kill revanent digit
-				{
-					LCDWriteStringXY(14, 0, " ");
-				}
-				LCDWriteFloatXY(12, 0, PID.temperature); // Current Temp
-				if (PID.pwm < 100)							// needed to kill revanent digit
-				{
-					LCDWriteStringXY(12, 1, " ");
-				}
-				LCDWriteIntXY(4, 1, PID.pwm);
-			}
-			else
-			{
-				LCDWriteStringXY(12, 0, "NAN");
-			}
-		}
-	}
-}
 
 void LCDgotoPos(int pos_i, int line){
     lcd_set_cursor(line, pos_i); //pos_i, line);
@@ -341,7 +224,7 @@ void bootanimation(){
 
         }
         b++;
-        sleep_ms(50);
+        sleep_ms(30);
         x++;
     }
 }
@@ -371,7 +254,6 @@ void encoder_callback(uint gpio, uint32_t events)
         {
             cw_fall = 0;
             ccw_fall = 0;
-            //do something here,  for now it is just printing out CW or CCW
             pids[menupos]--;
             if (pids[menupos]<0){
                 pids[menupos] = 0;
@@ -390,7 +272,6 @@ void encoder_callback(uint gpio, uint32_t events)
         {
             cw_fall = 0;
             ccw_fall = 0;
-            //do something here,  for now it is just printing out CW or CCW
             printf("CW \r\n");
             pids[menupos]++;
             if (pids[menupos]<0){
@@ -400,11 +281,14 @@ void encoder_callback(uint gpio, uint32_t events)
 
     }
     if (gpio == ENC_SW){
-        menupos++;
-        if (menupos > 3){
+        busy_wait_ms(4);
+        if(gpio_get(ENC_SW) == 0){
+            menupos++;
+            if (menupos > 4){
             menupos = 0;
+            }
         }
-    
+        
     }
            
 
@@ -454,17 +338,10 @@ void setup(void){
     
     
     bootanimation();
-    menuInit();
-    int variable = 0;
-    char buffer[33];
-    //stdio_init_all();
-    //LCDinit(6,7,8,9,13,11,16,2);
-    // LCDWriteIntXY(5,1,variable++);
-    // LCDWriteFloatXY(10,1,(float)variable);
-    // sleep_ms(5000);
     lcd_clear();
 }
 void menuicon(void){
+    if (menupos <4){
         if (menupos == 0){
             LCDWriteStringXY(0, 0, ">");
             LCDWriteStringXY(0, 8, " ");
@@ -489,6 +366,8 @@ void menuicon(void){
             LCDWriteStringXY(2, 0, " ");
             LCDWriteStringXY(2, 8, ">");
         }
+    }
+
         
 }
 
@@ -496,19 +375,34 @@ int main(){
     setup();
     
     while (1) {
-        menuicon();
+        lcd_clear();
+        while (menupos <4){
+            pids[4] = pids[3];
+            menuicon();
+            LCDWriteStringXY(0, 1, "P:");
+            LCDWriteStringXY(0, 9, "I:");
+            LCDWriteStringXY(2, 1, "D:");
+            LCDWriteStringXY(2, 9, "S:"); 
 
-        LCDWriteStringXY(0, 1, "P:");
-		LCDWriteStringXY(0, 9, "I:");
-		LCDWriteStringXY(2, 1, "D:");
-		LCDWriteStringXY(2, 9, "S:"); 
+            LCDWriteIntXY(0, 3, pids[0]);
+            LCDWriteIntXY(0, 11, pids[1]);
+            LCDWriteIntXY(2, 3, pids[2]);
+            LCDWriteIntXY(2, 11, pids[3]);
+        }
 
-        LCDWriteIntXY(0, 3, pids[0]);
-		LCDWriteIntXY(0, 11, pids[1]);
-		LCDWriteIntXY(2, 3, pids[2]);
-		LCDWriteIntXY(2, 11, pids[3]);
+        if (menupos ==4){
+            lcd_clear();
+            while(menupos == 4){
+                pids[3] = pids[4];
+                LCDWriteStringXY(0, 0, "TEMP:");
+                LCDWriteIntXY(0, 6, realtemp);
+                LCDWriteStringXY(1, 0, "SET:");
+                LCDWriteIntXY(1, 5, pids[3]);
+            }
 
 
+
+    }
 
 
 
