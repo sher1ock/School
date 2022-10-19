@@ -19,7 +19,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(tempcontrol tempcontrol.c)
+add_executable(tempcontrol tempcontrol.c PIDCalc.c MAX6675.c pwmPID.c)
 
 pico_set_program_name(tempcontrol "tempcontrol")
 pico_set_program_version(tempcontrol "0.1")
@@ -37,6 +37,7 @@ target_link_libraries(tempcontrol
         hardware_pio
         hardware_timer
         hardware_clocks
+        hardware_pwm
         )
 
 pico_add_extra_outputs(tempcontrol)

@@ -9,35 +9,23 @@
 #include "hardware/clocks.h"
 #include "ws2812.pio.h"
 #include "hardware/gpio.h"
-#include "menu.h"
 #include "encoder.h"
 #include "NewLCDLibrary.h"
-
-/*Encoder GPIO*/
-// GPIO 10 is Encoder phase A,  
-// GPIO 11 is Encoder phase B,
-// GPIO 12 is the encoder push botton switch.
-// change these as needed
+#include "MAX6675.h"
+#include "pwmPID.h"
 
 #define ENC_A   10
 #define ENC_B   11
 #define ENC_SW  12
-
-#define NAN 0.0/0.0
-
-pidVars_t PID;
-
-//#define DEBOUNCETIME 50
-
 
 #define WS2812_PIN 3
 #define repeat(x) for(int i = x; i--;)
 
 
 int menupos = 0;
-int realtemp = 0;
+float realtemp = 0;
 
-int pids[4] = {0,0,0,10}; //P= 0, I=1 D=2 S=3
+int pids[4] = {0,0,0,10}; //P= 0 I=1 D=2 S=3
 
 
 #define IS_RGBW false
@@ -46,8 +34,6 @@ int pids[4] = {0,0,0,10}; //P= 0, I=1 D=2 S=3
 
 #define repeat(x) for(int i = x; i--;)
 
-// volatile int encPos = 0;
-// int buttonpos = 0;
 
 // commands
 const int LCD_CLEARDISPLAY = 0x01;
@@ -322,6 +308,9 @@ void setup(void){
     gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
     // Make the I2C pins available to picotool
     bi_decl(bi_2pins_with_func(PICO_DEFAULT_I2C_SDA_PIN, PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C));
+    
+    MAX6675Init(MAX6675_SCLK, MAX6675_MISO, MAX6675_CS);
+    pwmPID_init(PWM_OUTPUT_PIN);
 
     lcd_init();
 
@@ -378,6 +367,7 @@ int main(){
         lcd_clear();
         while (menupos <4){
             pids[4] = pids[3];
+            realtemp = readCelsius();
             menuicon();
             LCDWriteStringXY(0, 1, "P:");
             LCDWriteStringXY(0, 9, "I:");
@@ -394,8 +384,9 @@ int main(){
             lcd_clear();
             while(menupos == 4){
                 pids[3] = pids[4];
+                realtemp = readCelsius();
                 LCDWriteStringXY(0, 0, "TEMP:");
-                LCDWriteIntXY(0, 6, realtemp);
+                LCDWriteFloatXY(0, 6, realtemp);
                 LCDWriteStringXY(1, 0, "SET:");
                 LCDWriteIntXY(1, 5, pids[3]);
             }
