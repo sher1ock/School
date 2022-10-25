@@ -37,8 +37,7 @@ uint SPIRead16(void)
     {
         gpio_put(Max.CLK, 0);
         busy_wait_us(100);
-        if (gpio_get(Max.MISO))
-        {
+        if (gpio_get(Max.MISO)){
             d |= (1 << i);
         }
         gpio_put(Max.CLK, 1);

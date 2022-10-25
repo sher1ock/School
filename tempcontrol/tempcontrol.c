@@ -23,7 +23,7 @@
 
 
 int menupos = 0;
-float realtemp = 0;
+volatile float realtemp = 0;
 
 int pids[4] = {0,0,0,10}; //P= 0 I=1 D=2 S=3
 
@@ -309,10 +309,11 @@ void setup(void){
     // Make the I2C pins available to picotool
     bi_decl(bi_2pins_with_func(PICO_DEFAULT_I2C_SDA_PIN, PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C));
     
+    lcd_init();
+
     MAX6675Init(MAX6675_SCLK, MAX6675_MISO, MAX6675_CS);
     pwmPID_init(PWM_OUTPUT_PIN);
 
-    lcd_init();
 
 
     PIO pio = pio0;
@@ -386,7 +387,7 @@ int main(){
                 pids[3] = pids[4];
                 realtemp = readCelsius();
                 LCDWriteStringXY(0, 0, "TEMP:");
-                LCDWriteFloatXY(0, 6, realtemp);
+                LCDWriteFloatXY(0, 5, realtemp);
                 LCDWriteStringXY(1, 0, "SET:");
                 LCDWriteIntXY(1, 5, pids[3]);
             }
