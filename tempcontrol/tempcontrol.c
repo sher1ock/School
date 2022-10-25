@@ -310,6 +310,7 @@ void setup(void){
     bi_decl(bi_2pins_with_func(PICO_DEFAULT_I2C_SDA_PIN, PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C));
     
     lcd_init();
+    pwmPID_init(PWM_OUTPUT_PIN);
 
     MAX6675Init(MAX6675_SCLK, MAX6675_MISO, MAX6675_CS);
     pwmPID_init(PWM_OUTPUT_PIN);
@@ -379,6 +380,7 @@ int main(){
             LCDWriteIntXY(0, 11, pids[1]);
             LCDWriteIntXY(2, 3, pids[2]);
             LCDWriteIntXY(2, 11, pids[3]);
+            sleep_ms(100);
         }
 
         if (menupos ==4){
@@ -390,15 +392,9 @@ int main(){
                 LCDWriteFloatXY(0, 5, realtemp);
                 LCDWriteStringXY(1, 0, "SET:");
                 LCDWriteIntXY(1, 5, pids[3]);
+                sleep_ms(100);
             }
-
-
-
-    }
-
-
-
-
+        }
         sleep_ms(100);
     }
 

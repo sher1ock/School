@@ -23,11 +23,10 @@ Arduino = hot rod kit car wrapped in cotton wool with buoyancy aids & parachute
 
 
 //create the PID variables in global memory
-//pidVars_t PID;
+pidVars_t PID;
 
 
-int main()
-{
+int main(){
     float current_temp;
     stdio_init_all();
     LCDinit(6,7,8,9,13,11,16,2);
@@ -45,8 +44,8 @@ int main()
     SetMode(AUTOMATIC);
         
     // Here is how we put out serial data: puts("MECH PID!");
-    //LCDclear();
-    //LCDprintWrapped("Welcome to the  PIDPico");
+    LCDclear();
+    LCDprintWrapped("Welcome to the  PIDPico");
     showSplashScreen();
     while(1)
     {
