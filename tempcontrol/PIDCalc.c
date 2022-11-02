@@ -8,7 +8,8 @@
 /*
 nick.mccloud:
 Pico/RP2040 ≠ Arduino
-Pico = hot rod kit car, Arduino = hot rod kit car wrapped in cotton wool with buoyancy aids & parachute
+Pico = hot rod kit car,
+ Arduino = hot rod kit car wrapped in cotton wool with buoyancy aids & parachute
 */
 
 
@@ -36,10 +37,10 @@ void PID_init(double* Input, double* Output, double* Setpoint,
     mySetpoint = Setpoint;
     inAuto = false;
 
-    SetOutputLimits(0, 255);				//default output limit corresponds to
-												//the arduino pwm limits
+    SetOutputLimits(0, 65535);				//default output limit corresponds to
+												//the PR2040 pwm limits
 
-    SampleTime = 100;							//default Controller Sample Time is 0.1 seconds
+    SampleTime = SAMPLETIME;							//default Controller Sample Time is 0.1 seconds
 
     SetControllerDirection(ControllerDirection);
     SetTunings(Kp, Ki, Kd, POn);
@@ -64,8 +65,17 @@ bool Compute()
       /*Compute all the working error variables*/
       double input = *myInput;
       double error = *mySetpoint - input;
+      Error = error; //display variables have upper case first
+
       double dInput = (input - lastInput);
-      outputSum+= (ki * error);
+      
+      outputSum+= (ki * error); //outputSum is the accumulating error
+      
+      // This is Dr. Hakula's windup limit:  This code is copywrited 
+      // and is not to be used in commercial applications without permission!
+      if(ki && (outputSum > INTLIMIT)) outputSum = INTLIMIT/ki; //this effectively limits the I term to 100% of output
+      else if(ki && (outputSum < -INTLIMIT)) outputSum = -INTLIMIT/ki;
+      //
 
       /*Add Proportional on Measurement, if P_ON_M is specified*/
       if(!pOnE) outputSum-= kp * dInput;
@@ -75,15 +85,18 @@ bool Compute()
 
       /*Add Proportional on Error, if P_ON_E is specified*/
 	   double output;
-      if(pOnE) output = kp * error;
+      Pterm = kp * error;
+      if(pOnE) output = Pterm;
       else output = 0;
 
       /*Compute Rest of PID Output*/
-      output += outputSum - kd * dInput;
+      Dterm = -(kd * dInput);
+      Iterm = outputSum;
+      output += Iterm - Dterm;
 
 	    if(output > outMax) output = outMax;
-      else if(output < outMin) output = outMin;
-	    *myOutput = output;
+       else if(output < outMin) output = outMin;
+	    *myOutput = output; //connection to real output
 
       /*Remember some variables for next time*/
       lastInput = input;

@@ -2,9 +2,9 @@
 #include "pico/stdlib.h"
 #include "NewLCDLibrary.h"
 #include "encoder.h"
-// #include "menu.h"
-// #include "MAX6675.h"
-// #include "pwmPID.h"
+#include "menu.h"
+#include "MAX6675.h"
+#include "pwmPID.h"
 #include "PIDCalc.h"
 
 #define START_SETPOINT 150
@@ -40,7 +40,6 @@ int main(){
     PID.ki = START_KI;
     PID.kd = START_KD;
 
-    PID_init(&PID.temperature, &PID.pwm, &PID.SP, PID.kp, PID.ki, PID.kd, P_ON_E, DIRECT );
     SetMode(AUTOMATIC);
         
     // Here is how we put out serial data: puts("MECH PID!");

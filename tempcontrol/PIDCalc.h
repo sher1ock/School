@@ -9,6 +9,8 @@
   #define REVERSE  1
   #define P_ON_M 0
   #define P_ON_E 1
+  #define SAMPLETIME 50
+  #define INTLIMIT 10000
 
   //commonly used functions **************************************************************************
     void PID_init(double*, double*, double*,        // * constructor.  links the PID to the Input, Output, and 
@@ -70,7 +72,7 @@
                                 //   what these values are.  with pointers we'll just know.
 			  
 	unsigned long lastTime;
-	double outputSum, lastInput;
+	double Iterm, Dterm, Pterm, Error, outputSum, lastInput;
 
 	unsigned long SampleTime;
 	double outMin, outMax;

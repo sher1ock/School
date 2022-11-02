@@ -13,6 +13,7 @@
 #include "NewLCDLibrary.h"
 #include "MAX6675.h"
 #include "pwmPID.h"
+#include "PIDCalc.h"
 
 #define ENC_A   10
 #define ENC_B   11
@@ -22,10 +23,31 @@
 #define repeat(x) for(int i = x; i--;)
 
 
-int menupos = 0;
-volatile float realtemp = 0;
+int menupos = 4;
+double realtemp = 100;
+double pwmset = 50;
 
-int pids[4] = {0,0,0,10}; //P= 0 I=1 D=2 S=3
+
+
+double pids[] = {300,30,10,0,50}; //P= 0 I=1 D=2 S=3
+
+struct repeating_timer timer1;
+//wrapper for compute function makeing it a callback.
+bool repeating_timer_callback_calc(struct repeating_timer *t)
+{
+    Compute();
+}
+
+
+struct repeating_timer timer2;
+//wrapper for compute function makeing it a callback.
+bool repeating_timer_callback_print(struct repeating_timer *t)
+{
+    printf("%4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f \r\n", 
+        realtemp, pids[4], (pwmset/65535 * 100), 
+        Error, (Pterm/1000), (Iterm/100), (Dterm/100));
+}
+
 
 
 #define IS_RGBW false
@@ -310,9 +332,9 @@ void setup(void){
     bi_decl(bi_2pins_with_func(PICO_DEFAULT_I2C_SDA_PIN, PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C));
     
     lcd_init();
-    pwmPID_init(PWM_OUTPUT_PIN);
 
     MAX6675Init(MAX6675_SCLK, MAX6675_MISO, MAX6675_CS);
+    
     pwmPID_init(PWM_OUTPUT_PIN);
 
 
@@ -328,7 +350,7 @@ void setup(void){
     }
     
     
-    bootanimation();
+    //bootanimation();
     lcd_clear();
 }
 void menuicon(void){
@@ -364,6 +386,24 @@ void menuicon(void){
 
 int main(){
     setup();
+
+    // double *tempature = realtemp;
+    // double PIDSP = pids[3];
+    // double PIDkp = pids[0];
+    // double PIDki = pids[1];
+    // double PIDkd = pids[2];
+    // double *pwm = pwmset;
+
+    //PID_init(&PID.temperature, &PID.pwm, &PID.SP, PID.kp, PID.ki, PID.kd, P_ON_E, DIRECT );
+
+    //void PID_init(double* Input, double* Output, double* Setpoint, double Kp, double Ki, double Kd, int POn, int ControllerDirection)
+
+    PID_init(&realtemp, &pwmset, &pids[3], pids[0], pids[1], pids[2], P_ON_E, DIRECT );
+    SetMode(AUTOMATIC);
+    add_repeating_timer_ms(SAMPLETIME, repeating_timer_callback_calc, NULL, &timer1);
+    add_repeating_timer_ms(1000, repeating_timer_callback_print, NULL, &timer2);
+
+
     
     while (1) {
         lcd_clear();
@@ -380,6 +420,8 @@ int main(){
             LCDWriteIntXY(0, 11, pids[1]);
             LCDWriteIntXY(2, 3, pids[2]);
             LCDWriteIntXY(2, 11, pids[3]);
+            SetTunings(pids[0],pids[1],pids[2], P_ON_E);
+            pwmPID_output(pwmset);    
             sleep_ms(100);
         }
 
@@ -392,6 +434,10 @@ int main(){
                 LCDWriteFloatXY(0, 5, realtemp);
                 LCDWriteStringXY(1, 0, "SET:");
                 LCDWriteIntXY(1, 5, pids[3]);
+                LCDWriteStringXY(0,12, "PWM");
+                LCDWriteIntXY(1,11,pwmset);
+                SetTunings(pids[0],pids[1],pids[2], P_ON_E);
+                pwmPID_output(pwmset);   
                 sleep_ms(100);
             }
         }
