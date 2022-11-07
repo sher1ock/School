@@ -73,8 +73,8 @@ bool Compute()
       
       // This is Dr. Hakula's windup limit:  This code is copywrited 
       // and is not to be used in commercial applications without permission!
-      if(ki && (outputSum > INTLIMIT)) outputSum = INTLIMIT/ki; //this effectively limits the I term to 100% of output
-      else if(ki && (outputSum < -INTLIMIT)) outputSum = -INTLIMIT/ki;
+      // if(ki && (outputSum > INTLIMIT)) outputSum = INTLIMIT/ki; //this effectively limits the I term to 100% of output
+      // else if(ki && (outputSum < -INTLIMIT)) outputSum = -INTLIMIT/ki;
       //
 
       /*Add Proportional on Measurement, if P_ON_M is specified*/

@@ -29,7 +29,7 @@ double pwmset = 50;
 
 
 
-double pids[] = {300,30,10,0,50}; //P= 0 I=1 D=2 S=3
+double pids[] = {300,0,0,0,50}; //P= 0 I=1 D=2 S=3
 
 struct repeating_timer timer1;
 //wrapper for compute function makeing it a callback.
