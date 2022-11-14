@@ -11,7 +11,7 @@
 #include "hardware/gpio.h"
 #include "encoder.h"
 #include "NewLCDLibrary.h"
-#include "MAX6675.h"
+//#include "MAX6675.h"
 #include "pwmPID.h"
 #include "PIDCalc.h"
 
@@ -22,19 +22,23 @@
 #define WS2812_PIN 3
 #define repeat(x) for(int i = x; i--;)
 
+int speedCount = 0; 
 
 int menupos = 4;
-double realtemp = 100;
+double realspeed = 100;
 double pwmset = 50;
 
 
 
-double pids[] = {300,0,0,0,50}; //P= 0 I=1 D=2 S=3
+double pids[] = {300,0,0,0,250}; //P= 0 I=1 D=2 S=3
 
 struct repeating_timer timer1;
 //wrapper for compute function makeing it a callback.
 bool repeating_timer_callback_calc(struct repeating_timer *t)
 {
+    //assumes: 3 counts per motor rev, 29.86 motor rev per shaft rev, 50 ms time
+    realspeed = speedCount * 669.79 / SAMPLETIME;
+    speedCount = 0;
     Compute();
 }
 
@@ -44,7 +48,7 @@ struct repeating_timer timer2;
 bool repeating_timer_callback_print(struct repeating_timer *t)
 {
     printf("%4.2f %4.2f %4.2f %4.2f %4.2f %4.2f %4.2f \r\n", 
-        realtemp, pids[4], (pwmset/65535 * 100), 
+        realspeed, pids[4], (pwmset/65535 * 100), 
         Error, (Pterm/1000), (Iterm/100), (Dterm/100));
 }
 
@@ -244,8 +248,6 @@ void encoder_callback(uint gpio, uint32_t events)
 
     gpio_state = (gpio_get_all() >> 10) & 0b0111;   // get all GPIO them mask out all but bits 10, 11, 12
                                                     // This will need to change to match which GPIO pins are being used.
-
-
     static bool ccw_fall = 0;  //bool used when falling edge is triggered
     static bool cw_fall = 0;
 
@@ -253,23 +255,32 @@ void encoder_callback(uint gpio, uint32_t events)
     enc_value = (gpio_state & 0x03);
 
 
-    if (gpio == ENC_A) 
-    {
-        if ((!cw_fall) && (enc_value == 0b10)) // cw_fall is set to TRUE when phase A interrupt is triggered
-            cw_fall = 1; 
-
-        if ((ccw_fall) && (enc_value == 0b00)) // if ccw_fall is already set to true from a previous B phase trigger, the ccw event will be triggered 
+    if (gpio == EN_SPEED) // speed interrupt
+	{
+		if(speedCount < 0xFFFFFFFF) 
+			speedCount = speedCount + 1;
+		else
+			speedCount = 0xFFFFFFFF;	
+	}
+	else{
+        
+        if (gpio == ENC_A) 
         {
-            cw_fall = 0;
-            ccw_fall = 0;
-            pids[menupos]--;
-            if (pids[menupos]<0){
-                pids[menupos] = 0;
+            if ((!cw_fall) && (enc_value == 0b10)) // cw_fall is set to TRUE when phase A interrupt is triggered
+                cw_fall = 1; 
+
+            if ((ccw_fall) && (enc_value == 0b00)) // if ccw_fall is already set to true from a previous B phase trigger, the ccw event will be triggered 
+            {
+                cw_fall = 0;
+                ccw_fall = 0;
+                pids[menupos]--;
+                if (pids[menupos]<0){
+                    pids[menupos] = 0;
+                }
             }
-        }
 
-    }   
-
+        }   
+    }
 
     if (gpio == ENC_B) 
     {
@@ -304,7 +315,7 @@ void encoder_callback(uint gpio, uint32_t events)
 void setup(void){
     stdio_init_all();
      // GPIO Setup for Encoder
-    gpio_init(ENC_SW);                  //Initialise a GPIO for (enabled I/O and set func to GPIO_FUNC_SIO)
+    /*gpio_init(ENC_SW);                  //Initialise a GPIO for (enabled I/O and set func to GPIO_FUNC_SIO)
     gpio_set_dir(ENC_SW,GPIO_IN);
     gpio_disable_pulls(ENC_SW);
 
@@ -315,11 +326,22 @@ void setup(void){
     gpio_init(ENC_B);
     gpio_set_dir(ENC_B,GPIO_IN);
     gpio_disable_pulls(ENC_B);
+    */
+    
+    // GPIO Setup for Encoder
+	int encoderInputs[] = {EN_SW,EN_CLK,EN_DT, EN_SPEED};
+	for (int i = 0; i < ELEMENTS(encoderInputs); i++){
+		gpio_init(encoderInputs[i]);					//Initialise a GPIO for (enabled I/O and set func to GPIO_FUNC_SIO)
+		gpio_set_dir(encoderInputs[i],GPIO_IN);
+		gpio_disable_pulls(encoderInputs[i]);
+		gpio_set_input_hysteresis_enabled(encoderInputs[i], true);
+	}
+    
 
     gpio_set_irq_enabled_with_callback(ENC_SW, GPIO_IRQ_EDGE_FALL, true, &encoder_callback);
     gpio_set_irq_enabled(ENC_A, GPIO_IRQ_EDGE_FALL, true);
     gpio_set_irq_enabled(ENC_B, GPIO_IRQ_EDGE_FALL, true);
-
+    
     
 
     // This example will use I2C0 on the default SDA and SCL pins (4, 5 on a Pico)
@@ -333,7 +355,7 @@ void setup(void){
     
     lcd_init();
 
-    MAX6675Init(MAX6675_SCLK, MAX6675_MISO, MAX6675_CS);
+//    MAX6675Init(MAX6675_SCLK, MAX6675_MISO, MAX6675_CS);
     
     pwmPID_init(PWM_OUTPUT_PIN);
 
@@ -387,18 +409,7 @@ void menuicon(void){
 int main(){
     setup();
 
-    // double *tempature = realtemp;
-    // double PIDSP = pids[3];
-    // double PIDkp = pids[0];
-    // double PIDki = pids[1];
-    // double PIDkd = pids[2];
-    // double *pwm = pwmset;
-
-    //PID_init(&PID.temperature, &PID.pwm, &PID.SP, PID.kp, PID.ki, PID.kd, P_ON_E, DIRECT );
-
-    //void PID_init(double* Input, double* Output, double* Setpoint, double Kp, double Ki, double Kd, int POn, int ControllerDirection)
-
-    PID_init(&realtemp, &pwmset, &pids[3], pids[0], pids[1], pids[2], P_ON_E, DIRECT );
+    PID_init(&realspeed, &pwmset, &pids[3], pids[0], pids[1], pids[2], P_ON_E, DIRECT );
     SetMode(AUTOMATIC);
     add_repeating_timer_ms(SAMPLETIME, repeating_timer_callback_calc, NULL, &timer1);
     add_repeating_timer_ms(1000, repeating_timer_callback_print, NULL, &timer2);
@@ -409,7 +420,7 @@ int main(){
         lcd_clear();
         while (menupos <4){
             pids[4] = pids[3];
-            realtemp = readCelsius();
+            //realspeed = readCelsius();
             menuicon();
             LCDWriteStringXY(0, 1, "P:");
             LCDWriteStringXY(0, 9, "I:");
@@ -429,9 +440,9 @@ int main(){
             lcd_clear();
             while(menupos == 4){
                 pids[3] = pids[4];
-                realtemp = readCelsius();
-                LCDWriteStringXY(0, 0, "TEMP:");
-                LCDWriteFloatXY(0, 5, realtemp);
+                //realspeed = readCelsius();
+                LCDWriteStringXY(0, 0, "Speed:");
+                LCDWriteFloatXY(0, 5, realspeed);
                 LCDWriteStringXY(1, 0, "SET:");
                 LCDWriteIntXY(1, 5, pids[3]);
                 LCDWriteStringXY(0,12, "PWM");
