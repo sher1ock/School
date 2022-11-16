@@ -15,9 +15,10 @@
 #include "pwmPID.h"
 #include "PIDCalc.h"
 
-#define ENC_A   10
-#define ENC_B   11
-#define ENC_SW  12
+#define ENC_A 10
+#define ENC_B 11
+#define ENC_SW 12
+#define ENC_SP 6
 
 #define WS2812_PIN 3
 #define repeat(x) for(int i = x; i--;)
@@ -241,19 +242,7 @@ void bootanimation(){
     }
 }
 
-void encoder_callback(uint gpio, uint32_t events) 
-{
-
-    uint32_t gpio_state = 0;
-
-    gpio_state = (gpio_get_all() >> 10) & 0b0111;   // get all GPIO them mask out all but bits 10, 11, 12
-                                                    // This will need to change to match which GPIO pins are being used.
-    static bool ccw_fall = 0;  //bool used when falling edge is triggered
-    static bool cw_fall = 0;
-
-    uint8_t enc_value = 0;
-    enc_value = (gpio_state & 0x03);
-
+void encoder_callback(uint gpio, uint32_t events){
 
     if (gpio == EN_SPEED) // speed interrupt
 	{
@@ -263,6 +252,18 @@ void encoder_callback(uint gpio, uint32_t events)
 			speedCount = 0xFFFFFFFF;	
 	}
 	else{
+        uint32_t gpio_state = 0;
+
+        gpio_state = (gpio_get_all() >> 10) & 0b0111;   // get all GPIO them mask out all but bits 10, 11, 12
+                                                        // This will need to change to match which GPIO pins are being used.
+        static bool ccw_fall = 0;  //bool used when falling edge is triggered
+        static bool cw_fall = 0;
+
+        uint8_t enc_value = 0;
+        enc_value = (gpio_state & 0x03);
+
+
+
         
         if (gpio == ENC_A) 
         {
@@ -280,36 +281,36 @@ void encoder_callback(uint gpio, uint32_t events)
             }
 
         }   
-    }
+    
 
-    if (gpio == ENC_B) 
-    {
-        if ((!ccw_fall) && (enc_value == 0b01)) //ccw leading edge is true
-            ccw_fall = 1;
-
-        if ((cw_fall) && (enc_value == 0b00)) //cw trigger
+        if (gpio == ENC_B) 
         {
-            cw_fall = 0;
-            ccw_fall = 0;
-            printf("CW \r\n");
-            pids[menupos]++;
-            if (pids[menupos]<0){
-                pids[menupos] = 0;
-            }
-        }
+            if ((!ccw_fall) && (enc_value == 0b01)) //ccw leading edge is true
+                ccw_fall = 1;
 
-    }
-    if (gpio == ENC_SW){
-        busy_wait_ms(4);
-        if(gpio_get(ENC_SW) == 0){
-            menupos++;
-            if (menupos > 4){
-            menupos = 0;
+            if ((cw_fall) && (enc_value == 0b00)) //cw trigger
+            {
+                cw_fall = 0;
+                ccw_fall = 0;
+                printf("CW \r\n");
+                pids[menupos]++;
+                if (pids[menupos]<0){
+                    pids[menupos] = 0;
+                }
             }
+
         }
-        
-    }
-           
+        if (gpio == ENC_SW){
+            busy_wait_ms(4);
+            if(gpio_get(ENC_SW) == 0){
+                menupos++;
+                if (menupos > 4){
+                menupos = 0;
+                }
+            }
+            
+        }
+    }            
 
 }
 void setup(void){
@@ -329,7 +330,7 @@ void setup(void){
     */
     
     // GPIO Setup for Encoder
-	int encoderInputs[] = {EN_SW,EN_CLK,EN_DT, EN_SPEED};
+	int encoderInputs[] = {EN_SW,EN_CLK,EN_DT,EN_SPEED};
 	for (int i = 0; i < ELEMENTS(encoderInputs); i++){
 		gpio_init(encoderInputs[i]);					//Initialise a GPIO for (enabled I/O and set func to GPIO_FUNC_SIO)
 		gpio_set_dir(encoderInputs[i],GPIO_IN);
@@ -341,7 +342,7 @@ void setup(void){
     gpio_set_irq_enabled_with_callback(ENC_SW, GPIO_IRQ_EDGE_FALL, true, &encoder_callback);
     gpio_set_irq_enabled(ENC_A, GPIO_IRQ_EDGE_FALL, true);
     gpio_set_irq_enabled(ENC_B, GPIO_IRQ_EDGE_FALL, true);
-    
+    gpio_set_irq_enabled(ENC_SP, GPIO_IRQ_EDGE_FALL, true);
     
 
     // This example will use I2C0 on the default SDA and SCL pins (4, 5 on a Pico)
