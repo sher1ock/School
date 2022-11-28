@@ -31,7 +31,7 @@ double pwmset = 50;
 
 
 
-double pids[] = {300,0,0,0,250}; //P= 0 I=1 D=2 S=3
+double pids[] = {50,30,1,0,600}; //P= 0 I=1 D=2 S=3
 
 struct repeating_timer timer1;
 //wrapper for compute function makeing it a callback.
@@ -434,7 +434,7 @@ int main(){
             LCDWriteIntXY(2, 11, pids[3]);
             SetTunings(pids[0],pids[1],pids[2], P_ON_E);
             pwmPID_output(pwmset);    
-            sleep_ms(100);
+            sleep_ms(1);
         }
 
         if (menupos ==4){
@@ -450,10 +450,10 @@ int main(){
                 LCDWriteIntXY(1,11,pwmset);
                 SetTunings(pids[0],pids[1],pids[2], P_ON_E);
                 pwmPID_output(pwmset);   
-                sleep_ms(100);
+                sleep_ms(1);
             }
         }
-        sleep_ms(100);
+        sleep_ms(1);
     }
 
 }
