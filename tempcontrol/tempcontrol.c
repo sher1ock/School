@@ -11,7 +11,6 @@
 #include "hardware/gpio.h"
 #include "encoder.h"
 #include "NewLCDLibrary.h"
-//#include "MAX6675.h"
 #include "pwmPID.h"
 #include "PIDCalc.h"
 
@@ -24,6 +23,7 @@
 #define repeat(x) for(int i = x; i--;)
 
 int speedCount = 0; 
+bool button = false;
 
 int menupos = 4;
 double realspeed = 100;
@@ -315,21 +315,6 @@ void encoder_callback(uint gpio, uint32_t events){
 }
 void setup(void){
     stdio_init_all();
-     // GPIO Setup for Encoder
-    /*gpio_init(ENC_SW);                  //Initialise a GPIO for (enabled I/O and set func to GPIO_FUNC_SIO)
-    gpio_set_dir(ENC_SW,GPIO_IN);
-    gpio_disable_pulls(ENC_SW);
-
-    gpio_init(ENC_A);
-    gpio_set_dir(ENC_A,GPIO_IN);
-    gpio_disable_pulls(ENC_A);
-
-    gpio_init(ENC_B);
-    gpio_set_dir(ENC_B,GPIO_IN);
-    gpio_disable_pulls(ENC_B);
-    */
-    
-    // GPIO Setup for Encoder
 	int encoderInputs[] = {EN_SW,EN_CLK,EN_DT,EN_SPEED};
 	for (int i = 0; i < ELEMENTS(encoderInputs); i++){
 		gpio_init(encoderInputs[i]);					//Initialise a GPIO for (enabled I/O and set func to GPIO_FUNC_SIO)
@@ -414,12 +399,19 @@ int main(){
     SetMode(AUTOMATIC);
     add_repeating_timer_ms(SAMPLETIME, repeating_timer_callback_calc, NULL, &timer1);
     add_repeating_timer_ms(1000, repeating_timer_callback_print, NULL, &timer2);
-
+    double setpoint = 0;
 
     
     while (1) {
         lcd_clear();
         while (menupos <4){
+            if(button = 1){
+                setpoint = pids[4];
+                pids[4] = 0;
+            }
+            if(button = 0 && pids[4] == 0){
+                pids[4] = setpoint;
+            }
             pids[4] = pids[3];
             //realspeed = readCelsius();
             menuicon();
@@ -440,6 +432,13 @@ int main(){
         if (menupos ==4){
             lcd_clear();
             while(menupos == 4){
+            if(button = 1){
+                setpoint = pids[3];
+                pids[3] = 0;
+            }
+            if(button = 0 && pids[3] == 0){
+                pids[3] = setpoint;
+            }
                 pids[3] = pids[4];
                 //realspeed = readCelsius();
                 LCDWriteStringXY(0, 0, "Speed:");
