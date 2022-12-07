@@ -19,11 +19,12 @@
 #define ENC_SW 12
 #define ENC_SP 6
 
-#define WS2812_PIN 3
+#define WS2812_PIN 2
+#define SensorPin 20
 #define repeat(x) for(int i = x; i--;)
 
 int speedCount = 0; 
-bool button = false;
+//int button = 0;
 
 int menupos = 4;
 double realspeed = 100;
@@ -345,17 +346,21 @@ void setup(void){
     
     pwmPID_init(PWM_OUTPUT_PIN);
 
+    //setup for button
+    gpio_init(SensorPin);
+    gpio_set_dir(SensorPin, GPIO_IN);
+    gpio_pull_up(SensorPin);
 
 
-    PIO pio = pio0;
-    int sm = 0;
-    uint offset = pio_add_program(pio, &ws2812_program);
+    // PIO pio = pio0;
+    // int sm = 0;
+    // uint offset = pio_add_program(pio, &ws2812_program);
 
-    ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
-    //reset all pixels
-    for (uint i=0; i<12; i++){
-        put_pixel(0);
-    }
+    // ws2812_program_init(pio, sm, offset, WS2812_PIN, 800000, IS_RGBW);
+    // //reset all pixels
+    // for (uint i=0; i<12; i++){
+    //     put_pixel(0);
+    // }
     
     
     //bootanimation();
@@ -399,18 +404,24 @@ int main(){
     SetMode(AUTOMATIC);
     add_repeating_timer_ms(SAMPLETIME, repeating_timer_callback_calc, NULL, &timer1);
     add_repeating_timer_ms(1000, repeating_timer_callback_print, NULL, &timer2);
-    double setpoint = 0;
+    volatile double setpoint = 0;
+    volatile bool writereset = 1;
+    volatile int button = 0;
 
     
     while (1) {
         lcd_clear();
         while (menupos <4){
-            if(button = 1){
+            button = gpio_get(SensorPin);
+
+            if(button == 0){
                 setpoint = pids[4];
-                pids[4] = 0;
+                pids[3] = 0;
+                writereset = 0;
             }
-            if(button = 0 && pids[4] == 0){
-                pids[4] = setpoint;
+            if(button == 1 && writereset == 0){
+                pids[3] = setpoint;
+                writereset = 1;
             }
             pids[4] = pids[3];
             //realspeed = readCelsius();
@@ -432,12 +443,15 @@ int main(){
         if (menupos ==4){
             lcd_clear();
             while(menupos == 4){
-            if(button = 1){
+            button = gpio_get(SensorPin);
+            if(button == 0 && writereset == 1){
                 setpoint = pids[3];
-                pids[3] = 0;
+                pids[4] = 0;
+                writereset = 0;
             }
-            if(button = 0 && pids[3] == 0){
-                pids[3] = setpoint;
+            if(button == 1 && writereset == 0){
+                pids[4] = setpoint;
+                writereset = 1;
             }
                 pids[3] = pids[4];
                 //realspeed = readCelsius();
